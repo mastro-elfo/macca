@@ -1,4 +1,4 @@
-name: Deploy built content to Pages
+name: Deploy static content to Pages
 
 on:
   push:
@@ -17,17 +17,25 @@ permissions:
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          # cache: 'npm'
 
       - name: Install dependencies
         run: yarn
