@@ -27,6 +27,9 @@ i18n
             ? 86400000
             : expirationTime,
         },
+        {
+          loadPath: "/macca/locales/{{lng}}/{{ns}}.json",
+        },
       ],
     },
     partialBundledLanguages: true,
