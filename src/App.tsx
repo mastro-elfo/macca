@@ -16,7 +16,7 @@ export default function App() {
         <AppQuery>
           <AppSnackbar>
             <Suspense fallback={<FallbackLayout />}>
-              <Router>
+              <Router basename="macca">
                 <AppLocalizationProvider>
                   <AppRoutes />
                 </AppLocalizationProvider>
