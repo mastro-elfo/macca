@@ -1,0 +1,26 @@
+{
+  "artworks": [
+    {
+      "id": 1,
+      "title": "Senza titolo",
+      "year": 1992,
+      "tags": ["bricks", "white-marble"],
+      "town": "Peccioli",
+      "address": "Via Corbiano, 24",
+      "latitude": 43.548715,
+      "longitude": 10.7216364,
+      "author": "Vittorio Messina"
+    },
+    {
+      "id": 2,
+      "title": "Colonna che scende",
+      "year": 1992,
+      "tags": ["burnished-bronze"],
+      "town": "Peccioli",
+      "address": "Via Bastioni, 1",
+      "latitude": 43.5476053,
+      "longitude": 10.7210038,
+      "author": "Hidetoshi Nagasawa"
+    }
+  ]
+}
