@@ -1,0 +1,5 @@
+{
+  "MIN_DATE_WITHIN_12_H": "La data di inizio non può essere entro 12 ore dalla richiesta",
+  "START_DATE_GREATER_THAN_END_DATE": "La data di fine non può essere antecedente alla data di inizio",
+  "REPEAT_PASSWORD_NOT_EQUAL_TO_PASSWORD": "I campi 'nuova password' e 'ripeti nuova password' devono coincidere"
+}
