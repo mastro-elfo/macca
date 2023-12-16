@@ -16,7 +16,7 @@ export default function FallbackLayout() {
         </Container>
       </Stack>
       <BackgroundBox
-        image="/assets/6da22f/undraw_loading_re_5axr.svg"
+        image="/macca/assets/2196f3/undraw_loading_re_5axr.svg"
         opacity={0.5}
         position="bottom"
       />
