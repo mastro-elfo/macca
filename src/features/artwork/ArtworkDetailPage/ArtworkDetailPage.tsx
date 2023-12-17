@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import WorkInProgressAlert from "../../../components/WorkInProgressAlert/WorkInProgressAlert";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useDocumentTitle from "../../../services/useDocumentTitle";
+import ArtworkImageList from "../ArtworkImageList/ArtworkImageList";
 import { useArtworkDetailQuery } from "../artworkService";
 
 export default function ArtworkDetailPage() {
@@ -36,8 +37,8 @@ export default function ArtworkDetailPage() {
       <Typography variant="body2">
         {artworkDetailQuery.data?.tags.map((tag) => t(tag)).join(", ")}
       </Typography>
+      <ArtworkImageList artwork={artworkDetailQuery.data} />
       <WorkInProgressAlert />
-      {/* TODO: complete detail */}
     </PageLayout>
   );
 }

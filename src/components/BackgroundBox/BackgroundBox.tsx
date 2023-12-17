@@ -33,7 +33,7 @@ export default function BackgroundBox({
 }: BackgroundBoxProps) {
   return (
     <Box
-      position="absolute"
+      position="fixed"
       top={0}
       bottom={0}
       left={drawerWidth ?? 0}
@@ -43,7 +43,7 @@ export default function BackgroundBox({
         overflow: "hidden",
         "&::after": {
           content: '""',
-          position: "absolute",
+          position: "fixed",
           top: 0,
           bottom: 0,
           left: 0,

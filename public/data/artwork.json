@@ -22,7 +22,22 @@
       "latitude": 43.5476053,
       "longitude": 10.7210038,
       "author": "Hidetoshi Nagasawa",
-      "images": []
+      "images": [
+        {
+          "path": "1.jpg",
+          "attribution": {
+            "url": "https://www.peccioli.net/colonna-che-scende/",
+            "title": "peccioli.net"
+          }
+        },
+        {
+          "path": "2.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=19&idView=1",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ]
 }

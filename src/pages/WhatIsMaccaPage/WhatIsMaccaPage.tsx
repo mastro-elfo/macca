@@ -19,6 +19,7 @@ export default function WhatIsMaccaPage() {
       }}
     >
       <WorkInProgressAlert />
+      {/* TODO: translate */}
       <Markdown>{`
 # MACCA 
 

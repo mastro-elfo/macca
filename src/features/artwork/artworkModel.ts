@@ -1,5 +1,15 @@
 import { z } from "zod";
 
+const ArtworkAttribution = z.object({
+  title: z.string(),
+  url: z.string().url(),
+});
+
+const ArtworkImage = z.object({
+  path: z.string(),
+  attribution: ArtworkAttribution,
+});
+
 export const ArtworkSchema = z.object({
   id: z.number(),
   title: z.string(),
@@ -12,7 +22,8 @@ export const ArtworkSchema = z.object({
   url: z.string().optional(),
   author: z.string(),
   // TODO: add images
-  images: z.string().array(),
+  // TODO: images should have attribution
+  images: ArtworkImage.array(),
   // TODO: add markdown text
 });
 
