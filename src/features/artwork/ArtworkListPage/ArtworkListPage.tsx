@@ -10,7 +10,11 @@ export default function ArtworkListPage() {
   const artworkListQuery = useArtworkListQuery();
 
   return (
-    <PageLayout title={t("Artworks")} loading={artworkListQuery.isFetching}>
+    <PageLayout
+      title={t("Artworks")}
+      loading={artworkListQuery.isFetching}
+      py={1}
+    >
       {/* TODO: add more artworks */}
       <ArtworkGrid artworks={artworkListQuery.data ?? []} />
     </PageLayout>

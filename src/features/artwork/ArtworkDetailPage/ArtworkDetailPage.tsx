@@ -22,6 +22,7 @@ export default function ArtworkDetailPage() {
         opacity: 0.5,
         position: "bottom left",
       }}
+      py={1}
     >
       <Stack direction="row">
         <Typography variant="h6" flex={1}>
