@@ -41,7 +41,6 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
         }
         subheader={artwork.author}
       />
-      {/* TODO: add image */}
 
       <CardContent>
         <Typography>{artwork.tags.map((tag) => t(tag)).join(", ")}</Typography>
