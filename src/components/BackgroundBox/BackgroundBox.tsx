@@ -1,4 +1,5 @@
-import { Box, Breakpoint, useTheme } from "@mui/material";
+import { Box, Breakpoint } from "@mui/material";
+import { Season } from "../../services/useSeason/useSeason";
 
 type BackgroundPosition =
   | "center"
@@ -12,24 +13,24 @@ type BackgroundPosition =
   | "bottom right";
 
 type BackgroundBoxProps = {
+  absolutePath?: boolean;
+  drawerWidth?: number;
   image: string;
   opacity?: number;
-  size?: Breakpoint;
+  size?: Breakpoint | false;
   position?: BackgroundPosition;
   transform?: string;
-  drawerWidth?: number;
 };
 
 export default function BackgroundBox({
+  absolutePath,
+  drawerWidth,
   image,
   opacity,
   position,
   size,
   transform,
-  drawerWidth,
 }: BackgroundBoxProps) {
-  const theme = useTheme();
-
   return (
     <Box
       position="absolute"
@@ -38,7 +39,7 @@ export default function BackgroundBox({
       left={drawerWidth ?? 0}
       right={0}
       zIndex={-1}
-      sx={{
+      sx={(theme) => ({
         overflow: "hidden",
         "&::after": {
           content: '""',
@@ -47,17 +48,30 @@ export default function BackgroundBox({
           bottom: 0,
           left: 0,
           right: 0,
-          backgroundImage: `url(/macca/assets/${theme.season}/${image})`,
+          backgroundImage: `url(${getImagePath(
+            image,
+            absolutePath,
+            theme.season
+          )})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: position,
-          backgroundSize: (theme) => ({
+          backgroundSize: {
             xs: "contain",
-            [size ?? "sm"]: theme.breakpoints.values[size ?? "sm"],
-          }),
+            ...(size === false
+              ? {}
+              : {
+                  [size ?? "sm"]: theme.breakpoints.values[size ?? "sm"],
+                }),
+          },
           opacity: opacity ?? 1,
           transform: transform,
         },
-      }}
+      })}
     />
   );
+}
+
+function getImagePath(image: string, absolute?: boolean, season?: Season) {
+  if (absolute) return `/macca/assets/${image}`;
+  return `/macca/assets/${season}/${image}`;
 }
