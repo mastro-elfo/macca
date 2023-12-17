@@ -11,6 +11,7 @@ export default function ArtworkListPage() {
 
   return (
     <PageLayout title={t("Artworks")} loading={artworkListQuery.isFetching}>
+      {/* TODO: add more artworks */}
       <ArtworkGrid artworks={artworkListQuery.data ?? []} />
     </PageLayout>
   );

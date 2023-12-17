@@ -1,4 +1,4 @@
-import { Box, Breakpoint } from "@mui/material";
+import { Box, Breakpoint, useTheme } from "@mui/material";
 
 type BackgroundPosition =
   | "center"
@@ -28,6 +28,8 @@ export default function BackgroundBox({
   transform,
   drawerWidth,
 }: BackgroundBoxProps) {
+  const theme = useTheme();
+
   return (
     <Box
       position="absolute"
@@ -45,7 +47,7 @@ export default function BackgroundBox({
           bottom: 0,
           left: 0,
           right: 0,
-          backgroundImage: `url(${image})`,
+          backgroundImage: `url(/macca/assets/${theme.season}/${image})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: position,
           backgroundSize: (theme) => ({

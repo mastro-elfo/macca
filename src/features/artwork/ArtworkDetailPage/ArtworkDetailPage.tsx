@@ -17,6 +17,8 @@ export default function ArtworkDetailPage() {
       loading={artworkDetailQuery.isFetching}
     >
       {artworkDetailQuery.data?.title}
+      {/* TODO: add "work in progress" */}
+      {/* TODO: complete detail */}
     </PageLayout>
   );
 }

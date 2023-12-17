@@ -26,7 +26,11 @@ export default function PageLayout({
         </Toolbar>
       </AppBar>
       <Toolbar />
-      <Container>{children ?? <Outlet />}</Container>
+      <Container>
+        {/* TODO: add padding */}
+        {children ?? <Outlet />}
+        {/* TODO: add to-top floating button */}
+      </Container>
       <LoadingProgress
         loading={loading}
         sx={{

@@ -34,6 +34,8 @@ export default function DrawerContent() {
         </ListItemIcon>
         <ListItemText>{t("Artworks")}</ListItemText>
       </ListItemButton>
+
+      {/* TODO: add author list */}
     </List>
   );
 }
