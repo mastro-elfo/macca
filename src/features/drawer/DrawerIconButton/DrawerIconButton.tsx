@@ -17,7 +17,7 @@ export default function DrawerIconButton({
 
   return (
     <>
-      <IconButton onClick={handleOpen} {...props}>
+      <IconButton onClick={handleOpen} color="inherit" {...props}>
         <DrawerIcon />
       </IconButton>
       <Drawer open={open} onClose={handleClose}>
