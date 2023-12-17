@@ -10,7 +10,22 @@
       "latitude": 43.548715,
       "longitude": 10.7216364,
       "author": "Vittorio Messina",
-      "images": []
+      "images": [
+        {
+          "path": "3.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=18&idView=1",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "4.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=18&idView=1",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     },
     {
       "id": 2,
