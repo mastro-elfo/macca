@@ -1,6 +1,4 @@
-import DetailIcon from "@mui/icons-material/Visibility";
 import {
-  Button,
   Card,
   CardActions,
   CardContent,
@@ -9,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import ArtworkDetailButton from "../ArtworkDetailButton/ArtworkDetailButton";
 import { ArtworkEntity } from "../artworkModel";
 
 type ArtworkCardProps = {
@@ -18,7 +16,6 @@ type ArtworkCardProps = {
 
 export default function ArtworkCard({ artwork }: ArtworkCardProps) {
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
   return (
     <Card>
@@ -47,12 +44,7 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
           flexDirection: "row-reverse",
         }}
       >
-        <Button
-          endIcon={<DetailIcon />}
-          onClick={() => navigate(`/artworks/${artwork.id}`)}
-        >
-          {t("Detail")}
-        </Button>
+        <ArtworkDetailButton artwork={artwork} />
       </CardActions>
     </Card>
   );

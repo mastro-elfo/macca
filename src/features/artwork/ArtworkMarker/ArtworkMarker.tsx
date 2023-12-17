@@ -1,10 +1,11 @@
 import PlaceIcon from "@mui/icons-material/Place";
-import { useTheme } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import L from "leaflet";
 import { useMemo } from "react";
 import { renderToString } from "react-dom/server";
-import { Marker } from "react-leaflet";
+import { Marker, Popup } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
+import ArtworkDetailButton from "../ArtworkDetailButton/ArtworkDetailButton";
 import { ArtworkEntity } from "../artworkModel";
 
 type ArtworkMarkerProps = {
@@ -50,6 +51,11 @@ export default function ArtworkMarker({
       eventHandlers={{
         click: handleClick,
       }}
-    />
+    >
+      <Popup>
+        <Typography>{artwork.title}</Typography>
+        <ArtworkDetailButton artwork={artwork} />
+      </Popup>
+    </Marker>
   );
 }

@@ -1,7 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
-import WorkInProgressAlert from "../../../components/WorkInProgressAlert/WorkInProgressAlert";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useDocumentTitle from "../../../services/useDocumentTitle";
 import ArtworkImageList from "../ArtworkImageList/ArtworkImageList";
@@ -38,7 +37,6 @@ export default function ArtworkDetailPage() {
         {artworkDetailQuery.data?.tags.map((tag) => t(tag)).join(", ")}
       </Typography>
       <ArtworkImageList artwork={artworkDetailQuery.data} />
-      <WorkInProgressAlert />
     </PageLayout>
   );
 }
