@@ -53,6 +53,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 3,
+      "title": "Acropoli",
+      "year": 1993,
+      "tags": ["marble", "wood"],
+      "town": "Peccioli",
+      "address": "Via Marconi, 6 (Castellaccia - Vista panoramica)",
+      "latitude": 43.5486998,
+      "longitude": 10.7207348,
+      "author": "Vittorio Messina",
+      "images": [
+        {
+          "path": "5.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=20&idView=2",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "6.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=20&idView=2",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ]
 }
