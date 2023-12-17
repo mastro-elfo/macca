@@ -9,6 +9,9 @@ const ArtworkListPage = lazy(
 const ArtworkDetailPage = lazy(
   () => import("../features/artwork/ArtworkDetailPage/ArtworkDetailPage")
 );
+const WhatIsMaccaPage = lazy(
+  () => import("../pages/WhatIsMaccaPage/WhatIsMaccaPage")
+);
 
 export function AppRoutes() {
   return (
@@ -27,6 +30,7 @@ export function AppRoutes() {
         <Route path="" element={<ArtworkListPage />} />
         <Route path=":id" element={<ArtworkDetailPage />} />
       </Route>
+      <Route path="what-is-macca" element={<WhatIsMaccaPage />} />
       <Route path="fallback" element={<FallbackLayout />} />
     </Routes>
   );

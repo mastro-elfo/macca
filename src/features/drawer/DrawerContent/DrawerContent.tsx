@@ -1,3 +1,4 @@
+import HelpIcon from "@mui/icons-material/Help";
 import {
   List,
   ListItemButton,
@@ -25,6 +26,7 @@ export default function DrawerContent() {
         </ListItemIcon>
         <ListItemText>{t("Map")}</ListItemText>
       </ListItemButton>
+
       <ListItemButton
         onClick={() => navigate("/artworks")}
         selected={location.pathname.startsWith("/artworks")}
@@ -33,6 +35,16 @@ export default function DrawerContent() {
           <ArtworkIcon />
         </ListItemIcon>
         <ListItemText>{t("Artworks")}</ListItemText>
+      </ListItemButton>
+
+      <ListItemButton
+        onClick={() => navigate("/what-is-macca")}
+        selected={location.pathname.startsWith("/what-is-macca")}
+      >
+        <ListItemIcon>
+          <HelpIcon />
+        </ListItemIcon>
+        <ListItemText>{t("What is MACCA?")}</ListItemText>
       </ListItemButton>
 
       {/* TODO: add author list */}
