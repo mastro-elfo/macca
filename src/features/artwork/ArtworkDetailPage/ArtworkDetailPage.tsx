@@ -1,5 +1,7 @@
+import { Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
+import WorkInProgressAlert from "../../../components/WorkInProgressAlert/WorkInProgressAlert";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useDocumentTitle from "../../../services/useDocumentTitle";
 import { useArtworkDetailQuery } from "../artworkService";
@@ -16,8 +18,19 @@ export default function ArtworkDetailPage() {
       title={t("Artwork detail")}
       loading={artworkDetailQuery.isFetching}
     >
-      {artworkDetailQuery.data?.title}
-      {/* TODO: add "work in progress" */}
+      <Stack direction="row">
+        <Typography variant="h6" flex={1}>
+          {artworkDetailQuery.data?.title}
+        </Typography>
+        <Typography variant="h6">{artworkDetailQuery.data?.year}</Typography>
+      </Stack>
+      <Typography variant="h6" color="textSecondary">
+        {artworkDetailQuery.data?.author}
+      </Typography>
+      <Typography variant="body2">
+        {artworkDetailQuery.data?.tags.map((tag) => t(tag)).join(", ")}
+      </Typography>
+      <WorkInProgressAlert />
       {/* TODO: complete detail */}
     </PageLayout>
   );
