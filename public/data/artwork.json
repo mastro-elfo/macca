@@ -9,7 +9,8 @@
       "address": "Via Corbiano, 24",
       "latitude": 43.548715,
       "longitude": 10.7216364,
-      "author": "Vittorio Messina"
+      "author": "Vittorio Messina",
+      "images": []
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
       "address": "Via Bastioni, 1",
       "latitude": 43.5476053,
       "longitude": 10.7210038,
-      "author": "Hidetoshi Nagasawa"
+      "author": "Hidetoshi Nagasawa",
+      "images": []
     }
   ]
 }

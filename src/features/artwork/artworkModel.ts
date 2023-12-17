@@ -12,6 +12,7 @@ export const ArtworkSchema = z.object({
   url: z.string().optional(),
   author: z.string(),
   // TODO: add images
+  images: z.string().array(),
   // TODO: add markdown text
 });
 
