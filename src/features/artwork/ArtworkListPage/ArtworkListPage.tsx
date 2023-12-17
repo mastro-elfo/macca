@@ -14,6 +14,11 @@ export default function ArtworkListPage() {
       title={t("Artworks")}
       loading={artworkListQuery.isFetching}
       py={1}
+      background={{
+        image: "undraw_art_museum_-8-or4.svg",
+        position: "bottom",
+        opacity: 0.5,
+      }}
     >
       {/* TODO: add more artworks */}
       <ArtworkGrid artworks={artworkListQuery.data ?? []} />
