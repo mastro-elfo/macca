@@ -17,6 +17,11 @@ export default function ArtworkDetailPage() {
     <PageLayout
       title={t("Artwork detail")}
       loading={artworkDetailQuery.isFetching}
+      background={{
+        image: "undraw_art_lover_re_fn8g.svg",
+        opacity: 0.5,
+        position: "bottom left",
+      }}
     >
       <Stack direction="row">
         <Typography variant="h6" flex={1}>

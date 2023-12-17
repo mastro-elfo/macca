@@ -1,16 +1,19 @@
 import { AppBar, Container, Toolbar, Typography } from "@mui/material";
-import { PropsWithChildren, ReactNode } from "react";
+import { ComponentProps, PropsWithChildren, ReactNode } from "react";
 import { Outlet } from "react-router-dom";
+import BackgroundBox from "../../components/BackgroundBox/BackgroundBox";
 import LoadingProgress from "../../components/LoadingProgress/LoadingProgress";
 import DrawerContent from "../../features/drawer/DrawerContent/DrawerContent";
 import DrawerIconButton from "../../features/drawer/DrawerIconButton/DrawerIconButton";
 
 type PageLayoutProps = PropsWithChildren<{
+  background?: ComponentProps<typeof BackgroundBox>;
   title?: ReactNode;
   loading?: boolean;
 }>;
 
 export default function PageLayout({
+  background,
   children,
   loading,
   title,
@@ -41,6 +44,7 @@ export default function PageLayout({
           zIndex: (theme) => theme.zIndex.appBar,
         }}
       />
+      {!!background && <BackgroundBox {...background} />}
     </>
   );
 }
