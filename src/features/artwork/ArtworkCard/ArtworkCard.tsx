@@ -3,6 +3,7 @@ import {
   CardActions,
   CardContent,
   CardHeader,
+  CardMedia,
   Stack,
   Typography,
 } from "@mui/material";
@@ -19,6 +20,13 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
 
   return (
     <Card>
+      {!!artwork.images.length && (
+        <CardMedia
+          sx={{ height: 140 }}
+          image={`/macca/media/${artwork.images[0].path}`}
+          title={artwork.images[0].attribution.title}
+        />
+      )}
       <CardHeader
         title={
           <Stack
