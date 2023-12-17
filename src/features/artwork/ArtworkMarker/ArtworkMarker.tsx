@@ -1,4 +1,3 @@
-import PlaceIcon from "@mui/icons-material/Place";
 import { Typography, useTheme } from "@mui/material";
 import L from "leaflet";
 import { useMemo } from "react";
@@ -6,6 +5,7 @@ import { renderToString } from "react-dom/server";
 import { Marker, Popup } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
 import ArtworkDetailButton from "../ArtworkDetailButton/ArtworkDetailButton";
+import ArtworkIcon from "../ArtworkIcon/ArtworkIcon";
 import { ArtworkEntity } from "../artworkModel";
 
 type ArtworkMarkerProps = {
@@ -32,7 +32,7 @@ export default function ArtworkMarker({
         iconSize: highlight ? [48, 48] : [24, 24],
         iconAnchor: highlight ? [24, 48] : [12, 24],
         html: renderToString(
-          <PlaceIcon
+          <ArtworkIcon
             style={{
               color: theme.palette.primary.main,
               fontSize: highlight ? "48px" : "24px",
