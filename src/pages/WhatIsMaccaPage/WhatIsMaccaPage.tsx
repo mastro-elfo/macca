@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import Markdown from "../../components/Markdown/Markdown";
-import WorkInProgressAlert from "../../components/WorkInProgressAlert/WorkInProgressAlert";
 import PageLayout from "../../layouts/PageLayout/PageLayout";
+import useMarkdownTranslation from "../../services/useMarkdownTranslation";
 
 export default function WhatIsMaccaPage() {
   const { t } = useTranslation();
+  const contentQuery = useMarkdownTranslation("what-is-macca.md");
 
   return (
     <PageLayout
@@ -17,17 +18,9 @@ export default function WhatIsMaccaPage() {
         size: false,
         opacity: 0.25,
       }}
+      loading={contentQuery.isFetching}
     >
-      <WorkInProgressAlert />
-      {/* TODO: translate */}
-      <Markdown>{`
-# MACCA 
-
-Il **MACCA – Museo D’Arte Contemporanea a Cielo Aperto** è un’istituzione che raccoglie sotto un’unica direzione le progettualità artistiche disseminate sul territorio di Peccioli e le sue frazioni. Il museo ospita una moltitudine di opere d’arte contemporanea, frutto di un lavoro trentennale in relazione con artisti e artiste che nel tempo sono stati invitati a sviluppare progetti in sintonia con il territorio pecciolese.
-
-Fonte: [https://www.peccioli.net/m-a-c-c-a-2/](https://www.peccioli.net/m-a-c-c-a-2/)
-
-`}</Markdown>
+      <Markdown>{contentQuery.data}</Markdown>
     </PageLayout>
   );
 }
