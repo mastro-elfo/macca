@@ -29,6 +29,7 @@ export default function MapPage() {
           />
         ))}
       </MapProvider>
+      {/* TODO: show other place of interest */}
     </FullpageLayout>
   );
 }

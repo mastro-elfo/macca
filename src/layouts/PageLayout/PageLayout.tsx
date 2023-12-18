@@ -10,6 +10,7 @@ import { ComponentProps, PropsWithChildren, ReactNode } from "react";
 import { Outlet } from "react-router-dom";
 import BackgroundBox from "../../components/BackgroundBox/BackgroundBox";
 import LoadingProgress from "../../components/LoadingProgress/LoadingProgress";
+import ToTopFab from "../../components/ToTopFab/ToTopFab";
 import DrawerContent from "../../features/drawer/DrawerContent/DrawerContent";
 import DrawerIconButton from "../../features/drawer/DrawerIconButton/DrawerIconButton";
 
@@ -39,7 +40,6 @@ export default function PageLayout({
       <Toolbar />
       <Container>
         <Box py={py}>{children ?? <Outlet />}</Box>
-        {/* TODO: add to-top floating button */}
       </Container>
       <LoadingProgress
         loading={loading}
@@ -52,6 +52,7 @@ export default function PageLayout({
         }}
       />
       {!!background && <BackgroundBox {...background} />}
+      <ToTopFab size="small" color="primary" />
     </>
   );
 }

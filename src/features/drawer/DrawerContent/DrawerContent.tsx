@@ -48,6 +48,8 @@ export default function DrawerContent() {
       </ListItemButton>
 
       {/* TODO: add author list */}
+
+      {/* TODO: choose language */}
     </List>
   );
 }
