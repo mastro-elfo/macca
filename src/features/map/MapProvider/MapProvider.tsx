@@ -5,7 +5,11 @@ import Follow from "./Follow";
 type MapProviderProps = PropsWithChildren;
 
 export default function MapProvider({ children }: MapProviderProps) {
-  const { lat = 43.5453, lng = 10.7194, zoom = 13 } = useParams();
+  const {
+    lat = 43.54773160834968,
+    lng = 10.720531940460207,
+    zoom = 16,
+  } = useParams();
 
   return (
     <MapContainer

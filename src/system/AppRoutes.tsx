@@ -18,7 +18,12 @@ export function AppRoutes() {
     <Routes>
       <Route path="" element={<Navigate to="/map" />} />
       <Route path="map">
-        <Route path="" element={<Navigate to="/map/43.5453/10.7194/13" />} />
+        <Route
+          path=""
+          element={
+            <Navigate to="/map/43.54773160834968/10.720531940460207/16" />
+          }
+        />
         <Route
           path=":lat/:lng"
           element={<Navigate to="18" relative="path" />}
