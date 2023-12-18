@@ -80,6 +80,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 4,
+      "title": "Fonte",
+      "year": 1995,
+      "tags": ["glass"],
+      "town": "Peccioli",
+      "address": "Palazzo Pretorio, Piazza del Popolo, 5",
+      "latitude": 43.5477752,
+      "longitude": 10.7209913,
+      "author": "Vittorio Corsini",
+      "images": [
+        {
+          "path": "7.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=22&idView=2",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ]
 }
