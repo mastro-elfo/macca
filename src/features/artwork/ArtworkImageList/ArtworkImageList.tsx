@@ -1,4 +1,9 @@
-import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import {
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  Link,
+} from "@mui/material";
 import useBreakpoint from "../../../services/useBreakpoint";
 import { ArtworkEntity } from "../artworkModel";
 
@@ -19,8 +24,15 @@ export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
           <img src={`/macca/media/${image.path}`} />
           <ImageListItemBar
             title={image.attribution.title}
-            // TODO: add link
-            subtitle={image.attribution.url}
+            subtitle={
+              <Link
+                href={image.attribution.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {image.attribution.url}
+              </Link>
+            }
           />
         </ImageListItem>
       ))}
