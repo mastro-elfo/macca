@@ -1,10 +1,13 @@
 import { useTranslation } from "react-i18next";
 import Markdown from "../../components/Markdown/Markdown";
 import PageLayout from "../../layouts/PageLayout/PageLayout";
+import useDocumentTitle from "../../services/useDocumentTitle";
 import useMarkdownTranslation from "../../services/useMarkdownTranslation";
 
 export default function WhatIsMaccaPage() {
   const { t } = useTranslation();
+  useDocumentTitle(t("What is MACCA?"));
+
   const contentQuery = useMarkdownTranslation("what-is-macca.md");
 
   return (
