@@ -100,6 +100,40 @@
           }
         }
       ]
+    },
+    {
+      "id": 5,
+      "title": "Chiacchiere",
+      "year": 1995,
+      "tags": ["bronze"],
+      "town": "Peccioli",
+      "address": "Via Carraia 8/10",
+      "latitude": 43.5474911,
+      "longitude": 10.7209693,
+      "author": "Vittorio Corsini",
+      "images": [
+        {
+          "path": "8.jpeg",
+          "attribution": {
+            "url": "https://www.peccioli.net/chiacchiere-vittorio-orsini/",
+            "title": "peccioli.net"
+          }
+        },
+        {
+          "path": "9.jpeg",
+          "attribution": {
+            "url": "https://www.peccioli.net/chiacchiere-vittorio-orsini/",
+            "title": "peccioli.net"
+          }
+        },
+        {
+          "path": "10.jpeg",
+          "attribution": {
+            "url": "https://www.peccioli.net/chiacchiere-vittorio-orsini/",
+            "title": "peccioli.net"
+          }
+        }
+      ]
     }
   ]
 }
