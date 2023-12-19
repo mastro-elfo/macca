@@ -8,6 +8,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 import ArtworkIcon from "../../artwork/ArtworkIcon/ArtworkIcon";
+import AuthorIcon from "../../author/AuthorIcon/AuthorIcon";
 import MapIcon from "../../map/MapIcon/MapIcon";
 
 export default function DrawerContent() {
@@ -38,6 +39,16 @@ export default function DrawerContent() {
       </ListItemButton>
 
       <ListItemButton
+        onClick={() => navigate("/artists")}
+        selected={location.pathname.startsWith("/artists")}
+      >
+        <ListItemIcon>
+          <AuthorIcon />
+        </ListItemIcon>
+        <ListItemText>{t("Artists")}</ListItemText>
+      </ListItemButton>
+
+      <ListItemButton
         onClick={() => navigate("/what-is-macca")}
         selected={location.pathname.startsWith("/what-is-macca")}
       >
@@ -46,8 +57,6 @@ export default function DrawerContent() {
         </ListItemIcon>
         <ListItemText>{t("What is MACCA?")}</ListItemText>
       </ListItemButton>
-
-      {/* TODO: add author list */}
 
       {/* TODO: choose language */}
     </List>
