@@ -20,7 +20,6 @@ export default function ArtworkListPage() {
         opacity: 0.5,
       }}
     >
-      {/* TODO: add more artworks */}
       <ArtworkGrid artworks={artworkListQuery.data ?? []} />
     </PageLayout>
   );

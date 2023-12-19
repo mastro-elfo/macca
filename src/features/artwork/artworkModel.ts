@@ -21,8 +21,6 @@ export const ArtworkSchema = z.object({
   longitude: z.number(),
   url: z.string().optional(),
   author: z.string(),
-  // TODO: add images
-  // TODO: images should have attribution
   images: ArtworkImage.array(),
   // TODO: add markdown text
 });
