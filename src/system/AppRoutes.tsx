@@ -38,7 +38,7 @@ export function AppRoutes() {
         <Route path="" element={<ArtworkListPage />} />
         <Route path=":id" element={<ArtworkDetailPage />} />
       </Route>
-      <Route path="artists">
+      <Route path="authors">
         <Route path="" element={<AuthorListPage />} />
       </Route>
       <Route path="what-is-macca" element={<WhatIsMaccaPage />} />

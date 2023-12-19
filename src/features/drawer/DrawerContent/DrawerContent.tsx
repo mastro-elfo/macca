@@ -39,13 +39,13 @@ export default function DrawerContent() {
       </ListItemButton>
 
       <ListItemButton
-        onClick={() => navigate("/artists")}
-        selected={location.pathname.startsWith("/artists")}
+        onClick={() => navigate("/authors")}
+        selected={location.pathname.startsWith("/authors")}
       >
         <ListItemIcon>
           <AuthorIcon />
         </ListItemIcon>
-        <ListItemText>{t("Artists")}</ListItemText>
+        <ListItemText>{t("Authors")}</ListItemText>
       </ListItemButton>
 
       <ListItemButton

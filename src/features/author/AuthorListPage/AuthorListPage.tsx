@@ -5,11 +5,11 @@ import useDocumentTitle from "../../../services/useDocumentTitle";
 
 export default function AuthorListPage() {
   const { t } = useTranslation();
-  useDocumentTitle(t("Artists"));
+  useDocumentTitle(t("Authors"));
 
   return (
     <PageLayout
-      title={t("Artists")}
+      title={t("Authors")}
       //   loading={artworkListQuery.isFetching}
       py={1}
       background={{
