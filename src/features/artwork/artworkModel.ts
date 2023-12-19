@@ -20,6 +20,7 @@ export const ArtworkSchema = z.object({
   latitude: z.number(),
   longitude: z.number(),
   url: z.string().optional(),
+  // FIXME: author should refer to the author list
   author: z.string(),
   images: ArtworkImage.array(),
   // TODO: add markdown text

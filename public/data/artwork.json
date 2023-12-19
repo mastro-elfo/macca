@@ -135,5 +135,25 @@
         }
       ]
     }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "firstName": "Vittorio",
+      "lastName": "Messina",
+      "isUnknown": false
+    },
+    {
+      "id": 2,
+      "firstName": "Hidetoshi",
+      "lastName": "Nagasawa",
+      "isUnknown": false
+    },
+    {
+      "id": 3,
+      "firstName": "Vittorio",
+      "lastName": "Corsini",
+      "isUnknown": false
+    }
   ]
 }
