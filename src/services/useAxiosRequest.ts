@@ -21,10 +21,9 @@ export function useAxiosQuery<TResponse = unknown>({
 }: UseAxiosQueryOptions<TResponse>) {
   return useQuery<TResponse, AxiosError<TResponse>>({
     queryKey: [...api, ...(queryKey ?? [])],
-    // FIXME: signal
-    queryFn: () =>
+    queryFn: ({ signal }) =>
       axios
-        .get(["", "macca", "data", ...api].join("/"))
+        .get(["", "macca", "data", ...api].join("/"), { signal })
         .then(AxiosResponseSchema.parse)
         .then(responseSchema.parse)
         .then((response) => {
