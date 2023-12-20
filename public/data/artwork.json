@@ -134,6 +134,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Fontana",
+      "year": 1993,
+      "tags": ["marble", "stone"],
+      "town": "Peccioli",
+      "address": "Via Marconi, 6 (Castellaccia)",
+      "latitude": 43.54885,
+      "longitude": 10.7206,
+      "author": "Vittorio Messina",
+      "images": [
+        {
+          "path": "11.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=18&idView=1",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
