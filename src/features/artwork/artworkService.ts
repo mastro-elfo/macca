@@ -15,7 +15,7 @@ export function useArtworkListQuery() {
 export function useArtworkDetailQuery(id: number) {
   return useAxiosQuery<ArtworkEntity>({
     api: ["artwork.json"],
-    queryKey: ["detail"],
+    queryKey: ["artwork", "detail"],
     responseSchema: ArtworkResponseSchema,
     find: (artwork) => artwork.id === id,
     enabled: !!id,

@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { useAxiosListQuery } from "../../services/useAxiosRequest";
+import {
+  useAxiosListQuery,
+  useAxiosQuery,
+} from "../../services/useAxiosRequest";
 import { AuthorEntity, AuthorResponseSchema } from "./authorModel";
 
 export function useAuthorListQuery() {
@@ -7,6 +10,16 @@ export function useAuthorListQuery() {
     api: ["artwork.json"],
     queryKey: ["author", "list"],
     responseSchema: AuthorResponseSchema,
+  });
+}
+
+export function useAuthorDetailQuery(id: number) {
+  return useAxiosQuery<AuthorEntity>({
+    api: ["artwork.json"],
+    queryKey: ["author", "detail"],
+    responseSchema: AuthorResponseSchema,
+    find: (author) => author.id === id,
+    enabled: !!id,
   });
 }
 
