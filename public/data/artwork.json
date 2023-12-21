@@ -10,6 +10,7 @@
       "latitude": 43.548747,
       "longitude": 10.721708,
       "author": "Vittorio Messina",
+      "authorId": 1,
       "images": [
         {
           "path": "3.jpg",
@@ -37,6 +38,7 @@
       "latitude": 43.54704,
       "longitude": 10.72119,
       "author": "Hidetoshi Nagasawa",
+      "authorId": 2,
       "images": [
         {
           "path": "1.jpg",
@@ -64,6 +66,7 @@
       "latitude": 43.5486998,
       "longitude": 10.7207348,
       "author": "Vittorio Messina",
+      "authorId": 1,
       "images": [
         {
           "path": "5.jpg",
@@ -91,6 +94,7 @@
       "latitude": 43.5477752,
       "longitude": 10.7209913,
       "author": "Vittorio Corsini",
+      "authorId": 3,
       "images": [
         {
           "path": "7.jpg",
@@ -111,6 +115,7 @@
       "latitude": 43.5474911,
       "longitude": 10.7209693,
       "author": "Vittorio Corsini",
+      "authorId": 3,
       "images": [
         {
           "path": "8.jpeg",
@@ -145,6 +150,7 @@
       "latitude": 43.54885,
       "longitude": 10.7206,
       "author": "Vittorio Messina",
+      "authorId": 1,
       "images": [
         {
           "path": "11.jpg",
