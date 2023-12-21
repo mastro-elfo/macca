@@ -160,6 +160,27 @@
           }
         }
       ]
+    },
+    {
+      "id": 7,
+      "title": "Bastone",
+      "year": 1996,
+      "tags": ["engraving-on-bricks"],
+      "town": "Peccioli",
+      "address": "Via Bastioni, 8",
+      "latitude": 43.5476248,
+      "longitude": 10.7213711,
+      "author": "Federico De Leonardis",
+      "authorId": 4,
+      "images": [
+        {
+          "path": "12.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=24&idView=2",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -179,6 +200,12 @@
       "id": 3,
       "firstName": "Vittorio",
       "lastName": "Corsini",
+      "isUnknown": false
+    },
+    {
+      "id": 4,
+      "firstName": "Federico",
+      "lastName": "De Leonardis",
       "isUnknown": false
     }
   ]
