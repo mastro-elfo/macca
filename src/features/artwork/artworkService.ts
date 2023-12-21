@@ -7,7 +7,7 @@ import { ArtworkEntity, ArtworkResponseSchema } from "./artworkModel";
 export function useArtworkListQuery() {
   return useAxiosListQuery<ArtworkEntity>({
     api: ["artwork.json"],
-    queryKey: ["list"],
+    queryKey: ["artwork", "list"],
     responseSchema: ArtworkResponseSchema,
   });
 }

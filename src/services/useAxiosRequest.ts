@@ -9,7 +9,7 @@ type UseAxiosQueryOptions<TResponse> = Pick<
   api: string[];
   queryKey?: UseQueryOptions<TResponse>["queryKey"];
   responseSchema?: ZodSchema;
-  find?: (artwork: TResponse) => boolean;
+  find?: (data: TResponse) => boolean;
 };
 
 export function useAxiosQuery<TResponse = unknown>({

@@ -22,6 +22,7 @@ export const ArtworkSchema = z.object({
   url: z.string().optional(),
   // FIXME: author should refer to the author list
   author: z.string(),
+  authorId: z.number(),
   images: ArtworkImage.array(),
   // TODO: add markdown text
 });

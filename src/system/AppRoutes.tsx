@@ -12,6 +12,9 @@ const ArtworkDetailPage = lazy(
 const AuthorListPage = lazy(
   () => import("../features/author/AuthorListPage/AuthorListPage")
 );
+const AuthorDetailPage = lazy(
+  () => import("../features/author/AuthorDetailPage/AuthorDetailPage")
+);
 const WhatIsMaccaPage = lazy(
   () => import("../pages/WhatIsMaccaPage/WhatIsMaccaPage")
 );
@@ -40,6 +43,7 @@ export function AppRoutes() {
       </Route>
       <Route path="authors">
         <Route path="" element={<AuthorListPage />} />
+        <Route path=":id" element={<AuthorDetailPage />} />
       </Route>
       <Route path="what-is-macca" element={<WhatIsMaccaPage />} />
       <Route path="fallback" element={<FallbackLayout />} />

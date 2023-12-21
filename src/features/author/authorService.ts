@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import {
   useAxiosListQuery,
@@ -23,8 +24,12 @@ export function useAuthorDetailQuery(id: number) {
   });
 }
 
-export function useFullName(author: AuthorEntity) {
+export function useAuthorFullNameFormatter() {
   const { t } = useTranslation();
-  if (author.isUnknown) return t("Unknown");
-  return [author.firstName, author.lastName].filter((item) => item).join(" ");
+
+  return useCallback((author?: AuthorEntity) => {
+    if (!author) return "";
+    if (author.isUnknown) return t("Unknown");
+    return [author.firstName, author.lastName].filter((item) => item).join(" ");
+  }, []);
 }
