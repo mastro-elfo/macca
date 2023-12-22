@@ -181,6 +181,34 @@
           }
         }
       ]
+    },
+    {
+      "id": 8,
+      "title": "Fessura e contravvento II",
+      "year": 2000,
+      "tags": ["concrete", "steel", "bronze"],
+      "town": "Peccioli",
+      "address": "Parcheggio multipiano, Via del giardino, 19",
+      "latitude": 43.546917,
+      "longitude": 10.720294,
+      "author": "Federico De Leonardis",
+      "authorId": 4,
+      "images": [
+        {
+          "path": "13.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=32&idView=6",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "14.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=32&idView=6",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
