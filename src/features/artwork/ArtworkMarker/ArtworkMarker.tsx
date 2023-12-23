@@ -52,7 +52,7 @@ export default function ArtworkMarker({
         click: handleClick,
       }}
     >
-      <Popup>
+      <Popup offset={[0, -32]}>
         <Typography>{artwork.title}</Typography>
         <ArtworkDetailButton artwork={artwork} />
       </Popup>
