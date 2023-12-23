@@ -209,6 +209,41 @@
           }
         }
       ]
+    },
+    {
+      "id": 9,
+      "title": "Costruttivo Peccioli",
+      "year": 2001,
+      "tags": ["steel"],
+      "town": "Peccioli",
+      "address": "Caserma dei Carabinieri, Via della Resistenza, 3",
+      "latitude": 43.5445187,
+      "longitude": 10.7224051,
+      "author": "Nicola Carrino",
+      "authorId": 5,
+      "images": [
+        {
+          "path": "16.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=42&idView=6",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "15.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=42&idView=6",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "17.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=42&idView=6",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -234,6 +269,12 @@
       "id": 4,
       "firstName": "Federico",
       "lastName": "De Leonardis",
+      "isUnknown": false
+    },
+    {
+      "id": 5,
+      "firstName": "Nicola",
+      "lastName": "Carrino",
       "isUnknown": false
     }
   ]
