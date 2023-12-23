@@ -1,7 +1,8 @@
-import { Typography, useTheme } from "@mui/material";
+import { Stack, Typography, useTheme } from "@mui/material";
 import L from "leaflet";
 import { useMemo } from "react";
 import { renderToString } from "react-dom/server";
+import { useTranslation } from "react-i18next";
 import { Marker, Popup } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
 import ArtworkDetailButton from "../ArtworkDetailButton/ArtworkDetailButton";
@@ -19,6 +20,7 @@ export default function ArtworkMarker({
 }: ArtworkMarkerProps) {
   const theme = useTheme();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleClick = () => {
     navigate(`/map/${artwork.latitude}/${artwork.longitude}/18/${artwork.id}`);
@@ -53,7 +55,14 @@ export default function ArtworkMarker({
       }}
     >
       <Popup offset={[0, -32]}>
-        <Typography>{artwork.title}</Typography>
+        <Stack direction="row" spacing={2}>
+          <Typography variant="h6">{artwork.title}</Typography>
+          <Typography variant="h6">{artwork.year}</Typography>
+        </Stack>
+        <Typography>{artwork.author}</Typography>
+        <Typography variant="body2">
+          {artwork.tags.map((tag) => t(tag)).join(", ")}
+        </Typography>
         <ArtworkDetailButton artwork={artwork} />
       </Popup>
     </Marker>
