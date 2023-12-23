@@ -31,6 +31,7 @@ export default function AuthorDetailPage() {
     <PageLayout
       title={t("Author detail")}
       loading={authorDetailQuery.isFetching || artworkListQuery.isFetching}
+      showBackButton
     >
       <Typography variant="h6" gutterBottom>
         {fullNameFormatter(authorDetailQuery.data)}

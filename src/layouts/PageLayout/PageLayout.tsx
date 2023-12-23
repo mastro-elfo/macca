@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { ComponentProps, PropsWithChildren, ReactNode } from "react";
 import { Outlet } from "react-router-dom";
+import BackButton from "../../components/BackButton/BackButton";
 import BackgroundBox from "../../components/BackgroundBox/BackgroundBox";
 import LoadingProgress from "../../components/LoadingProgress/LoadingProgress";
 import ToTopFab from "../../components/ToTopFab/ToTopFab";
@@ -18,6 +19,7 @@ type PageLayoutProps = PropsWithChildren & {
   background?: ComponentProps<typeof BackgroundBox>;
   title?: ReactNode;
   loading?: boolean;
+  showBackButton?: boolean;
 } & Pick<BoxProps, "py">;
 
 export default function PageLayout({
@@ -25,6 +27,7 @@ export default function PageLayout({
   children,
   loading,
   py,
+  showBackButton,
   title,
 }: PageLayoutProps) {
   return (
@@ -32,14 +35,17 @@ export default function PageLayout({
       <AppBar>
         <Toolbar>
           <DrawerIconButton drawer={<DrawerContent />} edge="start" />
-          <Typography variant="h6" flex={1}>
+          <Typography variant="h5" flex={1} textOverflow="ellipsis" noWrap>
             {title}
           </Typography>
         </Toolbar>
       </AppBar>
       <Toolbar />
       <Container>
-        <Box py={py}>{children ?? <Outlet />}</Box>
+        <Box py={py}>
+          {showBackButton && <BackButton size="small" />}
+          {children ?? <Outlet />}
+        </Box>
       </Container>
       <LoadingProgress
         loading={loading}
