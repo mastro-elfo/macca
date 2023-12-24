@@ -54,7 +54,7 @@ export default function ArtworkMarker({
         click: handleClick,
       }}
     >
-      <Popup offset={[0, -32]}>
+      <Popup offset={[0, -32]} autoPan={false}>
         <Stack direction="row" spacing={2}>
           <Typography variant="h6">{artwork.title}</Typography>
           <Typography variant="h6">{artwork.year}</Typography>
