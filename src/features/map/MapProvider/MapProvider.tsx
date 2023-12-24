@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { useParams } from "react-router-dom";
+import Geolocation from "../Geolocation/Geolocation";
 import Follow from "./Follow";
 type MapProviderProps = PropsWithChildren;
 
@@ -18,6 +19,7 @@ export default function MapProvider({ children }: MapProviderProps) {
       style={{ height: "100%", width: "100%" }}
       zoomControl={false}
     >
+      <Geolocation />
       <Follow
         latitude={Number(lat)}
         longitude={Number(lng)}
