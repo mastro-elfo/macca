@@ -19,7 +19,7 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
   const { t } = useTranslation();
 
   return (
-    <Card>
+    <Card sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
       {!!artwork.images.length && (
         <CardMedia
           sx={{ height: 140 }}
@@ -42,7 +42,8 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
         subheader={artwork.author}
       />
 
-      <CardContent>
+      <CardContent sx={{ flex: 1 }}>
+        {/* TODO: flex */}
         <Typography>{artwork.tags.map((tag) => t(tag)).join(", ")}</Typography>
       </CardContent>
 
