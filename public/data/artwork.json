@@ -244,6 +244,41 @@
           }
         }
       ]
+    },
+    {
+      "id": 10,
+      "title": "Omaggio a Benozzo Gozzoli",
+      "year": 2007,
+      "tags": ["digital-painting"],
+      "town": "Peccioli",
+      "address": "Caffè Haus, Via del Giardino, 55",
+      "latitude": 43.5460038,
+      "longitude": 10.7206253,
+      "author": "Mariella Bettineschi",
+      "authorId": 6,
+      "images": [
+        {
+          "path": "18.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=42&idView=6",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "19.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=42&idView=6",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "20.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=42&idView=6",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -275,6 +310,12 @@
       "id": 5,
       "firstName": "Nicola",
       "lastName": "Carrino",
+      "isUnknown": false
+    },
+    {
+      "id": 6,
+      "firstName": "Mariella",
+      "lastName": "Bettineschi",
       "isUnknown": false
     }
   ]
