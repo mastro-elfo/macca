@@ -1,6 +1,6 @@
 import { Stack, Typography, useTheme } from "@mui/material";
 import L from "leaflet";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { renderToString } from "react-dom/server";
 import { useTranslation } from "react-i18next";
 import { Marker, Popup } from "react-leaflet";
@@ -21,6 +21,7 @@ export default function ArtworkMarker({
   const theme = useTheme();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const markerRef = useRef<L.Marker>(null);
 
   const handleClick = () => {
     navigate(`/map/${artwork.latitude}/${artwork.longitude}/18/${artwork.id}`);
@@ -45,6 +46,12 @@ export default function ArtworkMarker({
     [highlight]
   );
 
+  useEffect(() => {
+    if (highlight) {
+      markerRef.current?.openPopup();
+    }
+  }, [highlight]);
+
   return (
     <Marker
       position={[artwork.latitude, artwork.longitude]}
@@ -53,6 +60,7 @@ export default function ArtworkMarker({
       eventHandlers={{
         click: handleClick,
       }}
+      ref={markerRef}
     >
       <Popup offset={[0, -32]} autoPan={false}>
         <Stack direction="row" spacing={2}>
