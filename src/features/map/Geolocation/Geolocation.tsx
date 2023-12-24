@@ -42,7 +42,7 @@ export default function Geolocation() {
         iconAnchor: [12, 12],
         html: renderToString(markerIcon),
       }),
-    []
+    [markerIcon]
   );
 
   useEffect(() => {
@@ -51,7 +51,6 @@ export default function Geolocation() {
       const handler = () => {
         navigator.geolocation.getCurrentPosition(
           (currentPosition) => {
-            //   console.log(currentPosition);
             setPosition(currentPosition);
             setError(false);
             setLoading(false);
