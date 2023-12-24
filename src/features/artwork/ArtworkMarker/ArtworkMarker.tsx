@@ -62,7 +62,7 @@ export default function ArtworkMarker({
       }}
       ref={markerRef}
     >
-      <Popup offset={[0, -32]} autoPan={false}>
+      <Popup offset={[0, -24]} autoPan={false}>
         <Stack direction="row" spacing={2}>
           <Typography variant="h6">{artwork.title}</Typography>
           <Typography variant="h6">{artwork.year}</Typography>
