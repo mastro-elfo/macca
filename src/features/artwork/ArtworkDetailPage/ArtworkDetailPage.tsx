@@ -24,18 +24,26 @@ export default function ArtworkDetailPage() {
       }}
       showBackButton
     >
-      <Stack direction="row">
-        <Typography variant="h6" flex={1}>
-          {artworkDetailQuery.data?.title}
+      <Stack direction="row" justifyContent="space-between" spacing={2}>
+        <Typography variant="h6">{artworkDetailQuery.data?.title}</Typography>
+        <Typography variant="h6" align="right">
+          {artworkDetailQuery.data?.year}
         </Typography>
-        <Typography variant="h6">{artworkDetailQuery.data?.year}</Typography>
       </Stack>
-      <Typography variant="h6" color="textSecondary">
-        {artworkDetailQuery.data?.author}
-      </Typography>
+
+      <Stack direction="row" justifyContent="space-between" spacing={2}>
+        <Typography variant="h6" color="textSecondary">
+          {artworkDetailQuery.data?.author}
+        </Typography>
+        <Typography variant="h6" color="textSecondary" align="right">
+          {artworkDetailQuery.data?.address}
+        </Typography>
+      </Stack>
+
       <Typography variant="body2">
         {artworkDetailQuery.data?.tags.map((tag) => t(tag)).join(", ")}
       </Typography>
+
       <ArtworkImageList artwork={artworkDetailQuery.data} />
     </PageLayout>
   );
