@@ -47,6 +47,7 @@ export function AppRoutes() {
       </Route>
       <Route path="what-is-macca" element={<WhatIsMaccaPage />} />
       <Route path="fallback" element={<FallbackLayout />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }

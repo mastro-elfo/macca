@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import "./i18n";
 import FallbackLayout from "./layouts/FallbackLayout/FallbackLayout";
 import AppLocalizationProvider from "./system/AppLocalizationProvider/AppLocalizationProvider";
@@ -16,7 +16,7 @@ export default function App() {
         <AppQuery>
           <AppSnackbar>
             <Suspense fallback={<FallbackLayout />}>
-              <Router basename="macca">
+              <Router>
                 <AppLocalizationProvider>
                   <AppRoutes />
                 </AppLocalizationProvider>
