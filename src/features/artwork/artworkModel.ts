@@ -3,8 +3,7 @@ import { AuthorSchema } from "../author/authorModel";
 
 const ArtworkAttribution = z.object({
   title: z.string(),
-  // FIXME: Probably optional
-  url: z.string().url(),
+  url: z.string().url().optional(),
 });
 
 const ArtworkImage = z.object({
