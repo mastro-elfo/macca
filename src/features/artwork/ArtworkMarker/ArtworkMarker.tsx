@@ -66,19 +66,23 @@ export default function ArtworkMarker({
       ref={markerRef}
     >
       <Popup offset={[0, -24]} autoPan={false}>
-        {/* TODO: refactor popup */}
-        {/* TITLE */}
-        {/* AUTHOR   YEAR */}
-        {/* ADDRESS */}
         <Stack direction="row" spacing={2}>
-          <Typography variant="h6">{artwork.title}</Typography>
-          <Typography variant="h6">{artwork.year}</Typography>
+          <Typography variant="h6" component="div">
+            {artwork.title}
+          </Typography>
         </Stack>
-        <Typography>{fullNameFormatter(artwork.author)}</Typography>
-        <Typography variant="body2">
-          {artwork.tags.map((tag) => t(tag)).join(", ")}
+        <Stack direction="row" justifyContent="space-between">
+          <Typography component="div">
+            {fullNameFormatter(artwork.author)}
+          </Typography>
+          <Typography component="div">{artwork.year}</Typography>
+        </Stack>
+        <Typography variant="body2" component="div">
+          {artwork.town} - {artwork.address}
         </Typography>
-        <ArtworkDetailButton artwork={artwork} />
+        <Stack direction="row" justifyContent="flex-end">
+          <ArtworkDetailButton artwork={artwork} size="small" />
+        </Stack>
       </Popup>
     </Marker>
   );

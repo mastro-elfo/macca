@@ -46,7 +46,6 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
       />
 
       <CardContent sx={{ flex: 1 }}>
-        {/* TODO: flex */}
         <Typography>{artwork.tags.map((tag) => t(tag)).join(", ")}</Typography>
       </CardContent>
 
