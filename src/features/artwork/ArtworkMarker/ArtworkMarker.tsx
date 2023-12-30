@@ -5,6 +5,7 @@ import { renderToString } from "react-dom/server";
 import { useTranslation } from "react-i18next";
 import { Marker, Popup } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
+import { useAuthorFullNameFormatter } from "../../author/authorService";
 import ArtworkDetailButton from "../ArtworkDetailButton/ArtworkDetailButton";
 import ArtworkIcon from "../ArtworkIcon/ArtworkIcon";
 import { ArtworkEntity } from "../artworkModel";
@@ -22,6 +23,8 @@ export default function ArtworkMarker({
   const navigate = useNavigate();
   const { t } = useTranslation();
   const markerRef = useRef<L.Marker>(null);
+
+  const fullNameFormatter = useAuthorFullNameFormatter();
 
   const handleClick = () => {
     navigate(`/map/${artwork.latitude}/${artwork.longitude}/18/${artwork.id}`);
@@ -63,11 +66,15 @@ export default function ArtworkMarker({
       ref={markerRef}
     >
       <Popup offset={[0, -24]} autoPan={false}>
+        {/* TODO: refactor popup */}
+        {/* TITLE */}
+        {/* AUTHOR   YEAR */}
+        {/* ADDRESS */}
         <Stack direction="row" spacing={2}>
           <Typography variant="h6">{artwork.title}</Typography>
           <Typography variant="h6">{artwork.year}</Typography>
         </Stack>
-        <Typography>{artwork.author}</Typography>
+        <Typography>{fullNameFormatter(artwork.author)}</Typography>
         <Typography variant="body2">
           {artwork.tags.map((tag) => t(tag)).join(", ")}
         </Typography>

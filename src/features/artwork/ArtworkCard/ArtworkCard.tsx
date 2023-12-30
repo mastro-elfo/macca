@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { useAuthorFullNameFormatter } from "../../author/authorService";
 import ArtworkDetailButton from "../ArtworkDetailButton/ArtworkDetailButton";
 import { ArtworkEntity } from "../artworkModel";
 
@@ -17,6 +18,8 @@ type ArtworkCardProps = {
 
 export default function ArtworkCard({ artwork }: ArtworkCardProps) {
   const { t } = useTranslation();
+
+  const fullNameFormatter = useAuthorFullNameFormatter();
 
   return (
     <Card sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
@@ -39,7 +42,7 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
             <Typography variant="h6">{artwork.year}</Typography>
           </Stack>
         }
-        subheader={artwork.author}
+        subheader={fullNameFormatter(artwork.author)}
       />
 
       <CardContent sx={{ flex: 1 }}>

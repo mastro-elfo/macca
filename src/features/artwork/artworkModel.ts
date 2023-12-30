@@ -1,7 +1,9 @@
 import { z } from "zod";
+import { AuthorSchema } from "../author/authorModel";
 
 const ArtworkAttribution = z.object({
   title: z.string(),
+  // FIXME: Probably optional
   url: z.string().url(),
 });
 
@@ -20,8 +22,7 @@ export const ArtworkSchema = z.object({
   latitude: z.number(),
   longitude: z.number(),
   url: z.string().optional(),
-  // FIXME: author should refer to the author list
-  author: z.string(),
+  author: AuthorSchema,
   authorId: z.number(),
   images: ArtworkImage.array(),
   // TODO: add markdown text
@@ -31,8 +32,14 @@ export type ArtworkEntity = z.infer<typeof ArtworkSchema>;
 
 export const ArtworkResponseSchema = z
   .object({
-    artworks: ArtworkSchema.array(),
+    artworks: ArtworkSchema.omit({ author: true }).array(),
+    authors: AuthorSchema.array(),
   })
-  .transform((args) => args.artworks);
+  .transform((args) =>
+    args.artworks.map((artwork) => ({
+      ...artwork,
+      author: args.authors.find((author) => author.id === artwork.authorId),
+    }))
+  );
 
 export type ArtworkResponseDto = z.infer<typeof ArtworkResponseSchema>;

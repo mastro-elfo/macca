@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useDocumentTitle from "../../../services/useDocumentTitle";
+import { useAuthorFullNameFormatter } from "../../author/authorService";
 import ArtworkImageList from "../ArtworkImageList/ArtworkImageList";
 import { useArtworkDetailQuery } from "../artworkService";
 
@@ -12,6 +13,7 @@ export default function ArtworkDetailPage() {
   const { id } = useParams();
 
   const artworkDetailQuery = useArtworkDetailQuery(Number(id));
+  const fullNameFormatter = useAuthorFullNameFormatter();
 
   return (
     <PageLayout
@@ -33,7 +35,7 @@ export default function ArtworkDetailPage() {
 
       <Stack direction="row" justifyContent="space-between" spacing={2}>
         <Typography variant="h6" color="textSecondary">
-          {artworkDetailQuery.data?.author}
+          {fullNameFormatter(artworkDetailQuery.data?.author)}
         </Typography>
         <Typography variant="h6" color="textSecondary" align="right">
           {artworkDetailQuery.data?.address}
