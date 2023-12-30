@@ -74,6 +74,7 @@ export default function Geolocation() {
             position={[position.coords.latitude, position.coords.longitude]}
             icon={icon}
           ></Marker>
+          {/* TODO: don't display accuracy circle if it is too small relative to zoom */}
           <Circle
             center={[position.coords.latitude, position.coords.longitude]}
             pathOptions={{
@@ -91,7 +92,7 @@ export default function Geolocation() {
         sx={(theme) => ({
           position: "fixed",
           zIndex: theme.zIndex.appBar,
-          top: theme.spacing(1),
+          top: theme.spacing(2),
           right: theme.spacing(1),
         })}
         onClick={() => setActive(!active)}
