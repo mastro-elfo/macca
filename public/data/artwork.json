@@ -302,6 +302,27 @@
           }
         }
       ]
+    },
+    {
+      "id": 12,
+      "title": "La scala per Ophiuchus",
+      "year": 2010,
+      "tags": ["mixed-technique"],
+      "town": "Peccioli",
+      "address": "Vicolo Grotticella, 1",
+      "latitude": 43.54660444590148,
+      "longitude": 10.721189904644168,
+      "author": "Grupparte",
+      "authorId": 8,
+      "images": [
+        {
+          "path": "22.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=73&idView=7",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -345,6 +366,12 @@
       "id": 7,
       "firstName": "Angelo",
       "lastName": "Casciello",
+      "isUnknown": false
+    },
+    {
+      "id": 8,
+      "firstName": "Grupparte",
+      "lastName": "",
       "isUnknown": false
     }
   ]
