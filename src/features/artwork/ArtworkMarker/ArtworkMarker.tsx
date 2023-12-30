@@ -2,7 +2,6 @@ import { Stack, Typography, useTheme } from "@mui/material";
 import L from "leaflet";
 import { useEffect, useMemo, useRef } from "react";
 import { renderToString } from "react-dom/server";
-import { useTranslation } from "react-i18next";
 import { Marker, Popup } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
 import { useAuthorFullNameFormatter } from "../../author/authorService";
@@ -21,7 +20,6 @@ export default function ArtworkMarker({
 }: ArtworkMarkerProps) {
   const theme = useTheme();
   const navigate = useNavigate();
-  const { t } = useTranslation();
   const markerRef = useRef<L.Marker>(null);
 
   const fullNameFormatter = useAuthorFullNameFormatter();
