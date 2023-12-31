@@ -6,7 +6,7 @@ import { Fab, useTheme } from "@mui/material";
 import L from "leaflet";
 import { useEffect, useMemo, useState } from "react";
 import { renderToString } from "react-dom/server";
-import { Circle, Marker, useMap } from "react-leaflet";
+import { Marker, useMap } from "react-leaflet";
 import LoadingProgress from "../../../components/LoadingProgress/LoadingProgress";
 import AccuracyCircle from "./AccuracyCircle";
 
@@ -89,15 +89,6 @@ export default function Geolocation() {
               fillOpacity: 0.2,
               color: theme.palette.primary.main,
             }}
-          />
-          <Circle
-            center={[position.coords.latitude, position.coords.longitude]}
-            pathOptions={{
-              fillColor: theme.palette.primary.main,
-              fillOpacity: 0.2,
-              color: theme.palette.primary.main,
-            }}
-            radius={1048576}
           />
         </>
       )}

@@ -19,7 +19,6 @@ export default function AccuracyCircle({
   ...props
 }: AccuracyCircleProps) {
   if (!showAccuracyCircle(zoom, accuracy)) return null;
-
   return <Circle center={[latitude, longitude]} radius={accuracy} {...props} />;
 }
 
@@ -42,6 +41,7 @@ const ZOOM_ACCURACY_MIN_RADIUS: Record<number, number> = {
   3: 262144,
   2: 524288,
   1: 1048576,
+  0: 2097152,
 } as const;
 
 function showAccuracyCircle(zoom: number, accuracy: number) {
