@@ -6,8 +6,9 @@ import { Fab, useTheme } from "@mui/material";
 import L from "leaflet";
 import { useEffect, useMemo, useState } from "react";
 import { renderToString } from "react-dom/server";
-import { Circle, Marker } from "react-leaflet";
+import { Circle, Marker, useMap } from "react-leaflet";
 import LoadingProgress from "../../../components/LoadingProgress/LoadingProgress";
+import AccuracyCircle from "./AccuracyCircle";
 
 export default function Geolocation() {
   const theme = useTheme();
@@ -16,6 +17,9 @@ export default function Geolocation() {
   const [active, setActive] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const map = useMap();
+
+  const zoom = map.getZoom();
 
   const markerIcon = position?.coords?.speed ? (
     <WalkingIcon
@@ -75,6 +79,17 @@ export default function Geolocation() {
             icon={icon}
           ></Marker>
           {/* TODO: don't display accuracy circle if it is too small relative to zoom */}
+          <AccuracyCircle
+            accuracy={position.coords.accuracy}
+            latitude={position.coords.latitude}
+            longitude={position.coords.longitude}
+            zoom={zoom}
+            pathOptions={{
+              fillColor: theme.palette.primary.main,
+              fillOpacity: 0.2,
+              color: theme.palette.primary.main,
+            }}
+          />
           <Circle
             center={[position.coords.latitude, position.coords.longitude]}
             pathOptions={{
@@ -82,7 +97,7 @@ export default function Geolocation() {
               fillOpacity: 0.2,
               color: theme.palette.primary.main,
             }}
-            radius={position.coords.accuracy}
+            radius={1048576}
           />
         </>
       )}
