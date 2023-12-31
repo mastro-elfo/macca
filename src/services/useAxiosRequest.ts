@@ -26,6 +26,10 @@ export function useAxiosQuery<TResponse = unknown>({
         .get(["", "macca", "data", ...api].join("/"), { signal })
         .then(AxiosResponseSchema.parse)
         .then(responseSchema.parse)
+        .catch((error) => {
+          if (import.meta.env.DEV) console.error(error);
+          return Promise.reject(error);
+        })
         .then((response) => {
           if (response.find && find) {
             return response.find(find);
