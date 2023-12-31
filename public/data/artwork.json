@@ -311,6 +311,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 13,
+      "title": "Street Art Theatre 450° Shakespeare",
+      "year": 2014,
+      "tags": ["paint-on-wall"],
+      "town": "Peccioli",
+      "address": "Palazzo Pretorio, Piazza del Popolo, 5",
+      "latitude": 43.5477752,
+      "longitude": 10.7210613,
+      "authorId": 9,
+      "images": [
+        {
+          "path": "23.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=74&idView=7",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -359,6 +379,12 @@
     {
       "id": 8,
       "firstName": "Grupparte",
+      "lastName": "",
+      "isUnknown": false
+    },
+    {
+      "id": 9,
+      "firstName": "Emmeu e Pepsy",
       "lastName": "",
       "isUnknown": false
     }
