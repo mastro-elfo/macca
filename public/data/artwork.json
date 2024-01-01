@@ -133,21 +133,21 @@
       "authorId": 3,
       "images": [
         {
-          "path": "8.jpeg",
+          "path": "8.jpg",
           "attribution": {
             "url": "https://www.peccioli.net/chiacchiere-vittorio-orsini/",
             "title": "peccioli.net"
           }
         },
         {
-          "path": "9.jpeg",
+          "path": "9.jpg",
           "attribution": {
             "url": "https://www.peccioli.net/chiacchiere-vittorio-orsini/",
             "title": "peccioli.net"
           }
         },
         {
-          "path": "10.jpeg",
+          "path": "10.jpg",
           "attribution": {
             "url": "https://www.peccioli.net/chiacchiere-vittorio-orsini/",
             "title": "peccioli.net"
@@ -327,6 +327,40 @@
           "path": "23.jpg",
           "attribution": {
             "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=74&idView=7",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Segno Polivalente",
+      "year": 2016,
+      "tags": ["paint-on-wall"],
+      "town": "Peccioli",
+      "address": "Centro Polivalente, Via del Carmine, 3",
+      "latitude": 43.549128465703326,
+      "longitude": 10.720330982668134,
+      "authorId": 7,
+      "images": [
+        {
+          "path": "24.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=75&idView=7",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "25.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=75&idView=7",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "26.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=75&idView=7",
             "title": "Peccioli PER"
           }
         }
