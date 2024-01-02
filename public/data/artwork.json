@@ -365,6 +365,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 15,
+      "title": "Con gli occhi di Giorgio Gremignai",
+      "year": 2016,
+      "tags": ["pvc-prints"],
+      "town": "Peccioli",
+      "address": "Centro Polivalente, Via del Carmine, 3",
+      "latitude": 43.5492938488527,
+      "longitude": 10.720360447137374,
+      "authorId": 3,
+      "images": [
+        {
+          "path": "27.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=79&idView=7",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "28.jpg",
+          "attribution": {
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=79&idView=7",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [

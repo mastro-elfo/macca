@@ -78,7 +78,6 @@ export default function Geolocation() {
             position={[position.coords.latitude, position.coords.longitude]}
             icon={icon}
           ></Marker>
-          {/* TODO: don't display accuracy circle if it is too small relative to zoom */}
           <AccuracyCircle
             accuracy={position.coords.accuracy}
             latitude={position.coords.latitude}
