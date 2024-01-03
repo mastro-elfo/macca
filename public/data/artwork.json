@@ -392,6 +392,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 16,
+      "title": "In Peccioli Lux",
+      "year": 2016,
+      "tags": ["neon-lights"],
+      "town": "Peccioli",
+      "address": "Centro Polivalente, Via del Carmine, 3",
+      "latitude": 43.54942706056051,
+      "longitude": 10.720106160449676,
+      "authorId": 10,
+      "images": [
+        {
+          "path": "29.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=63&idView=9",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -447,6 +467,12 @@
       "id": 9,
       "firstName": "Emmeu e Pepsy",
       "lastName": "",
+      "isUnknown": false
+    },
+    {
+      "id": 10,
+      "firstName": "Dai",
+      "lastName": "Yujie",
       "isUnknown": false
     }
   ]
