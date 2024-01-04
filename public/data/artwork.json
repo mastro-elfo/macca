@@ -412,6 +412,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 17,
+      "title": "In Peccioli Lux",
+      "year": 2016,
+      "tags": ["neon-lights"],
+      "town": "Peccioli",
+      "address": "Via Bastioni, 1",
+      "latitude": 43.54827082351454,
+      "longitude": 10.72142173189043,
+      "authorId": 11,
+      "images": [
+        {
+          "path": "30.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=65&idView=9",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -473,6 +493,12 @@
       "id": 10,
       "firstName": "Dai",
       "lastName": "Yujie",
+      "isUnknown": false
+    },
+    {
+      "id": 11,
+      "firstName": "Wang",
+      "lastName": "Yuchen",
       "isUnknown": false
     }
   ]
