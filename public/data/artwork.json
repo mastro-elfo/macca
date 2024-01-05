@@ -432,6 +432,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 18,
+      "title": "In Peccioli Lux",
+      "year": 2016,
+      "tags": ["neon-lights"],
+      "town": "Peccioli",
+      "address": "Le Serre viste dalla terrazza del Palazzo Senza Tempo",
+      "latitude": 43.54834582349988,
+      "longitude": 10.721681366032128,
+      "authorId": 12,
+      "images": [
+        {
+          "path": "31.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=66&idView=9",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -499,6 +519,12 @@
       "id": 11,
       "firstName": "Wang",
       "lastName": "Yuchen",
+      "isUnknown": false
+    },
+    {
+      "id": 12,
+      "firstName": "Luca",
+      "lastName": "Maestroni",
       "isUnknown": false
     }
   ]
