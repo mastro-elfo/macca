@@ -452,6 +452,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 19,
+      "title": "In Peccioli Lux",
+      "year": 2016,
+      "tags": ["neon-lights"],
+      "town": "Peccioli",
+      "address": "Retro della Pieve di San Verano",
+      "latitude": 43.54792007634101,
+      "longitude": 10.72036370243424,
+      "authorId": 13,
+      "images": [
+        {
+          "path": "32.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=67&idView=9",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -525,6 +545,12 @@
       "id": 12,
       "firstName": "Luca",
       "lastName": "Maestroni",
+      "isUnknown": false
+    },
+    {
+      "id": 13,
+      "firstName": "Sara",
+      "lastName": "Marioli",
       "isUnknown": false
     }
   ]
