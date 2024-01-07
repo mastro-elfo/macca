@@ -472,6 +472,40 @@
           }
         }
       ]
+    },
+    {
+      "id": 20,
+      "title": "Lo sguardo di Peccioli",
+      "year": 2017,
+      "tags": ["print-on-dibond"],
+      "town": "Peccioli",
+      "address": "Via Borgherucci 2/16",
+      "latitude": 43.54776422905656,
+      "longitude": 10.720313146763827,
+      "authorId": 3,
+      "images": [
+        {
+          "path": "33.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=58&idView=10",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "34.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=58&idView=10",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "35.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=58&idView=10",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
