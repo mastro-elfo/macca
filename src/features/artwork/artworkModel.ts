@@ -20,9 +20,8 @@ export const ArtworkSchema = z.object({
   address: z.string(),
   latitude: z.number(),
   longitude: z.number(),
-  // TODO: add latitude and longitude offset to display points at the same location
   url: z.string().optional(),
-  author: AuthorSchema,
+  author: AuthorSchema.optional(),
   // TODO: should be an array
   authorId: z.number(),
   images: ArtworkImage.array(),

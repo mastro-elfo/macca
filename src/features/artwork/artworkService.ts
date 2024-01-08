@@ -1,14 +1,14 @@
-import {
-  useAxiosListQuery,
-  useAxiosQuery,
-} from "../../services/useAxiosRequest";
+import { useAxiosQuery } from "../../services/useAxiosRequest";
+import { useDbQuery } from "../db/dbService";
 import { ArtworkEntity, ArtworkResponseSchema } from "./artworkModel";
 
 export function useArtworkListQuery() {
-  return useAxiosListQuery<ArtworkEntity>({
-    api: ["artwork.json"],
-    queryKey: ["artwork", "list"],
-    responseSchema: ArtworkResponseSchema,
+  return useDbQuery<ArtworkEntity[]>({
+    select: ({ artworks, authors }) =>
+      artworks.map((artwork) => ({
+        ...artwork,
+        author: authors.find((author) => author.id === artwork.authorId),
+      })),
   });
 }
 
