@@ -506,6 +506,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 21,
+      "title": "Light mood",
+      "year": 2017,
+      "tags": ["rgb-light-algorithm"],
+      "town": "Peccioli",
+      "address": "Centro Polivalente, Via del Carmine, 3",
+      "latitude": 43.549372552964904,
+      "longitude": 10.720420703397563,
+      "authorId": 3,
+      "images": [
+        {
+          "path": "36.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=59&idView=10",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
