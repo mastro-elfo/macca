@@ -526,6 +526,40 @@
           }
         }
       ]
+    },
+    {
+      "id": 22,
+      "title": "Azzurro",
+      "year": 2017,
+      "tags": ["projections"],
+      "town": "Peccioli",
+      "address": "Chiesa del Carmine, Piazza del carmine",
+      "latitude": 43.549561150876066,
+      "longitude": 10.72164589620604,
+      "authorId": 3,
+      "images": [
+        {
+          "path": "37.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=60&idView=10",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "38.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=60&idView=10",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "39.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=60&idView=10",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
