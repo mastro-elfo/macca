@@ -560,6 +560,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 23,
+      "title": "Corale",
+      "year": 2018,
+      "tags": ["marble", "glass", "narrative-voice"],
+      "town": "Peccioli",
+      "address": "Chiesa del Carmine, Piazza del carmine",
+      "latitude": 43.54945548977185,
+      "longitude": 10.721597192057427,
+      "authorId": 3,
+      "images": [
+        {
+          "path": "40.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=51&idView=11",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
