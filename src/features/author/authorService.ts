@@ -1,16 +1,12 @@
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  useAxiosListQuery,
-  useAxiosQuery,
-} from "../../services/useAxiosRequest";
+import { useAxiosQuery } from "../../services/useAxiosRequest";
+import { useDbQuery } from "../db/dbService";
 import { AuthorEntity, AuthorResponseSchema } from "./authorModel";
 
 export function useAuthorListQuery() {
-  return useAxiosListQuery<AuthorEntity>({
-    api: ["artwork.json"],
-    queryKey: ["author", "list"],
-    responseSchema: AuthorResponseSchema,
+  return useDbQuery<AuthorEntity[]>({
+    select: ({ authors }) => authors,
   });
 }
 

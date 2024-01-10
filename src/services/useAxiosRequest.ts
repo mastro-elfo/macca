@@ -40,17 +40,6 @@ export function useAxiosQuery<TResponse = unknown>({
   });
 }
 
-type UseAxiosListQueryOptions<TResponse> = Omit<
-  UseAxiosQueryOptions<TResponse[]>,
-  "initialData" | "find"
->;
-
-export function useAxiosListQuery<TResponse = unknown>(
-  options: UseAxiosListQueryOptions<TResponse>
-) {
-  return useAxiosQuery<TResponse[]>({ ...options, initialData: [] });
-}
-
 const AxiosResponseSchema = z
   .object({
     data: z.any(),
