@@ -580,6 +580,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 24,
+      "title": "Spirale",
+      "year": 2018,
+      "tags": ["wood", "cling-film", "narrative-voice"],
+      "town": "Peccioli",
+      "address": "Campanile di San Verano, Piazza del Popolo, 5",
+      "latitude": 43.54786045442416,
+      "longitude": 10.720714044359719,
+      "authorId": 3,
+      "images": [
+        {
+          "path": "41.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=54&idView=11",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
