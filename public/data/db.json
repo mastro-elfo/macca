@@ -627,6 +627,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 26,
+      "title": "Dialogo muto",
+      "year": 2019,
+      "tags": ["mixed-technique"],
+      "town": "Peccioli",
+      "address": "Via Corbiano, 9",
+      "latitude": 43.548743524639484,
+      "longitude": 10.721334402199822,
+      "authorId": 14,
+      "images": [
+        {
+          "path": "44.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=45&idView=13",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "45.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=45&idView=13",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -706,6 +733,12 @@
       "id": 13,
       "firstName": "Sara",
       "lastName": "Marioli",
+      "isUnknown": false
+    },
+    {
+      "id": 14,
+      "firstName": "Elisabetta",
+      "lastName": "Cardella",
       "isUnknown": false
     }
   ]
