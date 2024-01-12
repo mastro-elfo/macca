@@ -1,6 +1,5 @@
-import { useAxiosQuery } from "../../services/useAxiosRequest";
 import { useDbQuery } from "../db/dbService";
-import { ArtworkEntity, ArtworkResponseSchema } from "./artworkModel";
+import { ArtworkEntity } from "./artworkModel";
 
 export function useArtworkListQuery() {
   return useDbQuery<ArtworkEntity[]>({
@@ -13,11 +12,11 @@ export function useArtworkListQuery() {
 }
 
 export function useArtworkDetailQuery(id: number) {
-  return useAxiosQuery<ArtworkEntity>({
-    api: ["artwork.json"],
-    queryKey: ["artwork", "detail"],
-    responseSchema: ArtworkResponseSchema,
-    find: (artwork) => artwork.id === id,
-    enabled: !!id,
+  return useDbQuery<ArtworkEntity | undefined>({
+    select: ({ artworks, authors }) => {
+      const artwork = artworks.find((artwork) => artwork.id === id);
+      const author = authors.find((author) => author.id === artwork?.id);
+      if (artwork) return { ...artwork, author };
+    },
   });
 }
