@@ -11,6 +11,13 @@ export function useArtworkListQuery() {
   });
 }
 
+export function useArtowrkListByAuthorQuery(authorId: number) {
+  return useDbQuery<ArtworkEntity[]>({
+    select: ({ artworks }) =>
+      artworks.filter((artwork) => artwork.authorId === authorId),
+  });
+}
+
 export function useArtworkDetailQuery(id: number) {
   return useDbQuery<ArtworkEntity | undefined>({
     select: ({ artworks, authors }) => {

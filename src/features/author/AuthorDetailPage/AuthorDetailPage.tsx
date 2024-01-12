@@ -1,11 +1,10 @@
 import { Typography } from "@mui/material";
-import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useDocumentTitle from "../../../services/useDocumentTitle";
 import ArtworkGrid from "../../artwork/ArtworkGrid/ArtworkGrid";
-import { useArtworkListQuery } from "../../artwork/artworkService";
+import { useArtowrkListByAuthorQuery } from "../../artwork/artworkService";
 import {
   useAuthorDetailQuery,
   useAuthorFullNameFormatter,
@@ -18,14 +17,7 @@ export default function AuthorDetailPage() {
   const { id } = useParams();
   const authorDetailQuery = useAuthorDetailQuery(Number(id));
   const fullNameFormatter = useAuthorFullNameFormatter();
-  const artworkListQuery = useArtworkListQuery();
-  const authorArtworks = useMemo(
-    () =>
-      (artworkListQuery.data ?? []).filter(
-        (artwork) => artwork.authorId === Number(id)
-      ),
-    [artworkListQuery.data]
-  );
+  const artworkListQuery = useArtowrkListByAuthorQuery(Number(id));
 
   return (
     <PageLayout
@@ -36,7 +28,7 @@ export default function AuthorDetailPage() {
       <Typography variant="h6" gutterBottom>
         {fullNameFormatter(authorDetailQuery.data)}
       </Typography>
-      <ArtworkGrid artworks={authorArtworks} />
+      <ArtworkGrid artworks={artworkListQuery.data ?? []} />
     </PageLayout>
   );
 }
