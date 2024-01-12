@@ -600,6 +600,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 25,
+      "title": "Trailer",
+      "year": 2019,
+      "tags": ["stainless-steel", "neon", "narrative-voice"],
+      "town": "Peccioli",
+      "address": "Cinema Passerotti, Viale Mazzini, 2",
+      "latitude": 43.54974566525676,
+      "longitude": 10.721337404544801,
+      "authorId": 3,
+      "images": [
+        {
+          "path": "42.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=57&idView=11",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "43.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=57&idView=11",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
