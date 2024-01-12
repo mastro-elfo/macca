@@ -44,6 +44,7 @@ export default function MapToolbar() {
       getOptionLabel={(option) => option.title}
       isOptionEqualToValue={(option, value) => option.id === value.id}
       onChange={handleChange}
+      getOptionKey={(option) => option.id}
     />
   );
 }
