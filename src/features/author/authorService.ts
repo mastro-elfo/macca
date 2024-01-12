@@ -1,8 +1,7 @@
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { useAxiosQuery } from "../../services/useAxiosRequest";
 import { useDbQuery } from "../db/dbService";
-import { AuthorEntity, AuthorResponseSchema } from "./authorModel";
+import { AuthorEntity } from "./authorModel";
 
 export function useAuthorListQuery() {
   return useDbQuery<AuthorEntity[]>({
@@ -11,12 +10,8 @@ export function useAuthorListQuery() {
 }
 
 export function useAuthorDetailQuery(id: number) {
-  return useAxiosQuery<AuthorEntity>({
-    api: ["artwork.json"],
-    queryKey: ["author", "detail"],
-    responseSchema: AuthorResponseSchema,
-    find: (author) => author.id === id,
-    enabled: !!id,
+  return useDbQuery<AuthorEntity | undefined>({
+    select: ({ authors }) => authors.find((author) => (author.id = id)),
   });
 }
 
