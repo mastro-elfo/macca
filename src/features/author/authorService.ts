@@ -11,7 +11,7 @@ export function useAuthorListQuery() {
 
 export function useAuthorDetailQuery(id: number) {
   return useDbQuery<AuthorEntity | undefined>({
-    select: ({ authors }) => authors.find((author) => (author.id = id)),
+    select: ({ authors }) => authors.find((author) => author.id === id),
   });
 }
 
