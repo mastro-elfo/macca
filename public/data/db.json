@@ -654,6 +654,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 27,
+      "title": "Il perdono di una donna dagli occhi neri",
+      "year": 2019,
+      "tags": ["mixed-technique"],
+      "town": "Peccioli",
+      "address": "Via Corbiano, 9",
+      "latitude": 43.54877593498757,
+      "longitude": 10.721378989103203,
+      "authorId": 15,
+      "images": [
+        {
+          "path": "46.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=47&idView=13",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -739,6 +759,12 @@
       "id": 14,
       "firstName": "Elisabetta",
       "lastName": "Cardella",
+      "isUnknown": false
+    },
+    {
+      "id": 15,
+      "firstName": "Massimiliano",
+      "lastName": "Precisi",
       "isUnknown": false
     }
   ]
