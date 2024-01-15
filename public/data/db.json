@@ -674,6 +674,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 28,
+      "title": "Le store di San Nicola",
+      "year": 2019,
+      "tags": ["mixed-technique"],
+      "town": "Peccioli",
+      "address": "Vicolo Baldasserini",
+      "latitude": 43.5487764154126,
+      "longitude": 10.72103903907853,
+      "authorId": 16,
+      "images": [
+        {
+          "path": "47.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=46&idView=13",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -765,6 +785,12 @@
       "id": 15,
       "firstName": "Massimiliano",
       "lastName": "Precisi",
+      "isUnknown": false
+    },
+    {
+      "id": 16,
+      "firstName": "Luca",
+      "lastName": "Serasini",
       "isUnknown": false
     }
   ]
