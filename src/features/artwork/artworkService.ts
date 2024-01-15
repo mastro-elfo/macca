@@ -22,7 +22,7 @@ export function useArtworkDetailQuery(id: number) {
   return useDbQuery<ArtworkEntity | undefined>({
     select: ({ artworks, authors }) => {
       const artwork = artworks.find((artwork) => artwork.id === id);
-      const author = authors.find((author) => author.id === artwork?.id);
+      const author = authors.find((author) => author.id === artwork?.authorId);
       if (artwork) return { ...artwork, author };
     },
   });
