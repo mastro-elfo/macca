@@ -22,10 +22,10 @@ export const ArtworkSchema = z.object({
   longitude: z.number(),
   url: z.string().optional(),
   author: AuthorSchema.optional(),
-  // TODO: should be an array
+  // TODO: should be an array (authorIds)
   authorId: z.number(),
   images: ArtworkImage.array(),
-  // TODO: add markdown text
+  // TODO: add markdown text (problem with translation)
 });
 
 export type ArtworkEntity = z.infer<typeof ArtworkSchema>;

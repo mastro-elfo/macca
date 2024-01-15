@@ -1,3 +1,4 @@
+import CastleIcon from "@mui/icons-material/Castle";
 import HelpIcon from "@mui/icons-material/Help";
 import {
   List,
@@ -58,7 +59,17 @@ export default function DrawerContent() {
         <ListItemText>{t("What is MACCA?")}</ListItemText>
       </ListItemButton>
 
-      {/* TODO: choose language */}
+      <ListItemButton
+        onClick={() => navigate("/peccioli")}
+        selected={location.pathname.startsWith("/peccioli")}
+      >
+        <ListItemIcon>
+          <CastleIcon />
+        </ListItemIcon>
+        <ListItemText>{"Peccioli"}</ListItemText>
+      </ListItemButton>
+
+      {/* TODO: choose language (need more languages) */}
     </List>
   );
 }
