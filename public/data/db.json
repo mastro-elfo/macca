@@ -694,6 +694,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 29,
+      "title": "Nel momento",
+      "year": 2020,
+      "tags": ["lead", "gilded-metal"],
+      "town": "Peccioli",
+      "address": "Centro Polivalente, Via del Carmine, 3",
+      "latitude": 43.54909773419155,
+      "longitude": 10.72023504575402,
+      "authorId": 17,
+      "images": [
+        {
+          "path": "48.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=26&idView=14",
+            "title": "Peccioli PER"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -791,6 +811,12 @@
       "id": 16,
       "firstName": "Luca",
       "lastName": "Serasini",
+      "isUnknown": false
+    },
+    {
+      "id": 17,
+      "firstName": "Remo",
+      "lastName": "Salvadori",
       "isUnknown": false
     }
   ]
