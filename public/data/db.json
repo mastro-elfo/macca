@@ -714,6 +714,32 @@
           }
         }
       ]
+    },
+    {
+      "id": 30,
+      "title": "Endless Sunset",
+      "year": 2020,
+      "tags": ["steel", "epoxy-paint"],
+      "town": "Peccioli",
+      "address": "Parcheggio multipiano, 3° piano",
+      "latitude": 43.54737568714066,
+      "longitude": 10.719160493211517,
+      "authorId": 18,
+      "images": [
+        {
+          "path": "49.jpg",
+          "attribution": {
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=44&idView=14",
+            "title": "Peccioli PER"
+          }
+        },
+        {
+          "path": "50.jpg",
+          "attribution": {
+            "title": ""
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -817,6 +843,12 @@
       "id": 17,
       "firstName": "Remo",
       "lastName": "Salvadori",
+      "isUnknown": false
+    },
+    {
+      "id": 18,
+      "firstName": "Patrick",
+      "lastName": "Tuttofuoco",
       "isUnknown": false
     }
   ]
