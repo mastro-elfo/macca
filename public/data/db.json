@@ -740,6 +740,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 31,
+      "title": "Senza titolo",
+      "year": 2021,
+      "tags": ["enamelled-panels-with-screen-printing"],
+      "town": "Peccioli",
+      "address": "Via del giardino, 7",
+      "latitude": 43.54727359805137,
+      "longitude": 10.720300181716174,
+      "authorId": 19,
+      "images": [
+        {
+          "path": "51.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=146&idView=14"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -849,6 +869,12 @@
       "id": 18,
       "firstName": "Patrick",
       "lastName": "Tuttofuoco",
+      "isUnknown": false
+    },
+    {
+      "id": 19,
+      "firstName": "Marco",
+      "lastName": "Tirelli",
       "isUnknown": false
     }
   ]
