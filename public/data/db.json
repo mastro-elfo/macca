@@ -760,6 +760,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 32,
+      "title": "Photos-souvenirs A 45°, 5 colori + nero e bianco",
+      "year": 2021,
+      "tags": ["paint-on-wall"],
+      "town": "Peccioli",
+      "address": "Palazzo Senza Tempo, Via Carraia, 11",
+      "latitude": 43.547080276651535,
+      "longitude": 10.72126416894224,
+      "authorId": 20,
+      "images": [
+        {
+          "path": "52.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=155&idView=27"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -875,6 +895,12 @@
       "id": 19,
       "firstName": "Marco",
       "lastName": "Tirelli",
+      "isUnknown": false
+    },
+    {
+      "id": 20,
+      "firstName": "Daniel",
+      "lastName": "Buren",
       "isUnknown": false
     }
   ]

@@ -40,6 +40,8 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      # TODO: change order between Build and Test
+
       - name: Build
         run: yarn build
 
