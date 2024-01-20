@@ -780,6 +780,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 33,
+      "title": "Rotating Mirror IX",
+      "year": 2021,
+      "tags": ["mirroring-surface"],
+      "town": "Peccioli",
+      "address": "Palazzo Senza Tempo, Via Carraia, 11",
+      "latitude": 43.54736833676633,
+      "longitude": 10.721189393296779,
+      "authorId": 21,
+      "images": [
+        {
+          "path": "53.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=156&idView=27"
+          }
+        },
+        {
+          "path": "54.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=156&idView=27"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -901,6 +928,12 @@
       "id": 20,
       "firstName": "Daniel",
       "lastName": "Buren",
+      "isUnknown": false
+    },
+    {
+      "id": 21,
+      "firstName": "Jeppe",
+      "lastName": "Hein",
       "isUnknown": false
     }
   ]
