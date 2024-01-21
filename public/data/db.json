@@ -807,6 +807,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 34,
+      "title": "Dai su fammi un sorriso e Ma che voglia di prenderti per mano",
+      "year": 2021,
+      "tags": ["neon-lights"],
+      "town": "Peccioli",
+      "address": "Palazzo Senza Tempo, Via Carraia, 11",
+      "latitude": 43.547270617954304,
+      "longitude": 10.721062098906666,
+      "authorId": 3,
+      "images": [
+        {
+          "path": "55.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=157&idView=27"
+          }
+        },
+        {
+          "path": "56.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=157&idView=27"
+          }
+        }
+      ]
     }
   ],
   "authors": [
