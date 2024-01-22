@@ -834,6 +834,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 35,
+      "title": "Etimografie",
+      "year": 2021,
+      "tags": ["murales"],
+      "town": "Peccioli",
+      "address": "Centro Polivalente, Via del Carmine, 3",
+      "latitude": 43.5492210813801,
+      "longitude": 10.720368855983894,
+      "authorId": 22,
+      "images": [
+        {
+          "path": "57.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "https://www.facebook.com/fondazionepeccioliper/posts/5160431867314932/?paipv=0&eav=AfaXjej-KHPY1y_NDd5iigB38s2q6OvOkGse4JH03zxu2jV_m59BrHWYfQUqcIlLeE8&_rdr"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -961,6 +981,12 @@
       "id": 21,
       "firstName": "Jeppe",
       "lastName": "Hein",
+      "isUnknown": false
+    },
+    {
+      "id": 22,
+      "firstName": "David",
+      "lastName": "Reimondo",
       "isUnknown": false
     }
   ]
