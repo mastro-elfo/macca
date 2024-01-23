@@ -854,6 +854,18 @@
           }
         }
       ]
+    },
+    {
+      "id": 36,
+      "title": "The other party",
+      "year": 2021,
+      "tags": ["flipper", "neon-lights", "outdoor-lights"],
+      "town": "Peccioli",
+      "address": "Bar C'era una volta, Viale Mazzini",
+      "latitude": 43.547273060340935,
+      "longitude": 10.719188686126294,
+      "authorId": 23,
+      "images": []
     }
   ],
   "authors": [
@@ -987,6 +999,12 @@
       "id": 22,
       "firstName": "David",
       "lastName": "Reimondo",
+      "isUnknown": false
+    },
+    {
+      "id": 23,
+      "firstName": "",
+      "lastName": "Pantani-Surace",
       "isUnknown": false
     }
   ]
