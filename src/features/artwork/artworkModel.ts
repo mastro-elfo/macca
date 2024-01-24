@@ -14,7 +14,7 @@ const ArtworkImage = z.object({
 export const ArtworkSchema = z.object({
   id: z.number(),
   title: z.string(),
-  year: z.number(),
+  year: z.number().optional(),
   tags: z.string().array(),
   town: z.string(),
   address: z.string(),

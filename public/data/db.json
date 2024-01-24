@@ -866,9 +866,29 @@
       "longitude": 10.719188686126294,
       "authorId": 23,
       "images": []
+    },
+    {
+      "id": 37,
+      "title": "Sede del MACCA",
+      "tags": ["work-in-progress"],
+      "town": "Peccioli",
+      "address": "Piazza del Popolo, 12/15",
+      "latitude": 43.54814017990272,
+      "longitude": 10.72076387864975,
+      "authorId": 0,
+      "images": [
+        {
+          "path": "58.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/index.php?lang=it"
+          }
+        }
+      ]
     }
   ],
   "authors": [
+    { "id": 0, "firstName": "", "lastName": "", "isUnknown": true },
     {
       "id": 1,
       "firstName": "Vittorio",
