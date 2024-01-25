@@ -885,6 +885,25 @@
           }
         }
       ]
+    },
+    {
+      "id": 38,
+      "title": "Terrazza del Palazzo Senza Tempo",
+      "tags": [],
+      "town": "Peccioli",
+      "address": "Palazzo Senza Tempo, Via Carraia, 11",
+      "latitude": 43.54723367093936,
+      "longitude": 10.721440802529921,
+      "authorId": 24,
+      "images": [
+        {
+          "path": "59.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/index.php?lang=it"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1025,6 +1044,12 @@
       "id": 23,
       "firstName": "",
       "lastName": "Pantani-Surace",
+      "isUnknown": false
+    },
+    {
+      "id": 24,
+      "firstName": "Mario",
+      "lastName": "Cucinella",
       "isUnknown": false
     }
   ]
