@@ -889,6 +889,7 @@
     {
       "id": 38,
       "title": "Terrazza del Palazzo Senza Tempo",
+      "year": 2022,
       "tags": [],
       "town": "Peccioli",
       "address": "Palazzo Senza Tempo, Via Carraia, 11",
@@ -901,6 +902,54 @@
           "attribution": {
             "title": "Peccioli PER",
             "url": "http://www.fondarte.peccioli.net/opere/index.php?lang=it"
+          }
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "title": "Coppa Sabatini",
+      "year": 2022,
+      "tags": ["paint-on-wall"],
+      "town": "Peccioli",
+      "address": "Via Cavour",
+      "latitude": 43.54757156904005,
+      "longitude": 10.719244073571256,
+      "authorId": 25,
+      "images": [
+        {
+          "path": "60.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "https://www.peccioli.net/murales-dedicato-alla-70-edizione-della-coppa-sabatini/"
+          }
+        },
+        {
+          "path": "61.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "https://www.peccioli.net/murales-dedicato-alla-70-edizione-della-coppa-sabatini/"
+          }
+        },
+        {
+          "path": "62.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "https://www.peccioli.net/murales-dedicato-alla-70-edizione-della-coppa-sabatini/"
+          }
+        },
+        {
+          "path": "63.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "https://www.peccioli.net/murales-dedicato-alla-70-edizione-della-coppa-sabatini/"
+          }
+        },
+        {
+          "path": "64.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "https://www.peccioli.net/murales-dedicato-alla-70-edizione-della-coppa-sabatini/"
           }
         }
       ]
@@ -1050,6 +1099,12 @@
       "id": 24,
       "firstName": "Mario",
       "lastName": "Cucinella",
+      "isUnknown": false
+    },
+    {
+      "id": 25,
+      "firstName": "Projedo",
+      "lastName": "Ruido",
       "isUnknown": false
     }
   ]
