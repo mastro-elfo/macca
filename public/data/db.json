@@ -10,6 +10,7 @@
       "latitude": 43.548747,
       "longitude": 10.721708,
       "authorId": 1,
+      "authorIds": [1],
       "images": [
         {
           "path": "3.jpg",
@@ -37,6 +38,7 @@
       "latitude": 43.54704,
       "longitude": 10.72119,
       "authorId": 2,
+      "authorIds": [2],
       "images": [
         {
           "path": "1.jpg",
@@ -64,6 +66,7 @@
       "latitude": 43.5486998,
       "longitude": 10.7207348,
       "authorId": 1,
+      "authorIds": [1],
       "images": [
         {
           "path": "5.jpg",
@@ -91,6 +94,7 @@
       "latitude": 43.54885,
       "longitude": 10.7206,
       "authorId": 1,
+      "authorIds": [1],
       "images": [
         {
           "path": "11.jpg",
@@ -111,6 +115,7 @@
       "latitude": 43.5477752,
       "longitude": 10.7209913,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "7.jpg",
@@ -131,6 +136,7 @@
       "latitude": 43.5474911,
       "longitude": 10.7209693,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "8.jpg",
@@ -166,6 +172,7 @@
       "latitude": 43.5476248,
       "longitude": 10.7213711,
       "authorId": 4,
+      "authorIds": [4],
       "images": [
         {
           "path": "12.jpg",
@@ -186,6 +193,7 @@
       "latitude": 43.546917,
       "longitude": 10.720294,
       "authorId": 4,
+      "authorIds": [4],
       "images": [
         {
           "path": "13.jpg",
@@ -213,6 +221,7 @@
       "latitude": 43.5445187,
       "longitude": 10.7224051,
       "authorId": 5,
+      "authorIds": [5],
       "images": [
         {
           "path": "16.jpg",
@@ -247,6 +256,7 @@
       "latitude": 43.5460038,
       "longitude": 10.7206253,
       "authorId": 6,
+      "authorIds": [6],
       "images": [
         {
           "path": "18.jpg",
@@ -282,6 +292,7 @@
       "latitude": 43.549128465703326,
       "longitude": 10.720330982668134,
       "authorId": 7,
+      "authorIds": [7],
       "images": [
         {
           "path": "21.jpg",
@@ -302,6 +313,7 @@
       "latitude": 43.54660444590148,
       "longitude": 10.721189904644168,
       "authorId": 8,
+      "authorIds": [8],
       "images": [
         {
           "path": "22.jpg",
@@ -322,6 +334,7 @@
       "latitude": 43.5477752,
       "longitude": 10.7211113,
       "authorId": 9,
+      "authorIds": [9],
       "images": [
         {
           "path": "23.jpg",
@@ -342,6 +355,7 @@
       "latitude": 43.549278465703326,
       "longitude": 10.720330982668134,
       "authorId": 7,
+      "authorIds": [7],
       "images": [
         {
           "path": "24.jpg",
@@ -376,6 +390,7 @@
       "latitude": 43.5492938488527,
       "longitude": 10.720360447137374,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "27.jpg",
@@ -403,6 +418,7 @@
       "latitude": 43.54942706056051,
       "longitude": 10.720106160449676,
       "authorId": 10,
+      "authorIds": [10],
       "images": [
         {
           "path": "29.jpg",
@@ -423,6 +439,7 @@
       "latitude": 43.54827082351454,
       "longitude": 10.72142173189043,
       "authorId": 11,
+      "authorIds": [11],
       "images": [
         {
           "path": "30.jpg",
@@ -443,6 +460,7 @@
       "latitude": 43.54834582349988,
       "longitude": 10.721681366032128,
       "authorId": 12,
+      "authorIds": [12],
       "images": [
         {
           "path": "31.jpg",
@@ -463,6 +481,7 @@
       "latitude": 43.54792007634101,
       "longitude": 10.72036370243424,
       "authorId": 13,
+      "authorIds": [13],
       "images": [
         {
           "path": "32.jpg",
@@ -483,6 +502,7 @@
       "latitude": 43.54776422905656,
       "longitude": 10.720313146763827,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "33.jpg",
@@ -517,6 +537,7 @@
       "latitude": 43.549372552964904,
       "longitude": 10.720420703397563,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "36.jpg",
@@ -537,6 +558,7 @@
       "latitude": 43.549561150876066,
       "longitude": 10.72164589620604,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "37.jpg",
@@ -571,6 +593,7 @@
       "latitude": 43.54945548977185,
       "longitude": 10.721597192057427,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "40.jpg",
@@ -591,6 +614,7 @@
       "latitude": 43.54786045442416,
       "longitude": 10.720714044359719,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "41.jpg",
@@ -611,6 +635,7 @@
       "latitude": 43.54974566525676,
       "longitude": 10.721337404544801,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "42.jpg",
@@ -638,6 +663,7 @@
       "latitude": 43.548743524639484,
       "longitude": 10.721334402199822,
       "authorId": 14,
+      "authorIds": [14],
       "images": [
         {
           "path": "44.jpg",
@@ -665,6 +691,7 @@
       "latitude": 43.54877593498757,
       "longitude": 10.721378989103203,
       "authorId": 15,
+      "authorIds": [15],
       "images": [
         {
           "path": "46.jpg",
@@ -685,6 +712,7 @@
       "latitude": 43.5487764154126,
       "longitude": 10.72103903907853,
       "authorId": 16,
+      "authorIds": [16],
       "images": [
         {
           "path": "47.jpg",
@@ -705,6 +733,7 @@
       "latitude": 43.54909773419155,
       "longitude": 10.72023504575402,
       "authorId": 17,
+      "authorIds": [17],
       "images": [
         {
           "path": "48.jpg",
@@ -725,6 +754,8 @@
       "latitude": 43.54737568714066,
       "longitude": 10.719160493211517,
       "authorId": 18,
+      "authorIds": [18],
+
       "images": [
         {
           "path": "49.jpg",
@@ -751,6 +782,7 @@
       "latitude": 43.54727359805137,
       "longitude": 10.720300181716174,
       "authorId": 19,
+      "authorIds": [19],
       "images": [
         {
           "path": "51.jpg",
@@ -771,6 +803,7 @@
       "latitude": 43.547080276651535,
       "longitude": 10.72126416894224,
       "authorId": 20,
+      "authorIds": [20],
       "images": [
         {
           "path": "52.jpg",
@@ -791,6 +824,7 @@
       "latitude": 43.54736833676633,
       "longitude": 10.721189393296779,
       "authorId": 21,
+      "authorIds": [21],
       "images": [
         {
           "path": "53.jpg",
@@ -818,6 +852,7 @@
       "latitude": 43.547270617954304,
       "longitude": 10.721062098906666,
       "authorId": 3,
+      "authorIds": [3],
       "images": [
         {
           "path": "55.jpg",
@@ -845,6 +880,7 @@
       "latitude": 43.5492210813801,
       "longitude": 10.720368855983894,
       "authorId": 22,
+      "authorIds": [22],
       "images": [
         {
           "path": "57.jpg",
@@ -865,6 +901,7 @@
       "latitude": 43.547273060340935,
       "longitude": 10.719188686126294,
       "authorId": 23,
+      "authorIds": [23],
       "images": []
     },
     {
@@ -876,6 +913,7 @@
       "latitude": 43.54814017990272,
       "longitude": 10.72076387864975,
       "authorId": 0,
+      "authorIds": [0],
       "images": [
         {
           "path": "58.jpg",
@@ -896,6 +934,7 @@
       "latitude": 43.54723367093936,
       "longitude": 10.721440802529921,
       "authorId": 24,
+      "authorIds": [24],
       "images": [
         {
           "path": "59.jpg",
@@ -916,6 +955,7 @@
       "latitude": 43.54757156904005,
       "longitude": 10.719244073571256,
       "authorId": 25,
+      "authorIds": [25],
       "images": [
         {
           "path": "60.jpg",
