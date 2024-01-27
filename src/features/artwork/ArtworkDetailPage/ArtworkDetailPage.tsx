@@ -35,7 +35,7 @@ export default function ArtworkDetailPage() {
 
       <Stack direction="row" justifyContent="space-between" spacing={2}>
         <Typography variant="h6" color="textSecondary">
-          {fullNameFormatter(artworkDetailQuery.data?.author)}
+          {artworkDetailQuery.data?.authors.map(fullNameFormatter).join(", ")}
         </Typography>
         <Typography variant="h6" color="textSecondary" align="right">
           {artworkDetailQuery.data?.address}

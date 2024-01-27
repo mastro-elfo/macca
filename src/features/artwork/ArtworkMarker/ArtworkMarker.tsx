@@ -63,6 +63,7 @@ export default function ArtworkMarker({
       }}
       ref={markerRef}
     >
+      {/* TODO: ArtworkPopup */}
       <Popup offset={[0, -24]} autoPan={false}>
         <Stack direction="row" spacing={2}>
           <Typography variant="h6" component="div">
@@ -71,7 +72,7 @@ export default function ArtworkMarker({
         </Stack>
         <Stack direction="row" justifyContent="space-between">
           <Typography component="div">
-            {fullNameFormatter(artwork.author)}
+            {artwork.authors.map(fullNameFormatter).join(", ")}
           </Typography>
           <Typography component="div">{artwork.year}</Typography>
         </Stack>

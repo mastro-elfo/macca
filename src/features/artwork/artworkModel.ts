@@ -21,25 +21,11 @@ export const ArtworkSchema = z.object({
   latitude: z.number(),
   longitude: z.number(),
   url: z.string().optional(),
-  author: AuthorSchema.optional(),
+  authors: AuthorSchema.array().default([]),
   // TODO: should be an array (authorIds)
-  authorId: z.number(),
+  authorIds: z.number().array(),
   images: ArtworkImage.array(),
   // TODO: add markdown text (problem with translation)
 });
 
 export type ArtworkEntity = z.infer<typeof ArtworkSchema>;
-
-export const ArtworkResponseSchema = z
-  .object({
-    artworks: ArtworkSchema.omit({ author: true }).array(),
-    authors: AuthorSchema.array(),
-  })
-  .transform((args) =>
-    args.artworks.map((artwork) => ({
-      ...artwork,
-      author: args.authors.find((author) => author.id === artwork.authorId),
-    }))
-  );
-
-export type ArtworkResponseDto = z.infer<typeof ArtworkResponseSchema>;

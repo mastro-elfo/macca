@@ -42,7 +42,7 @@ export default function ArtworkCard({ artwork }: ArtworkCardProps) {
             <Typography variant="h6">{artwork.year}</Typography>
           </Stack>
         }
-        subheader={fullNameFormatter(artwork.author)}
+        subheader={artwork.authors.map(fullNameFormatter).join(", ")}
       />
 
       <CardContent sx={{ flex: 1 }}>

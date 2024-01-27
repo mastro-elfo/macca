@@ -8,11 +8,3 @@ export const AuthorSchema = z.object({
 });
 
 export type AuthorEntity = z.infer<typeof AuthorSchema>;
-
-export const AuthorResponseSchema = z
-  .object({
-    authors: AuthorSchema.array(),
-  })
-  .transform((arg) => arg.authors);
-
-export type AuthorResponseDto = z.infer<typeof AuthorResponseSchema>;
