@@ -953,6 +953,27 @@
           }
         }
       ]
+    },
+    {
+      "id": 40,
+      "title": "Just do it",
+      "year": 2000,
+      "tags": ["oil-on-canvas"],
+      "town": "Peccioli",
+      "address": "Hotel Portavaldera, Via De Chirico, 6",
+      "latitude": 43.554397989712236,
+      "longitude": 10.711807098320962,
+      "authorId": 26,
+      "authorIds": [26, 27],
+      "images": [
+        {
+          "path": "65.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=36&idView=6"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1105,6 +1126,18 @@
       "id": 25,
       "firstName": "Projedo",
       "lastName": "Ruido",
+      "isUnknown": false
+    },
+    {
+      "id": 26,
+      "firstName": "Vladimir",
+      "lastName": "Dubossarky",
+      "isUnknown": false
+    },
+    {
+      "id": 27,
+      "firstName": "Alexander",
+      "lastName": "Vinogradov",
       "isUnknown": false
     }
   ]
