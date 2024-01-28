@@ -21,7 +21,7 @@ export default function ToTopFab({ size, title, ...props }: ToTopFabProps) {
       <StyledFab
         size={size}
         onClick={handleClick}
-        title={title ?? t("To top")}
+        title={title ?? t("Back to top")}
         {...props}
       >
         <ArrowUpwardIcon fontSize={size} />

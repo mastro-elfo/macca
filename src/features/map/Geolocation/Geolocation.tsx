@@ -6,12 +6,14 @@ import { Fab, useTheme } from "@mui/material";
 import L from "leaflet";
 import { useEffect, useMemo, useState } from "react";
 import { renderToString } from "react-dom/server";
+import { useTranslation } from "react-i18next";
 import { Marker, useMap } from "react-leaflet";
 import LoadingProgress from "../../../components/LoadingProgress/LoadingProgress";
 import AccuracyCircle from "./AccuracyCircle";
 
 export default function Geolocation() {
   const theme = useTheme();
+  const { t } = useTranslation();
 
   const [position, setPosition] = useState<GeolocationPosition>();
   const [active, setActive] = useState(false);
@@ -101,6 +103,7 @@ export default function Geolocation() {
           right: theme.spacing(1),
         })}
         onClick={() => setActive(!active)}
+        title={t("Activate geolocation")}
       >
         <LoadingProgress
           variant="circular"
