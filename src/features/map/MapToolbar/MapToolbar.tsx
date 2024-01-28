@@ -23,7 +23,6 @@ export default function MapToolbar() {
     navigate(`/map/${artwork.latitude}/${artwork.longitude}/18/${artwork.id}`);
   };
 
-  // TODO: add author name to option items to prevent ambiguity between artwork with the same title (Senza titolo)
   const fullNameFormatter = useAuthorFullNameFormatter();
 
   return (
