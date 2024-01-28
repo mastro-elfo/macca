@@ -22,7 +22,6 @@ export const ArtworkSchema = z.object({
   longitude: z.number(),
   url: z.string().optional(),
   authors: AuthorSchema.array().default([]),
-  // TODO: should be an array (authorIds)
   authorIds: z.number().array(),
   images: ArtworkImage.array(),
   // TODO: add markdown text (problem with translation)
