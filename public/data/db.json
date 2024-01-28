@@ -974,6 +974,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 41,
+      "title": "Cumulus Humilis",
+      "year": 2001,
+      "tags": ["neon-lights"],
+      "town": "Peccioli",
+      "address": "Hotel Portavaldera, Via De Chirico, 6",
+      "latitude": 43.55427874837257,
+      "longitude": 10.711604282736095,
+      "authorIds": [28],
+      "images": [
+        {
+          "path": "66.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=33&idView=6"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1138,6 +1158,12 @@
       "id": 27,
       "firstName": "Alexander",
       "lastName": "Vinogradov",
+      "isUnknown": false
+    },
+    {
+      "id": 28,
+      "firstName": "Vedovamazzei",
+      "lastName": "",
       "isUnknown": false
     }
   ]
