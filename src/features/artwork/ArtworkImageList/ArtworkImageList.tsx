@@ -4,6 +4,7 @@ import {
   ImageListItemBar,
   Link,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import useBreakpoint from "../../../services/useBreakpoint";
 import { ArtworkEntity } from "../artworkModel";
 
@@ -12,6 +13,8 @@ type ArtworkImageListProps = {
 };
 
 export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
+  const { t } = useTranslation();
+
   const { only: isXs } = useBreakpoint("xs");
   const { only: isSm } = useBreakpoint("sm");
 
@@ -19,9 +22,12 @@ export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
 
   return (
     <ImageList cols={isXs ? 1 : isSm ? 2 : 3} gap={8} variant="masonry">
-      {artwork.images.map((image) => (
+      {artwork.images.map((image, index) => (
         <ImageListItem key={image.path}>
-          <img src={`/macca/media/${image.path}`} />
+          <img
+            src={`/macca/media/${image.path}`}
+            alt={t("artwork-image-alt", { ...artwork, index })}
+          />
           <ImageListItemBar
             title={image.attribution.title}
             subtitle={

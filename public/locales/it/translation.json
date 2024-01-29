@@ -48,5 +48,7 @@
   "oil-on-canvas": "Olio su tela",
   "varnish": "Vernice",
 
+  "artwork-image-alt": "Opera {{title}}, immagine numero {{index}}",
+
   "What is MACCA?": "Cos'è il MACCA?"
 }
