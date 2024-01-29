@@ -994,6 +994,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 42,
+      "title": "Richiamo",
+      "year": 2001,
+      "tags": ["steel", "varnish"],
+      "town": "Peccioli",
+      "address": "Hotel Portavaldera, Via De Chirico, 6",
+      "latitude": 43.554347514795985,
+      "longitude": 10.711824822859539,
+      "authorIds": [29],
+      "images": [
+        {
+          "path": "67.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=34&idView=6"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1164,6 +1184,12 @@
       "id": 28,
       "firstName": "Vedovamazzei",
       "lastName": "",
+      "isUnknown": false
+    },
+    {
+      "id": 29,
+      "firstName": "Massimo",
+      "lastName": "Bartolini",
       "isUnknown": false
     }
   ]
