@@ -1014,6 +1014,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 43,
+      "title": "Porta",
+      "year": 2001,
+      "tags": ["lamp-with-flashing-light"],
+      "town": "Peccioli",
+      "address": "Hotel Portavaldera, Via De Chirico, 6",
+      "latitude": 43.55432553215435,
+      "longitude": 10.711808409163366,
+      "authorIds": [29],
+      "images": [
+        {
+          "path": "68.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=35&idView=6"
+          }
+        },
+        {
+          "path": "69.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=35&idView=6"
+          }
+        }
+      ]
     }
   ],
   "authors": [
