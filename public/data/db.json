@@ -1041,6 +1041,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 44,
+      "title": "Sed necesse est",
+      "year": 2002,
+      "tags": ["holes-on-the-wall"],
+      "town": "Peccioli",
+      "address": "Hotel Portavaldera, Via De Chirico, 6",
+      "latitude": 43.554376631058666,
+      "longitude": 10.711425323281235,
+      "authorIds": [3],
+      "images": [
+        {
+          "path": "70.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=40&idView=6"
+          }
+        },
+        {
+          "path": "71.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=40&idView=6"
+          }
+        }
+      ]
     }
   ],
   "authors": [
