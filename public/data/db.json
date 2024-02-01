@@ -1068,6 +1068,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 45,
+      "title": "Alba",
+      "year": 2002,
+      "tags": ["neon-lights"],
+      "town": "Peccioli",
+      "address": "Hotel Portavaldera, Via De Chirico, 6",
+      "latitude": 43.55440478278909,
+      "longitude": 10.711506218900851,
+      "authorIds": [3],
+      "images": [
+        {
+          "path": "72.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=41&idView=6"
+          }
+        }
+      ]
     }
   ],
   "authors": [
