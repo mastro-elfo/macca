@@ -1,4 +1,4 @@
-import { List, ListItemButton, ListItemText } from "@mui/material";
+import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
@@ -29,13 +29,15 @@ export default function AuthorListPage() {
     >
       <List>
         {authorListQuery.data?.map((author) => (
-          <ListItemButton
-            key={author.id}
-            onClick={() => navigate(`/authors/${author.id}`)}
-            title={fullNameFormatter(author)}
-          >
-            <ListItemText primary={fullNameFormatter(author)} />
-          </ListItemButton>
+          <ListItem disablePadding>
+            <ListItemButton
+              key={author.id}
+              onClick={() => navigate(`/authors/${author.id}`)}
+              title={fullNameFormatter(author)}
+            >
+              <ListItemText primary={fullNameFormatter(author)} />
+            </ListItemButton>
+          </ListItem>
         ))}
       </List>
     </PageLayout>
