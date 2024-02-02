@@ -1088,6 +1088,18 @@
           }
         }
       ]
+    },
+    {
+      "id": 46,
+      "title": "Copertura Piazza De Chirico",
+      "year": 2020,
+      "tags": ["steel"],
+      "town": "Peccioli",
+      "address": "Hotel Portavaldera, Via De Chirico, 6",
+      "latitude": 43.55440267390673,
+      "longitude": 10.712138647415683,
+      "authorIds": [24],
+      "images": []
     }
   ],
   "authors": [
