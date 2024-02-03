@@ -9,6 +9,8 @@ export default function ArtworkListPage() {
   useDocumentTitle(t("Artworks"));
   const artworkListQuery = useArtworkListQuery();
 
+  // TODO: use infinite scroll
+
   return (
     <PageLayout
       title={t("Artworks")}

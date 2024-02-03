@@ -47,7 +47,9 @@ jobs:
         run: yarn build
 
       - name: Compress db
-        run: yarn compress
+        run: |
+          jq -c . ./public/data/db.json > ./public/data/db.tmp
+          mv ./public/data/db.tmp ./public/data/db.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
