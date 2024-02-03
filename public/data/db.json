@@ -1096,10 +1096,37 @@
       "tags": ["steel"],
       "town": "Peccioli",
       "address": "Hotel Portavaldera, Via De Chirico, 6",
-      "latitude": 43.55440267390673,
-      "longitude": 10.712138647415683,
+      "latitude": 43.5555979367692,
+      "longitude": 10.711160445044733,
       "authorIds": [24],
       "images": []
+    },
+    {
+      "id": 47,
+      "title": "Muri III",
+      "year": 2005,
+      "tags": ["steel"],
+      "town": "Peccioli",
+      "address": "Incubatore d'Impresa, Via Boccioni, 2",
+      "latitude": 43.55440267390673,
+      "longitude": 10.712138647415683,
+      "authorIds": [4],
+      "images": [
+        {
+          "path": "73.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=69&idView=7"
+          }
+        },
+        {
+          "path": "74.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=69&idView=7"
+          }
+        }
+      ]
     }
   ],
   "authors": [
