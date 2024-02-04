@@ -1127,6 +1127,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 48,
+      "title": "Welcome to Peccioli",
+      "year": 1999,
+      "tags": ["metal"],
+      "town": "Peccioli",
+      "address": "Rotonda Giugiaro",
+      "latitude": 43.58054689474019,
+      "longitude": 10.704345678560983,
+      "authorIds": [30],
+      "images": [
+        {
+          "path": "75.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=31&idView=6"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1303,6 +1323,12 @@
       "id": 29,
       "firstName": "Massimo",
       "lastName": "Bartolini",
+      "isUnknown": false
+    },
+    {
+      "id": 30,
+      "firstName": "Giorgetto",
+      "lastName": "Giugiaro",
       "isUnknown": false
     }
   ]
