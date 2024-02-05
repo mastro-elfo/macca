@@ -1147,6 +1147,66 @@
           }
         }
       ]
+    },
+    {
+      "id": 49,
+      "title": "Presenze",
+      "year": 2011,
+      "tags": ["polystyrene", "polyurethane foam", "cement-fibres"],
+      "town": "Peccioli",
+      "address": "Anfiteatro Fonte Mazzola",
+      "latitude": 43.54409824040278,
+      "longitude": 10.724796150493063,
+      "authorIds": [31],
+      "images": [
+        {
+          "path": "76.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=76&idView=8"
+          }
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "title": "Presenze",
+      "year": 2011,
+      "tags": ["polystyrene", "polyurethane foam", "cement-fibres"],
+      "town": "Peccioli",
+      "address": "Via della Fila",
+      "latitude": 43.55558381375948,
+      "longitude": 10.71155368011074,
+      "authorIds": [31],
+      "images": [
+        {
+          "path": "77.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=76&idView=8"
+          }
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "title": "Presenze",
+      "year": 2011,
+      "tags": ["polystyrene", "polyurethane foam", "cement-fibres"],
+      "town": "Legoli",
+      "address": "Impianto di Smaltimento e Trattamento rifiuti",
+      "latitude": 43.5622786186176,
+      "longitude": 10.806481097781528,
+      "authorIds": [31],
+      "images": [
+        {
+          "path": "78.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=76&idView=8"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1329,6 +1389,12 @@
       "id": 30,
       "firstName": "Giorgetto",
       "lastName": "Giugiaro",
+      "isUnknown": false
+    },
+    {
+      "id": 31,
+      "firstName": "Naturaliter",
+      "lastName": "",
       "isUnknown": false
     }
   ]
