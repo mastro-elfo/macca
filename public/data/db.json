@@ -1207,6 +1207,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 52,
+      "title": "Centrifugo",
+      "year": 2020,
+      "tags": ["cor-ten-steel"],
+      "town": "Peccioli",
+      "address": "Viale Risorgimento",
+      "latitude": 43.54492017157937,
+      "longitude": 10.716050181642704,
+      "authorIds": [32],
+      "images": [
+        {
+          "path": "79.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=27&idView=14"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1395,6 +1415,12 @@
       "id": 31,
       "firstName": "Naturaliter",
       "lastName": "",
+      "isUnknown": false
+    },
+    {
+      "id": 32,
+      "firstName": "Umberto",
+      "lastName": "Cavenago",
       "isUnknown": false
     }
   ]
