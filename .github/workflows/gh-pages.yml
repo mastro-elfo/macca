@@ -32,10 +32,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          # cache: 'npm'
 
       - name: Install dependencies
         run: yarn
@@ -48,14 +47,16 @@ jobs:
 
       - name: Compress db
         run: |
+          ls -l ./public/data/db.json
           jq -c . ./public/data/db.json > ./public/data/db.tmp
           mv ./public/data/db.tmp ./public/data/db.json
+          ls -l ./public/data/db.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "./dist"
 
