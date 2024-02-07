@@ -42,15 +42,13 @@ jobs:
       - name: Test
         run: yarn test
 
-      - name: Build
-        run: yarn build
-
       - name: Compress db
         run: |
-          ls -l ./public/data/db.json
           jq -c . ./public/data/db.json > ./public/data/db.tmp
           mv ./public/data/db.tmp ./public/data/db.json
-          ls -l ./public/data/db.json
+
+      - name: Build
+        run: yarn build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
