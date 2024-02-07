@@ -1227,6 +1227,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 53,
+      "title": "Il silenzio delle piante",
+      "year": 2019,
+      "tags": ["iron", "plants"],
+      "town": "Peccioli",
+      "address": "Anfiteatro Fonte Mazzola, Strada Vicinale delle Serre, 20",
+      "latitude": 43.54426758501276,
+      "longitude": 10.723826686012684,
+      "authorIds": [33],
+      "images": [
+        {
+          "path": "80.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=25&idView=14"
+          }
+        },
+        {
+          "path": "81.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=25&idView=14"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1421,6 +1448,12 @@
       "id": 32,
       "firstName": "Umberto",
       "lastName": "Cavenago",
+      "isUnknown": false
+    },
+    {
+      "id": 33,
+      "firstName": "Adrian",
+      "lastName": "Paci",
       "isUnknown": false
     }
   ]
