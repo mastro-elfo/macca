@@ -1254,6 +1254,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 54,
+      "title": "Rilievi",
+      "year": 1997,
+      "tags": ["bronze"],
+      "town": "Montechio",
+      "address": "Via della Chiesa, 1/33",
+      "latitude": 43.52626489133191,
+      "longitude": 10.738988128695695,
+      "authorIds": [33],
+      "images": [
+        {
+          "path": "82.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=28&idView=3"
+          }
+        }
+      ]
     }
   ],
   "authors": [
