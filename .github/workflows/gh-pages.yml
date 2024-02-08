@@ -46,13 +46,12 @@ jobs:
       - uses: actions/cache@v4
         id: yarn-cache
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir}}
-          key: ${{runner.os}}-yarn-${{hashFiles('**/yarn.lock')}}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{runner.os}}-yarn-
+            ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn
 
       - name: Test
