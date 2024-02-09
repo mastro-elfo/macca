@@ -1274,6 +1274,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 55,
+      "title": "Senza titolo",
+      "year": 1997,
+      "tags": ["mixed-technique"],
+      "town": "Fabbrica",
+      "address": "Via Vittorio Veneto, 12",
+      "latitude": 43.50711669937002,
+      "longitude": 10.757445072968203,
+      "authorIds": [34],
+      "images": [
+        {
+          "path": "83.jpg",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=30&idView=3"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1474,6 +1494,12 @@
       "id": 33,
       "firstName": "Adrian",
       "lastName": "Paci",
+      "isUnknown": false
+    },
+    {
+      "id": 34,
+      "firstName": "Alberto",
+      "lastName": "Garutti",
       "isUnknown": false
     }
   ]
