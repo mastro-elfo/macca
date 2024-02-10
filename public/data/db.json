@@ -1294,6 +1294,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 56,
+      "title": "Rovo",
+      "year": 2018,
+      "tags": ["steel", "enamel", "neon", "narrative-voice"],
+      "town": "Fabbrica",
+      "address": "Chiesa dei Santi Rocco e Sebastiano",
+      "latitude": 43.50534839007565,
+      "longitude": 10.754280266008578,
+      "authorIds": [3],
+      "images": [
+        {
+          "path": "84.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=56&idView=11"
+          }
+        },
+        {
+          "path": "85.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=56&idView=11"
+          }
+        }
+      ]
     }
   ],
   "authors": [
