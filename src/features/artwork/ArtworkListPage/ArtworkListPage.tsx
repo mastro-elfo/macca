@@ -1,20 +1,21 @@
 import { useTranslation } from "react-i18next";
+import InfiniteContainer from "../../../components/InfiniteContainer/InfiniteContainer";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useDocumentTitle from "../../../services/useDocumentTitle";
+import useIntersection from "../../../services/useIntersection";
 import ArtworkGrid from "../ArtworkGrid/ArtworkGrid";
-import { useArtworkListQuery } from "../artworkService";
+import { useArtworkInfiniteQuery } from "../artworkService";
 
 export default function ArtworkListPage() {
   const { t } = useTranslation();
   useDocumentTitle(t("Artworks"));
-  const artworkListQuery = useArtworkListQuery();
-
-  // TODO: use infinite scroll
+  const artworkInfiniteQuery = useArtworkInfiniteQuery();
+  const { ref } = useIntersection(artworkInfiniteQuery);
 
   return (
     <PageLayout
       title={t("Artworks")}
-      loading={artworkListQuery.isFetching}
+      loading={artworkInfiniteQuery.isFetching}
       py={1}
       background={{
         image: "undraw_art_museum_-8-or4.svg",
@@ -22,7 +23,14 @@ export default function ArtworkListPage() {
         opacity: 0.5,
       }}
     >
-      <ArtworkGrid artworks={artworkListQuery.data ?? []} />
+      <InfiniteContainer query={artworkInfiniteQuery} intersectionRef={ref}>
+        <ArtworkGrid
+          artworks={
+            artworkInfiniteQuery.data?.pages.map((page) => page.data).flat() ??
+            []
+          }
+        />
+      </InfiniteContainer>
     </PageLayout>
   );
 }
