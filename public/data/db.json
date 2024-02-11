@@ -1321,6 +1321,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 57,
+      "title": "Quattro uomini muti",
+      "year": 2006,
+      "tags": ["tuff-bricks", "metal"],
+      "town": "Legoli",
+      "address": "Via di Mezzo",
+      "latitude": 43.57219180107588,
+      "longitude": 10.795716489789372,
+      "authorIds": [1],
+      "images": [
+        {
+          "path": "86.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=43&idView=7"
+          }
+        },
+        {
+          "path": "87.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=43&idView=7"
+          }
+        }
+      ]
     }
   ],
   "authors": [
