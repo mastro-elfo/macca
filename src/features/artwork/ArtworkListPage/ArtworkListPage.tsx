@@ -12,6 +12,8 @@ export default function ArtworkListPage() {
   const artworkInfiniteQuery = useArtworkInfiniteQuery();
   const { ref } = useIntersection(artworkInfiniteQuery);
 
+  // TODO: support filters
+
   return (
     <PageLayout
       title={t("Artworks")}

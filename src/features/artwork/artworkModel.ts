@@ -23,6 +23,7 @@ export const ArtworkSchema = z.object({
   url: z.string().optional(),
   authors: AuthorSchema.array().default([]),
   authorIds: z.number().array(),
+  // TODO: support `isAuthorUnknown`
   images: ArtworkImage.array(),
   // TODO: add markdown text (problem with translation)
 });

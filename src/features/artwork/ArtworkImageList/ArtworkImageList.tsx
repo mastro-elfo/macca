@@ -20,6 +20,8 @@ export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
 
   if (!artwork) return null;
 
+  // TODO: support large image on click
+
   return (
     <ImageList cols={isXs ? 1 : isSm ? 2 : 3} gap={8} variant="masonry">
       {artwork.images.map((image, index) => (

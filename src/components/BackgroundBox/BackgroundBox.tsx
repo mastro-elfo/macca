@@ -56,6 +56,7 @@ export default function BackgroundBox({
           backgroundRepeat: "no-repeat",
           backgroundPosition: position,
           backgroundSize: {
+            // TODO: support size `cover`
             xs: "contain",
             ...(size === false
               ? {}
