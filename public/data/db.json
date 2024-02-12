@@ -1348,6 +1348,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 58,
+      "title": "Gabbiani",
+      "year": 2010,
+      "tags": ["copper"],
+      "town": "Legoli",
+      "address": "Impianto di Smaltimento e Trattamento rifiuti",
+      "latitude": 43.56228386102618,
+      "longitude": 10.80543280292962,
+      "authorIds": [35],
+      "images": [
+        {
+          "path": "88.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=72&idView=7"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1554,6 +1574,12 @@
       "id": 34,
       "firstName": "Alberto",
       "lastName": "Garutti",
+      "isUnknown": false
+    },
+    {
+      "id": 35,
+      "firstName": "Raffaello Mauro",
+      "lastName": "Marcucci",
       "isUnknown": false
     }
   ]
