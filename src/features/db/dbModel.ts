@@ -1,6 +1,13 @@
 import { z } from "zod";
 import { ArtworkSchema } from "../artwork/artworkModel";
-import { AuthorSchema } from "../author/authorModel";
+import { AuthorEntity, AuthorSchema } from "../author/authorModel";
+
+const UNKNOWN: AuthorEntity = {
+  id: 0,
+  isUnknown: true,
+  firstName: "",
+  lastName: "",
+} as const;
 
 export const DbResponseSchema = z
   .object({
@@ -11,9 +18,11 @@ export const DbResponseSchema = z
     authors: args.authors,
     artworks: args.artworks.map((artwork) => ({
       ...artwork,
-      authors: args.authors.filter((author) =>
-        artwork.authorIds.includes(author.id)
-      ),
+      authors: artwork.isAuthorUnknown
+        ? [UNKNOWN]
+        : args.authors.filter((author) =>
+            artwork.authorIds.includes(author.id)
+          ),
     })),
   }));
 

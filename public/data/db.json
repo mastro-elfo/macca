@@ -876,7 +876,8 @@
       "address": "Piazza del Popolo, 12/15",
       "latitude": 43.54814017990272,
       "longitude": 10.72076387864975,
-      "authorIds": [0],
+      "authorIds": [],
+      "isAuthorUnknown": true,
       "images": [
         {
           "path": "58.webp",
@@ -1405,222 +1406,185 @@
     }
   ],
   "authors": [
-    { "id": 0, "firstName": "", "lastName": "", "isUnknown": true },
     {
       "id": 1,
       "firstName": "Vittorio",
-      "lastName": "Messina",
-      "isUnknown": false
+      "lastName": "Messina"
     },
     {
       "id": 2,
       "firstName": "Hidetoshi",
-      "lastName": "Nagasawa",
-      "isUnknown": false
+      "lastName": "Nagasawa"
     },
     {
       "id": 3,
       "firstName": "Vittorio",
-      "lastName": "Corsini",
-      "isUnknown": false
+      "lastName": "Corsini"
     },
     {
       "id": 4,
       "firstName": "Federico",
-      "lastName": "De Leonardis",
-      "isUnknown": false
+      "lastName": "De Leonardis"
     },
     {
       "id": 5,
       "firstName": "Nicola",
-      "lastName": "Carrino",
-      "isUnknown": false
+      "lastName": "Carrino"
     },
     {
       "id": 6,
       "firstName": "Mariella",
-      "lastName": "Bettineschi",
-      "isUnknown": false
+      "lastName": "Bettineschi"
     },
     {
       "id": 7,
       "firstName": "Angelo",
-      "lastName": "Casciello",
-      "isUnknown": false
+      "lastName": "Casciello"
     },
     {
       "id": 8,
       "firstName": "Grupparte",
-      "lastName": "",
-      "isUnknown": false
+      "lastName": ""
     },
     {
       "id": 9,
       "firstName": "Emmeu e Pepsy",
-      "lastName": "",
-      "isUnknown": false
+      "lastName": ""
     },
     {
       "id": 10,
       "firstName": "Dai",
-      "lastName": "Yujie",
-      "isUnknown": false
+      "lastName": "Yujie"
     },
     {
       "id": 11,
       "firstName": "Wang",
-      "lastName": "Yuchen",
-      "isUnknown": false
+      "lastName": "Yuchen"
     },
     {
       "id": 12,
       "firstName": "Luca",
-      "lastName": "Maestroni",
-      "isUnknown": false
+      "lastName": "Maestroni"
     },
     {
       "id": 13,
       "firstName": "Sara",
-      "lastName": "Marioli",
-      "isUnknown": false
+      "lastName": "Marioli"
     },
     {
       "id": 14,
       "firstName": "Elisabetta",
-      "lastName": "Cardella",
-      "isUnknown": false
+      "lastName": "Cardella"
     },
     {
       "id": 15,
       "firstName": "Massimiliano",
-      "lastName": "Precisi",
-      "isUnknown": false
+      "lastName": "Precisi"
     },
     {
       "id": 16,
       "firstName": "Luca",
-      "lastName": "Serasini",
-      "isUnknown": false
+      "lastName": "Serasini"
     },
     {
       "id": 17,
       "firstName": "Remo",
-      "lastName": "Salvadori",
-      "isUnknown": false
+      "lastName": "Salvadori"
     },
     {
       "id": 18,
       "firstName": "Patrick",
-      "lastName": "Tuttofuoco",
-      "isUnknown": false
+      "lastName": "Tuttofuoco"
     },
     {
       "id": 19,
       "firstName": "Marco",
-      "lastName": "Tirelli",
-      "isUnknown": false
+      "lastName": "Tirelli"
     },
     {
       "id": 20,
       "firstName": "Daniel",
-      "lastName": "Buren",
-      "isUnknown": false
+      "lastName": "Buren"
     },
     {
       "id": 21,
       "firstName": "Jeppe",
-      "lastName": "Hein",
-      "isUnknown": false
+      "lastName": "Hein"
     },
     {
       "id": 22,
       "firstName": "David",
-      "lastName": "Reimondo",
-      "isUnknown": false
+      "lastName": "Reimondo"
     },
     {
       "id": 23,
       "firstName": "",
-      "lastName": "Pantani-Surace",
-      "isUnknown": false
+      "lastName": "Pantani-Surace"
     },
     {
       "id": 24,
       "firstName": "Mario",
-      "lastName": "Cucinella",
-      "isUnknown": false
+      "lastName": "Cucinella"
     },
     {
       "id": 25,
       "firstName": "Projedo",
-      "lastName": "Ruido",
-      "isUnknown": false
+      "lastName": "Ruido"
     },
     {
       "id": 26,
       "firstName": "Vladimir",
-      "lastName": "Dubossarky",
-      "isUnknown": false
+      "lastName": "Dubossarky"
     },
     {
       "id": 27,
       "firstName": "Alexander",
-      "lastName": "Vinogradov",
-      "isUnknown": false
+      "lastName": "Vinogradov"
     },
     {
       "id": 28,
       "firstName": "Vedovamazzei",
-      "lastName": "",
-      "isUnknown": false
+      "lastName": ""
     },
     {
       "id": 29,
       "firstName": "Massimo",
-      "lastName": "Bartolini",
-      "isUnknown": false
+      "lastName": "Bartolini"
     },
     {
       "id": 30,
       "firstName": "Giorgetto",
-      "lastName": "Giugiaro",
-      "isUnknown": false
+      "lastName": "Giugiaro"
     },
     {
       "id": 31,
       "firstName": "Naturaliter",
-      "lastName": "",
-      "isUnknown": false
+      "lastName": ""
     },
     {
       "id": 32,
       "firstName": "Umberto",
-      "lastName": "Cavenago",
-      "isUnknown": false
+      "lastName": "Cavenago"
     },
     {
       "id": 33,
       "firstName": "Adrian",
-      "lastName": "Paci",
-      "isUnknown": false
+      "lastName": "Paci"
     },
     {
       "id": 34,
       "firstName": "Alberto",
-      "lastName": "Garutti",
-      "isUnknown": false
+      "lastName": "Garutti"
     },
     {
       "id": 35,
       "firstName": "Raffaello Mauro",
-      "lastName": "Marcucci",
-      "isUnknown": false
+      "lastName": "Marcucci"
     },
     {
       "id": 36,
       "firstName": "Sergio",
-      "lastName": "Staino",
-      "isUnknown": false
+      "lastName": "Staino"
     }
   ]
 }
