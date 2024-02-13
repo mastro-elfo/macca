@@ -1368,6 +1368,40 @@
           }
         }
       ]
+    },
+    {
+      "id": 59,
+      "title": "All'altezza delle margherite",
+      "year": 2016,
+      "tags": ["wall-drawing"],
+      "town": "Legoli",
+      "address": "Impianto di Smaltimento e Trattamento rifiuti, Via Libbiano-Legoli, 54",
+      "latitude": 43.562657207523486,
+      "longitude": 10.811394333376986,
+      "authorIds": [36],
+      "images": [
+        {
+          "path": "89.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=77&idView=8"
+          }
+        },
+        {
+          "path": "90.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=77&idView=8"
+          }
+        },
+        {
+          "path": "91.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=77&idView=8"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1580,6 +1614,12 @@
       "id": 35,
       "firstName": "Raffaello Mauro",
       "lastName": "Marcucci",
+      "isUnknown": false
+    },
+    {
+      "id": 36,
+      "firstName": "Sergio",
+      "lastName": "Staino",
       "isUnknown": false
     }
   ]
