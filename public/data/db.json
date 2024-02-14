@@ -1403,6 +1403,40 @@
           }
         }
       ]
+    },
+    {
+      "id": 60,
+      "title": "Senza titolo",
+      "year": 2017,
+      "tags": ["wall-drawing"],
+      "town": "Legoli",
+      "address": "Impianto di Smaltimento e Trattamento rifiuti, Via Libbiano-Legoli, 54",
+      "latitude": 43.565262784885455,
+      "longitude": 10.806991352866348,
+      "authorIds": [37],
+      "images": [
+        {
+          "path": "92.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=78&idView=8"
+          }
+        },
+        {
+          "path": "93.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=78&idView=8"
+          }
+        },
+        {
+          "path": "94.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=78&idView=8"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1585,6 +1619,11 @@
       "id": 36,
       "firstName": "Sergio",
       "lastName": "Staino"
+    },
+    {
+      "id": 37,
+      "firstName": "David",
+      "lastName": "Tremlett"
     }
   ]
 }
