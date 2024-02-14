@@ -9,6 +9,7 @@ const ArtworkAttribution = z.object({
 const ArtworkImage = z.object({
   path: z.string(),
   attribution: ArtworkAttribution,
+  cols: z.number().default(1),
 });
 
 export const ArtworkSchema = z.object({

@@ -22,10 +22,12 @@ export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
 
   // TODO: support large image on click
 
+  const cols = isXs ? 1 : isSm ? 2 : 3;
+
   return (
-    <ImageList cols={isXs ? 1 : isSm ? 2 : 3} gap={8} variant="masonry">
+    <ImageList cols={cols} gap={8} variant="quilted">
       {artwork.images.map((image, index) => (
-        <ImageListItem key={image.path}>
+        <ImageListItem key={image.path} cols={Math.min(cols, image.cols)}>
           <img
             src={`/macca/media/${image.path}`}
             alt={t("artwork-image-alt", { ...artwork, index })}

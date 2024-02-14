@@ -1420,7 +1420,8 @@
           "attribution": {
             "title": "Peccioli PER",
             "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=78&idView=8"
-          }
+          },
+          "cols": 2
         },
         {
           "path": "93.webp",
