@@ -7,9 +7,9 @@ type MapProviderProps = PropsWithChildren;
 
 export default function MapProvider({ children }: MapProviderProps) {
   const {
-    lat = 43.54773160834968,
-    lng = 10.720531940460207,
-    zoom = 16,
+    lat = 43.54326008866115,
+    lng = 10.745916366577148,
+    zoom = 13,
   } = useParams();
 
   return (

@@ -28,7 +28,7 @@ export function AppRoutes() {
         <Route
           path=""
           element={
-            <Navigate to="/map/43.54773160834968/10.720531940460207/16" />
+            <Navigate to="/map/43.54326008866115/10.745916366577148/13" />
           }
         />
         <Route
