@@ -1,51 +1,44 @@
-import {
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-  Link,
-} from "@mui/material";
-import { useTranslation } from "react-i18next";
+import { ImageList } from "@mui/material";
+import { useState } from "react";
 import useBreakpoint from "../../../services/useBreakpoint";
-import { ArtworkEntity } from "../artworkModel";
+import ArtworkImageDialog from "../ArtworkImageDialog/ArtworkImageDialog";
+import ArtworkImageListItem from "../ArtworkImageListItem/ArtworkImageListItem";
+import { ArtworkEntity, ArtworkImage } from "../artworkModel";
 
 type ArtworkImageListProps = {
   artwork?: ArtworkEntity;
 };
 
 export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
-  const { t } = useTranslation();
-
   const { only: isXs } = useBreakpoint("xs");
   const { only: isSm } = useBreakpoint("sm");
 
-  if (!artwork) return null;
+  const [selectedImage, setSelectedImage] = useState<ArtworkImage | null>(null);
 
-  // TODO: support large image on click
+  if (!artwork) return null;
 
   const cols = isXs ? 1 : isSm ? 2 : 3;
 
   return (
-    <ImageList cols={cols} gap={8} variant="quilted">
-      {artwork.images.map((image, index) => (
-        <ImageListItem key={image.path} cols={Math.min(cols, image.cols)}>
-          <img
-            src={`/macca/media/${image.path}`}
-            alt={t("artwork-image-alt", { ...artwork, index })}
+    <>
+      <ImageList cols={cols} gap={8} variant="quilted">
+        {artwork.images.map((image, index) => (
+          <ArtworkImageListItem
+            key={image.path}
+            cols={Math.min(cols, image.cols)}
+            onClick={() => setSelectedImage(image)}
+            artwork={artwork}
+            image={image}
+            index={index}
           />
-          <ImageListItemBar
-            title={image.attribution.title}
-            subtitle={
-              <Link
-                href={image.attribution.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {image.attribution.url}
-              </Link>
-            }
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+        ))}
+      </ImageList>
+      <ArtworkImageDialog
+        artwork={artwork}
+        image={selectedImage}
+        open={!!(artwork && selectedImage)}
+        onClose={() => setSelectedImage(null)}
+      />
+    </>
   );
 }

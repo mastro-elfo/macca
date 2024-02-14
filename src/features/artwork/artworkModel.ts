@@ -1,16 +1,18 @@
 import { z } from "zod";
 import { AuthorSchema } from "../author/authorModel";
 
-const ArtworkAttribution = z.object({
+const ArtworkAttributionSchema = z.object({
   title: z.string(),
   url: z.string().url().optional(),
 });
 
-const ArtworkImage = z.object({
+const ArtworkImageSchema = z.object({
   path: z.string(),
-  attribution: ArtworkAttribution,
+  attribution: ArtworkAttributionSchema,
   cols: z.number().default(1),
 });
+
+export type ArtworkImage = z.infer<typeof ArtworkImageSchema>;
 
 export const ArtworkSchema = z.object({
   id: z.number(),
@@ -25,7 +27,7 @@ export const ArtworkSchema = z.object({
   authors: AuthorSchema.array().default([]),
   authorIds: z.number().array(),
   isAuthorUnknown: z.boolean().optional(),
-  images: ArtworkImage.array(),
+  images: ArtworkImageSchema.array(),
   // TODO: add markdown text (problem with translation)
 });
 
