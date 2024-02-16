@@ -1438,6 +1438,18 @@
           }
         }
       ]
+    },
+    {
+      "id": 61,
+      "title": "Crepa",
+      "year": 2021,
+      "tags": ["gold-leaf-24k"],
+      "town": "Legoli",
+      "address": "Chiesa dei SS. Giusto e Bartolomeo, Via Castello, 19",
+      "latitude": 43.572274728096914,
+      "longitude": 10.796416664961423,
+      "authorIds": [38],
+      "images": []
     }
   ],
   "authors": [
@@ -1625,6 +1637,11 @@
       "id": 37,
       "firstName": "David",
       "lastName": "Tremlett"
+    },
+    {
+      "id": 38,
+      "firstName": "Andrea",
+      "lastName": "Francolino"
     }
   ]
 }
