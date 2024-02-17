@@ -1450,6 +1450,18 @@
       "longitude": 10.796416664961423,
       "authorIds": [38],
       "images": []
+    },
+    {
+      "id": 62,
+      "title": "L'ombra del cielo",
+      "year": 2021,
+      "tags": ["paint-on-wall", "metal", "steel"],
+      "town": "Legoli",
+      "address": "Chiesa dei SS. Giusto e Bartolomeo, Via Castello, 19",
+      "latitude": 43.572223697930944,
+      "longitude": 10.796502789081499,
+      "authorIds": [39],
+      "images": []
     }
   ],
   "authors": [
@@ -1642,6 +1654,11 @@
       "id": 38,
       "firstName": "Andrea",
       "lastName": "Francolino"
+    },
+    {
+      "id": 39,
+      "firstName": "Francesca",
+      "lastName": "Banchelli"
     }
   ]
 }
