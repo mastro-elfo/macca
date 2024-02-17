@@ -22,13 +22,17 @@ export default function InfiniteContainer({
   const { t } = useTranslation();
   const primary = query.hasNextPage ? t("Load more") : t("End of the list");
 
+  const handleClick = () => {
+    void query.fetchNextPage();
+  };
+
   return (
     <Stack direction="column">
       {children}
       <ListItemButton
         ref={intersectionRef}
         disabled={!query.hasNextPage || query.isFetching}
-        onClick={() => query.fetchNextPage()}
+        onClick={handleClick}
       >
         <ListItemText
           primary={primary}
