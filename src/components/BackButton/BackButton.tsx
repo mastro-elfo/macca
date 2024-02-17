@@ -9,12 +9,16 @@ export default function BackButton(props: BackButtonProps) {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  const handleClick = () => {
+    navigate(-1);
+  };
+
   return (
     <Button
       {...props}
       title={t("Back")}
       startIcon={<ArrowBackIcon />}
-      onClick={() => navigate(-1)}
+      onClick={handleClick}
     >
       {t("Back")}
     </Button>
