@@ -23,9 +23,12 @@ import { useTranslation } from "react-i18next";
 import useSeason, { Season } from "../../services/useSeason/useSeason";
 
 declare module "@mui/material/styles" {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Theme {
     season: Season;
   }
+
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface ThemeOptions {
     season?: Season;
   }
