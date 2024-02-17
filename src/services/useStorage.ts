@@ -7,7 +7,7 @@ function load<TData = unknown>(
 ) {
   try {
     const value = storage.getItem(key);
-    if (value) return JSON.parse(value);
+    if (value) return JSON.parse(value) as TData;
     return defaultValue;
   } catch {
     return defaultValue;
@@ -27,8 +27,13 @@ function useStorage<TData = unknown>(
   const stored = useMemo(() => load<TData>(storage, key, defaultValue), []);
   const state = useState<TData>(stored);
   const [value] = state;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => dump(storage, key, value), [value]);
+  useEffect(
+    () => {
+      dump(storage, key, value);
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [value]
+  );
   return state;
 }
 
