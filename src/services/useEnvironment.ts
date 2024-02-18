@@ -20,19 +20,6 @@ export default function useEnvironment() {
   const i18nExpirationTime =
     Number(import.meta.env.VITE_I18N_EXPIRATION_TIME) || 86400000;
 
-  console.log({
-    isDevelopment,
-    isProduction,
-    mode,
-    documentTitlePrefix,
-    i18nExpirationTime,
-    logDebug,
-    logInfo,
-    logWarning,
-    logError,
-    backendUrl,
-  });
-
   return {
     isDevelopment,
     isProduction,
@@ -43,5 +30,6 @@ export default function useEnvironment() {
     logInfo,
     logWarning,
     logError,
+    i18nExpirationTime,
   };
 }
