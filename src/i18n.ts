@@ -12,9 +12,10 @@ import zodIt from "zod-i18n-map/locales/it/zod.json";
 import zodItCustom from "./locales/it/zodCustom.json";
 import zodItFix from "./locales/it/zodFix.json";
 
-const expirationTime = parseInt(import.meta.env.VITE_I18N_EXPIRATION_TIME);
+const expirationTime =
+  Number(import.meta.env.VITE_I18N_EXPIRATION_TIME) || 86400000;
 
-i18n
+await i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -42,7 +43,7 @@ i18n
         zodCustom: zodItCustom,
       },
     },
-    fallbackLng: import.meta.env.VITE_I18N_FALLBACK_LANGUAGE,
+    fallbackLng: String(import.meta.env.VITE_I18N_FALLBACK_LANGUAGE),
     fallbackNS: "translation",
   });
 
