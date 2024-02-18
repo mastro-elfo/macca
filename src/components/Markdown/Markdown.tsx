@@ -10,32 +10,32 @@ export default function Markdown(props: MarkdownProps) {
 
 const MARKDOWN_COMPONENTS: ComponentProps<typeof ReactMarkdown>["components"] =
   {
-    p: ({ ref, ...props }) => (
+    p: ({ ref: _, ...props }) => (
       <Typography variant="body1" paragraph {...props} />
     ),
-    h1: ({ ref, ...props }) => (
+    h1: ({ ref: _, ...props }) => (
       <Typography variant="h4" {...props} gutterBottom />
     ),
-    h2: ({ ref, ...props }) => (
+    h2: ({ ref: _, ...props }) => (
       <Typography variant="h5" {...props} gutterBottom />
     ),
-    h3: ({ ref, ...props }) => (
+    h3: ({ ref: _, ...props }) => (
       <Typography variant="h6" {...props} gutterBottom />
     ),
-    h4: ({ ref, ...props }) => (
+    h4: ({ ref: _, ...props }) => (
       <Typography variant="h6" color="textSecondary" gutterBottom {...props} />
     ),
-    h5: ({ ref, ...props }) => (
+    h5: ({ ref: _, ...props }) => (
       <Typography variant="h6" color="textSecondary" gutterBottom {...props} />
     ),
-    h6: ({ ref, ...props }) => (
+    h6: ({ ref: _, ...props }) => (
       <Typography variant="h6" color="textSecondary" gutterBottom {...props} />
     ),
-    strong: ({ ref, ...props }) => (
+    strong: ({ ref: _, ...props }) => (
       <Typography {...props} component="strong" fontWeight="bold" />
     ),
-    em: ({ ref, ...props }) => <Typography {...props} component="em" />,
-    code: ({ ref, ...props }) => (
+    em: ({ ref: _, ...props }) => <Typography {...props} component="em" />,
+    code: ({ ref: _, ...props }) => (
       <Paper square sx={(theme) => ({ p: theme.spacing(1) })}>
         <Typography
           variant="body2"
@@ -45,10 +45,10 @@ const MARKDOWN_COMPONENTS: ComponentProps<typeof ReactMarkdown>["components"] =
         />
       </Paper>
     ),
-    li: ({ ref, ...props }) => (
+    li: ({ ref: _, ...props }) => (
       <Typography variant="body1" component="li" {...props} />
     ),
-    a: ({ ref, ...props }) => (
+    a: ({ ref: _, ...props }) => (
       <Typography variant="inherit" component="a" color="primary" {...props} />
     ),
   } as const;
