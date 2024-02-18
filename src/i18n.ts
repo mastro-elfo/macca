@@ -15,7 +15,7 @@ import zodItFix from "./locales/it/zodFix.json";
 const expirationTime =
   Number(import.meta.env.VITE_I18N_EXPIRATION_TIME) || 86400000;
 
-await i18n
+void i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
