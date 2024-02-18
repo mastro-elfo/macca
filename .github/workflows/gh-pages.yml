@@ -28,6 +28,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+    env:
+      VITE_I18N_EXPIRATION_TIME: 86400000
+      VITE_DOCUMENT_TITLE_PREFIX: "MACCA - "
+      VITE_LOG_DEBUG: false
+      VITE_LOG_INFO: false
+      VITE_LOG_WARNING: false
+      VITE_LOG_ERROR: false
+
     runs-on: ubuntu-latest
 
     steps:
