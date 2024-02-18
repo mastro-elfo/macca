@@ -17,6 +17,22 @@ export default function useEnvironment() {
   const logError: boolean =
     String(import.meta.env.VITE_LOG_ERROR).toLowerCase() === "true";
 
+  const i18nExpirationTime =
+    Number(import.meta.env.VITE_I18N_EXPIRATION_TIME) || 86400000;
+
+  console.log({
+    isDevelopment,
+    isProduction,
+    mode,
+    documentTitlePrefix,
+    i18nExpirationTime,
+    logDebug,
+    logInfo,
+    logWarning,
+    logError,
+    backendUrl,
+  });
+
   return {
     isDevelopment,
     isProduction,
