@@ -1462,6 +1462,26 @@
       "longitude": 10.796502789081499,
       "authorIds": [39],
       "images": []
+    },
+    {
+      "id": 63,
+      "title": "Ospiti",
+      "year": 1997,
+      "tags": ["marble"],
+      "town": "Ghizzano",
+      "address": "Oratorio della Santissima Annunziata",
+      "latitude": 43.53843422168031,
+      "longitude": 10.790789360592287,
+      "authorIds": [40, 41],
+      "images": [
+        {
+          "path": "95.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=29&idView=3"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1659,6 +1679,16 @@
       "id": 39,
       "firstName": "Francesca",
       "lastName": "Banchelli"
+    },
+    {
+      "id": 40,
+      "firstName": "Irene",
+      "lastName": "Fortuyn"
+    },
+    {
+      "id": 41,
+      "firstName": "Robert",
+      "lastName": "O'Brien"
     }
   ]
 }
