@@ -8,7 +8,7 @@ export default function useIntersection(query: UseInfiniteQueryResult) {
   const { fetchNextPage } = query;
   useEffect(() => {
     if (inView) {
-      fetchNextPage();
+      void fetchNextPage();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
