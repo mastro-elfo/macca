@@ -23,33 +23,30 @@ export default function Geolocation() {
 
   const zoom = map.getZoom();
 
-  const markerIcon = position?.coords.speed ? (
-    <WalkingIcon
-      style={{
-        color: theme.palette.primary.main,
-        fontSize: "24px",
-      }}
-    />
-  ) : (
-    <StandingIcon
-      style={{
-        color: theme.palette.primary.main,
-        fontSize: "24px",
-      }}
-    />
-  );
-
-  const icon = useMemo(
-    () =>
-      L.divIcon({
-        className:
-          "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive",
-        iconSize: [24, 24],
-        iconAnchor: [12, 12],
-        html: renderToString(markerIcon),
-      }),
-    [markerIcon]
-  );
+  const icon = useMemo(() => {
+    const markerIcon = position?.coords.speed ? (
+      <WalkingIcon
+        style={{
+          color: theme.palette.primary.main,
+          fontSize: "24px",
+        }}
+      />
+    ) : (
+      <StandingIcon
+        style={{
+          color: theme.palette.primary.main,
+          fontSize: "24px",
+        }}
+      />
+    );
+    return L.divIcon({
+      className:
+        "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive",
+      iconSize: [24, 24],
+      iconAnchor: [12, 12],
+      html: renderToString(markerIcon),
+    });
+  }, [position?.coords.speed, theme.palette.primary.main]);
 
   useEffect(() => {
     if (active) {
