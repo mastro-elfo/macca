@@ -11,7 +11,7 @@ export default function useMarkdownTranslation(namespace: string) {
     queryKey: ["public", "locales", namespace],
     queryFn: ({ signal }) =>
       axios
-        .get(`/macca/locales/${compact}/${namespace}`, {
+        .get<string>(`/macca/locales/${compact}/${namespace}`, {
           signal,
           headers: {
             "Content-Type": "text/markdown",

@@ -14,7 +14,9 @@ export function useDbQuery<TData = unknown>({
     queryKey: ["db.json"],
     queryFn: ({ signal }) =>
       axios
-        .get(["", "macca", "data", "db.json"].join("/"), { signal })
+        .get<DbResponseDto>(["", "macca", "data", "db.json"].join("/"), {
+          signal,
+        })
         .then((response) => response.data)
         .then(DbResponseSchema.parse),
     ...options,
