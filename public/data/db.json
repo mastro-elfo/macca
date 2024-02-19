@@ -1482,6 +1482,18 @@
           }
         }
       ]
+    },
+    {
+      "id": 64,
+      "title": "Tra",
+      "year": 2018,
+      "tags": ["wood", "steel", "marble", "glass", "narrative-voice"],
+      "town": "Ghizzano",
+      "address": "Oratorio della Santissima Annunziata",
+      "latitude": 43.538336658282454,
+      "longitude": 10.790700755086332,
+      "authorIds": [3],
+      "images": []
     }
   ],
   "authors": [
