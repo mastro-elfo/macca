@@ -23,7 +23,7 @@ export default function Geolocation() {
 
   const zoom = map.getZoom();
 
-  const markerIcon = position?.coords?.speed ? (
+  const markerIcon = position?.coords.speed ? (
     <WalkingIcon
       style={{
         color: theme.palette.primary.main,
@@ -52,7 +52,7 @@ export default function Geolocation() {
   );
 
   useEffect(() => {
-    if (active && navigator.geolocation) {
+    if (active) {
       setLoading(true);
       const handler = () => {
         navigator.geolocation.getCurrentPosition(

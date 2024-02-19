@@ -22,7 +22,6 @@ export function useArtworkInfiniteQuery() {
       pageCount: Math.ceil((artworkQuery.data?.length ?? 0) / limit),
     }),
     getNextPageParam: (lastPage) => {
-      if (!lastPage) return 0;
       if (lastPage.page >= lastPage.pageCount) return undefined;
       return lastPage.page + 1;
     },

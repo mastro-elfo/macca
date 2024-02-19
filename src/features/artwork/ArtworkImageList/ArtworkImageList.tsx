@@ -38,7 +38,7 @@ export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
       <ArtworkImageDialog
         artwork={artwork}
         image={selectedImage}
-        open={!!(artwork && selectedImage)}
+        open={!!selectedImage}
         onClose={() => {
           setSelectedImage(null);
         }}
