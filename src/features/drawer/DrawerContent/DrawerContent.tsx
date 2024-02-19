@@ -20,7 +20,9 @@ export default function DrawerContent() {
   return (
     <List disablePadding>
       <ListItemButton
-        onClick={() => navigate("/")}
+        onClick={() => {
+          navigate("/");
+        }}
         selected={location.pathname.startsWith("/map")}
       >
         <ListItemIcon>
@@ -30,7 +32,9 @@ export default function DrawerContent() {
       </ListItemButton>
 
       <ListItemButton
-        onClick={() => navigate("/artworks")}
+        onClick={() => {
+          navigate("/artworks");
+        }}
         selected={location.pathname.startsWith("/artworks")}
       >
         <ListItemIcon>
@@ -40,7 +44,9 @@ export default function DrawerContent() {
       </ListItemButton>
 
       <ListItemButton
-        onClick={() => navigate("/authors")}
+        onClick={() => {
+          navigate("/authors");
+        }}
         selected={location.pathname.startsWith("/authors")}
       >
         <ListItemIcon>
@@ -50,7 +56,9 @@ export default function DrawerContent() {
       </ListItemButton>
 
       <ListItemButton
-        onClick={() => navigate("/what-is-macca")}
+        onClick={() => {
+          navigate("/what-is-macca");
+        }}
         selected={location.pathname.startsWith("/what-is-macca")}
       >
         <ListItemIcon>
@@ -60,7 +68,9 @@ export default function DrawerContent() {
       </ListItemButton>
 
       <ListItemButton
-        onClick={() => navigate("/peccioli")}
+        onClick={() => {
+          navigate("/peccioli");
+        }}
         selected={location.pathname.startsWith("/peccioli")}
       >
         <ListItemIcon>

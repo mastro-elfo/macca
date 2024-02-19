@@ -26,7 +26,9 @@ export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
           <ArtworkImageListItem
             key={image.path}
             cols={Math.min(cols, image.cols)}
-            onClick={() => setSelectedImage(image)}
+            onClick={() => {
+              setSelectedImage(image);
+            }}
             artwork={artwork}
             image={image}
             index={index}
@@ -37,7 +39,9 @@ export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
         artwork={artwork}
         image={selectedImage}
         open={!!(artwork && selectedImage)}
-        onClose={() => setSelectedImage(null)}
+        onClose={() => {
+          setSelectedImage(null);
+        }}
       />
     </>
   );

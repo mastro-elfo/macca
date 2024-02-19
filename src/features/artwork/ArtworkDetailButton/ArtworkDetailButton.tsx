@@ -24,7 +24,9 @@ export default function ArtworkDetailButton({
     <Button
       {...props}
       endIcon={<DetailIcon />}
-      onClick={() => navigate(`/artworks/${artwork.id}`)}
+      onClick={() => {
+        navigate(`/artworks/${artwork.id}`);
+      }}
     >
       {t("Detail")}
     </Button>

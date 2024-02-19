@@ -32,7 +32,9 @@ export default function AuthorListPage() {
           <ListItem disablePadding>
             <ListItemButton
               key={author.id}
-              onClick={() => navigate(`/authors/${author.id}`)}
+              onClick={() => {
+                navigate(`/authors/${author.id}`);
+              }}
               title={fullNameFormatter(author)}
             >
               <ListItemText primary={fullNameFormatter(author)} />

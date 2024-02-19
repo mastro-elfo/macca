@@ -68,9 +68,15 @@ export default function Geolocation() {
         );
       };
       const iv = setInterval(handler, 5000);
-      return () => clearInterval(iv);
+      return () => {
+        clearInterval(iv);
+      };
     }
   }, [active]);
+
+  const handleToggle = () => {
+    setActive(!active);
+  };
 
   return (
     <>
@@ -102,7 +108,7 @@ export default function Geolocation() {
           top: theme.spacing(2),
           right: theme.spacing(1),
         })}
-        onClick={() => setActive(!active)}
+        onClick={handleToggle}
         title={t("Activate geolocation")}
       >
         <LoadingProgress

@@ -15,10 +15,18 @@ function defaultCallback(message: string, variant: VariantType) {
 
 const Context = createContext({
   log: defaultCallback,
-  success: (message: string) => defaultCallback(message, "success"),
-  info: (message: string) => defaultCallback(message, "info"),
-  warning: (message: string) => defaultCallback(message, "warning"),
-  error: (message: string) => defaultCallback(message, "error"),
+  success: (message: string) => {
+    defaultCallback(message, "success");
+  },
+  info: (message: string) => {
+    defaultCallback(message, "info");
+  },
+  warning: (message: string) => {
+    defaultCallback(message, "warning");
+  },
+  error: (message: string) => {
+    defaultCallback(message, "error");
+  },
 });
 
 export function useAppSnackbar() {
@@ -28,12 +36,21 @@ export function useAppSnackbar() {
 function MessageProvider({ children }: PropsWithChildren) {
   const { enqueueSnackbar } = useSnackbar();
 
-  const log = (message: string, variant: VariantType) =>
+  const log = (message: string, variant: VariantType) => {
     enqueueSnackbar(message, { variant });
-  const success = (message: string) => log(message, "success");
-  const info = (message: string) => log(message, "info");
-  const warning = (message: string) => log(message, "warning");
-  const error = (message: string) => log(message, "error");
+  };
+  const success = (message: string) => {
+    log(message, "success");
+  };
+  const info = (message: string) => {
+    log(message, "info");
+  };
+  const warning = (message: string) => {
+    log(message, "warning");
+  };
+  const error = (message: string) => {
+    log(message, "error");
+  };
 
   return (
     <Context.Provider value={{ log, success, info, warning, error }}>

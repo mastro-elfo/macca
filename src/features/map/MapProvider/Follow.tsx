@@ -18,7 +18,9 @@ export default function Follow({ latitude, longitude, zoom }: FollowProps) {
     lng: number,
     zoom: number,
     id?: string
-  ) => navigate(`/map/${lat}/${lng}/${zoom}/${id ?? ""}`);
+  ) => {
+    navigate(`/map/${lat}/${lng}/${zoom}/${id ?? ""}`);
+  };
 
   useMapEvents({
     dragend: (event) => {
