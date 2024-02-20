@@ -29,7 +29,7 @@ export default function AuthorListPage() {
     >
       <List>
         {authorListQuery.data?.map((author) => (
-          <ListItem disablePadding>
+          <ListItem disablePadding key={author.id}>
             <ListItemButton
               key={author.id}
               onClick={() => {
