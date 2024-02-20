@@ -24,20 +24,24 @@ export default function Follow({ latitude, longitude, zoom }: FollowProps) {
 
   useMapEvents({
     dragend: (event) => {
+      /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument */
       const { lat, lng } = event.target.getCenter();
       const zoom = event.target.getZoom();
       handleUpdateUrl(lat, lng, zoom, params.id);
+      /* eslint-enable */
     },
     zoom: (event) => {
+      /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-argument */
       const { lat, lng } = event.target.getCenter();
       const zoom = event.target.getZoom();
       handleUpdateUrl(lat, lng, zoom, params.id);
+      /* eslint-enable */
     },
   });
 
   useEffect(() => {
     map.setView([latitude, longitude], zoom);
-  }, [latitude, longitude, zoom]);
+  }, [latitude, longitude, zoom, map]);
 
   return null;
 }
