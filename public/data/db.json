@@ -1469,7 +1469,7 @@
       "year": 1997,
       "tags": ["marble"],
       "town": "Ghizzano",
-      "address": "Oratorio della Santissima Annunziata",
+      "address": "Oratorio della Santissima Annunziata, Via Mercatino, 66",
       "latitude": 43.53843422168031,
       "longitude": 10.790789360592287,
       "authorIds": [40, 41],
@@ -1489,11 +1489,51 @@
       "year": 2018,
       "tags": ["wood", "steel", "marble", "glass", "narrative-voice"],
       "town": "Ghizzano",
-      "address": "Oratorio della Santissima Annunziata",
+      "address": "Oratorio della Santissima Annunziata, Via Mercatino, 66",
       "latitude": 43.538336658282454,
       "longitude": 10.790700755086332,
       "authorIds": [3],
       "images": []
+    },
+    {
+      "id": 65,
+      "title": "SolidSky",
+      "year": 2019,
+      "tags": ["azul-macaubas"],
+      "town": "Ghizzano",
+      "address": "Oratorio della Santissima Annunziata, Via Mercatino, 66",
+      "latitude": 43.538250621062275,
+      "longitude": 10.790713846349963,
+      "authorIds": [42],
+      "images": [
+        {
+          "path": "96.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=48&idView=12"
+          }
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "title": "SolidSky",
+      "year": 2019,
+      "tags": ["azul-macaubas"],
+      "town": "Ghizzano",
+      "address": "Oratorio della Santissima Annunziata, Via Mercatino, 66",
+      "latitude": 43.53989966895885,
+      "longitude": 10.792001978180512,
+      "authorIds": [42],
+      "images": [
+        {
+          "path": "97.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=48&idView=12"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1701,6 +1741,11 @@
       "id": 41,
       "firstName": "Robert",
       "lastName": "O'Brien"
+    },
+    {
+      "id": 42,
+      "firstName": "Alicja",
+      "lastName": "Kwade"
     }
   ]
 }
