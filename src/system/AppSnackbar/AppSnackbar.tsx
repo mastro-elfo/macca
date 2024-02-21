@@ -29,6 +29,7 @@ const Context = createContext({
   },
 });
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAppSnackbar() {
   return useContext(Context);
 }

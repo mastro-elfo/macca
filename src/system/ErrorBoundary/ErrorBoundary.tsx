@@ -66,4 +66,5 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default withTranslation()(ErrorBoundary);
