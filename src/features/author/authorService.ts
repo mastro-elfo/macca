@@ -18,9 +18,14 @@ export function useAuthorDetailQuery(id: number) {
 export function useAuthorFullNameFormatter() {
   const { t } = useTranslation();
 
-  return useCallback((author?: AuthorEntity) => {
-    if (!author) return "";
-    if (author.isUnknown) return t("Unknown");
-    return [author.firstName, author.lastName].filter((item) => item).join(" ");
-  }, []);
+  return useCallback(
+    (author?: AuthorEntity) => {
+      if (!author) return "";
+      if (author.isUnknown) return t("Unknown");
+      return [author.firstName, author.lastName]
+        .filter((item) => item)
+        .join(" ");
+    },
+    [t]
+  );
 }

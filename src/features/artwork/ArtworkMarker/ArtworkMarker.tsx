@@ -41,7 +41,7 @@ export default function ArtworkMarker({
           />
         ),
       }),
-    [highlight]
+    [highlight, theme.palette.primary.main]
   );
 
   useEffect(() => {
