@@ -1534,6 +1534,40 @@
           }
         }
       ]
+    },
+    {
+      "id": 67,
+      "title": "Via di Mezzo",
+      "year": 2019,
+      "tags": ["wall-drawing"],
+      "town": "Ghizzano",
+      "address": "Via di Mezzo, dal civico 6",
+      "latitude": 43.539603204033035,
+      "longitude": 10.792256845330073,
+      "authorIds": [37],
+      "images": [
+        {
+          "path": "98.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=49&idView=12"
+          }
+        },
+        {
+          "path": "99.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=49&idView=12"
+          }
+        },
+        {
+          "path": "100.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=49&idView=12"
+          }
+        }
+      ]
     }
   ],
   "authors": [
