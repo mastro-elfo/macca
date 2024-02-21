@@ -5,7 +5,7 @@ import { DbResponseDto, DbResponseSchema } from "./dbModel";
 type UseDbQueryOptions<TResponse, TError, TData> = Pick<
   UseQueryOptions<TResponse, TError, TData>,
   "enabled" | "initialData" | "select"
-> & {};
+>;
 
 export function useDbQuery<TData = unknown>({
   ...options
@@ -18,7 +18,7 @@ export function useDbQuery<TData = unknown>({
           signal,
         })
         .then((response) => response.data)
-        .then(DbResponseSchema.parse),
+        .then((data) => DbResponseSchema.parse(data)),
     ...options,
   });
 }
