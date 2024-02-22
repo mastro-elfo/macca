@@ -1568,6 +1568,66 @@
           }
         }
       ]
+    },
+    {
+      "id": 68,
+      "title": "Elevatio Corpus",
+      "year": 2019,
+      "tags": ["neon-lights", "steel-structure"],
+      "town": "Ghizzano",
+      "address": "Via di Mezzo, 2",
+      "latitude": 43.53915044166454,
+      "longitude": 10.791889631119556,
+      "authorIds": [18],
+      "images": [
+        {
+          "path": "101.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=50&idView=12"
+          }
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "title": "Elevatio Corpus",
+      "year": 2019,
+      "tags": ["neon-lights", "steel-structure"],
+      "town": "Ghizzano",
+      "address": "Via di Mezzo, 2",
+      "latitude": 43.53959058041814,
+      "longitude": 10.792106803601282,
+      "authorIds": [18],
+      "images": [
+        {
+          "path": "102.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=50&idView=12"
+          }
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "title": "Elevatio Corpus",
+      "year": 2019,
+      "tags": ["neon-lights", "steel-structure"],
+      "town": "Ghizzano",
+      "address": "Via di Mezzo, 2",
+      "latitude": 43.53968585276612,
+      "longitude": 10.791797008461103,
+      "authorIds": [18],
+      "images": [
+        {
+          "path": "103.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=50&idView=12"
+          }
+        }
+      ]
     }
   ],
   "authors": [
