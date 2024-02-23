@@ -1628,6 +1628,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 70,
+      "title": "Francescano",
+      "year": 2018,
+      "tags": ["wood", "grey-stone", "narrative-voice"],
+      "town": "Le Serre",
+      "address": "Chiesa delle Serre, Str. Vicinale delle Serre, 100",
+      "latitude": 43.53889753501676,
+      "longitude": 10.750399028762699,
+      "authorIds": [3],
+      "images": [
+        {
+          "path": "104.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=50&idView=12"
+          }
+        }
+      ]
     }
   ],
   "authors": [
