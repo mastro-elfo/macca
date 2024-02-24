@@ -1648,6 +1648,26 @@
           }
         }
       ]
+    },
+    {
+      "id": 71,
+      "title": "Sincronico",
+      "year": 2018,
+      "tags": ["wood", "enamel", "narrative-voice"],
+      "town": "Cedri",
+      "address": "Chiesa di San Giorgio, Via di Cedri, 25",
+      "latitude": 43.50848984078224,
+      "longitude": 10.817786467172336,
+      "authorIds": [3],
+      "images": [
+        {
+          "path": "105.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://fondarte.peccioli.net/opere/opere.php?idOpera=53&idView=11"
+          }
+        }
+      ]
     }
   ],
   "authors": [
