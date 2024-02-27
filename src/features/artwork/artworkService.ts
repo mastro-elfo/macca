@@ -44,3 +44,17 @@ export function useArtworkDetailQuery(id: number) {
     },
   });
 }
+
+export function useArtworkYearListQuery(_?: string) {
+  return useDbQuery<number[]>({
+    select: ({ artworks }) =>
+      Array.from(
+        new Set(
+          artworks
+            .filter((artwork) => artwork.year)
+            .map((artwork) => artwork.year)
+            .sort() as number[]
+        )
+      ),
+  });
+}
