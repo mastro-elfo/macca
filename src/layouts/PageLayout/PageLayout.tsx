@@ -16,6 +16,7 @@ import DrawerContent from "../../features/drawer/DrawerContent/DrawerContent";
 import DrawerIconButton from "../../features/drawer/DrawerIconButton/DrawerIconButton";
 
 type PageLayoutProps = PropsWithChildren & {
+  actions?: ReactNode;
   background?: ComponentProps<typeof BackgroundBox>;
   title?: ReactNode;
   loading?: boolean;
@@ -23,6 +24,7 @@ type PageLayoutProps = PropsWithChildren & {
 } & Pick<BoxProps, "py">;
 
 export default function PageLayout({
+  actions,
   background,
   children,
   loading,
@@ -38,6 +40,7 @@ export default function PageLayout({
           <Typography variant="h5" flex={1} textOverflow="ellipsis" noWrap>
             {title}
           </Typography>
+          {actions}
         </Toolbar>
       </AppBar>
       <Toolbar />
