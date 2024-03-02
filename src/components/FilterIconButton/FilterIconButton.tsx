@@ -34,7 +34,7 @@ export default function FilterIconButton({
 
   return (
     <>
-      <IconButton title={t("Filter")} onClick={handleOpen} {...props}>
+      <IconButton title={t("Filters")} onClick={handleOpen} {...props}>
         <Badge {...badgeProps}>
           <FilterIcon />
         </Badge>

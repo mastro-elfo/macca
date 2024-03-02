@@ -8,19 +8,25 @@ export function useArtworkListQuery() {
   });
 }
 
-export function useArtworkInfiniteQuery() {
+export function useArtworkInfiniteQuery(filters: { year: number | string }) {
   const limit = 10;
   const artworkQuery = useArtworkListQuery();
+
   return useInfiniteQuery({
-    queryKey: ["artwork", "infinite"],
-    queryFn: ({ pageParam }) => ({
-      data: (artworkQuery.data ?? []).slice(
-        pageParam * limit,
-        (pageParam + 1) * limit
-      ),
-      page: pageParam,
-      pageCount: Math.ceil((artworkQuery.data?.length ?? 0) / limit),
-    }),
+    queryKey: ["artwork", "infinite", filters],
+    queryFn: ({ pageParam }) => {
+      const data = (artworkQuery.data ?? []).filter((artwork) => {
+        if (filters.year) {
+          return artwork.year === filters.year;
+        }
+        return true;
+      });
+      return {
+        data: data.slice(pageParam * limit, (pageParam + 1) * limit),
+        page: pageParam,
+        pageCount: Math.ceil(data.length / limit),
+      };
+    },
     getNextPageParam: (lastPage) => {
       if (lastPage.page >= lastPage.pageCount) return undefined;
       return lastPage.page + 1;
@@ -56,5 +62,16 @@ export function useArtworkYearListQuery(_?: string) {
             .sort() as number[]
         )
       ),
+  });
+}
+
+import { useForm } from "react-hook-form";
+
+export function useArtworkFilterForm() {
+  return useForm({
+    mode: "onChange",
+    defaultValues: {
+      year: "",
+    },
   });
 }
