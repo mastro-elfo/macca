@@ -1668,6 +1668,33 @@
           }
         }
       ]
+    },
+    {
+      "id": 73,
+      "title": "Aério",
+      "year": 2023,
+      "tags": ["mixed-technique"],
+      "town": "Peccioli",
+      "address": "Vicolo Petresi",
+      "latitude": 43.54906665668373,
+      "longitude": 10.720253565437549,
+      "authorIds": [43],
+      "images": [
+        {
+          "path": "106.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=160&idView=28"
+          }
+        },
+        {
+          "path": "107.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=160&idView=28"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1880,6 +1907,11 @@
       "id": 42,
       "firstName": "Alicja",
       "lastName": "Kwade"
+    },
+    {
+      "id": 43,
+      "firstName": "Marcella",
+      "lastName": "Del Signore"
     }
   ]
 }
