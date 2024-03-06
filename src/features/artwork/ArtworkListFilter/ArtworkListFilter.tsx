@@ -1,4 +1,6 @@
 import { MenuItem, Stack } from "@mui/material";
+import { useMemo } from "react";
+import { useWatch } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import ControlledTextField from "../../../components/ControlledTextField/ControlledTextField";
 import FilterIconButton from "../../../components/FilterIconButton/FilterIconButton";
@@ -12,13 +14,19 @@ export default function ArtworkListFilter({
 }: ArtworkListFilterProps) {
   const { t } = useTranslation();
 
+  const filters = useWatch();
+  const appliedFilters = useMemo(
+    () => Object.values(filters).filter((item) => !!item).length,
+    [filters]
+  );
+
   return (
     <FilterIconButton
       edge="end"
       badgeProps={{
-        variant: "standard",
-        badgeContent: 5,
-        invisible: true,
+        variant: "dot",
+        badgeContent: appliedFilters,
+        invisible: appliedFilters === 0,
         color: "primary",
       }}
     >
