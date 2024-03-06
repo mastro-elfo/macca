@@ -6,5 +6,6 @@ do
     if [ ! -f "$output" ]
     then
         cwebp "$file" -o "$output"
+        rm "$file"
     fi
 done
