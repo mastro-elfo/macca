@@ -1695,6 +1695,40 @@
           }
         }
       ]
+    },
+    {
+      "id": 74,
+      "title": "Crispr - Locus",
+      "year": 2023,
+      "tags": ["mixed-technique"],
+      "town": "Peccioli",
+      "address": "via Borgherucci (terrazza)",
+      "latitude": 43.54926263078214,
+      "longitude": 10.71982378581081,
+      "authorIds": [44, 45, 46],
+      "images": [
+        {
+          "path": "108.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=161&idView=28"
+          }
+        },
+        {
+          "path": "109.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=161&idView=28"
+          }
+        },
+        {
+          "path": "110.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=161&idView=28"
+          }
+        }
+      ]
     }
   ],
   "authors": [
@@ -1912,6 +1946,21 @@
       "id": 43,
       "firstName": "Marcella",
       "lastName": "Del Signore"
+    },
+    {
+      "id": 44,
+      "firstName": "Maria",
+      "lastName": "Perbellini"
+    },
+    {
+      "id": 45,
+      "firstName": "Christian",
+      "lastName": "Pongratz"
+    },
+    {
+      "id": 46,
+      "firstName": "Dustin",
+      "lastName": "White"
     }
   ]
 }

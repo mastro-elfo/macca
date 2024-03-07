@@ -27,7 +27,9 @@ export default function ArtworkListPage() {
   useAutoSubmit(
     filterForm,
     (_data) => {
+      // FIXME: no need to invalidate queries here
       void queryClient.invalidateQueries({ queryKey: ["artwork", "infinite"] });
+      // TODO: push query parameters
     },
     (err) => {
       console.log("onError", err);
@@ -37,6 +39,7 @@ export default function ArtworkListPage() {
   return (
     <PageLayout
       title={t("Artworks")}
+      // TODO: add yearsQuery to loading state
       loading={artworkInfiniteQuery.isFetching}
       py={1}
       background={{

@@ -20,6 +20,9 @@ export default function ArtworkListFilter({
     [filters]
   );
 
+  // TODO: filter by tag
+  // TODO: filter by town
+
   return (
     <FilterIconButton
       edge="end"
@@ -38,6 +41,13 @@ export default function ArtworkListFilter({
           label={t("Year")}
           fullWidth
           name="year"
+          // TODO: show empty value
+          // SelectProps={{
+          //   displayEmpty: true,
+          // }}
+          // InputLabelProps={{
+          //   shrink: true,
+          // }}
         >
           <MenuItem value="">{t("All")}</MenuItem>
           {yearOptions.map((year) => (
@@ -46,6 +56,7 @@ export default function ArtworkListFilter({
             </MenuItem>
           ))}
         </ControlledTextField>
+        {/* TODO: add clear button */}
         {/* <Stack direction="row">
           <Button>Clear</Button>
         </Stack> */}

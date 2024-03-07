@@ -1,4 +1,5 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { useForm } from "react-hook-form";
 import { useDbQuery } from "../db/dbService";
 import { ArtworkEntity } from "./artworkModel";
 
@@ -65,7 +66,8 @@ export function useArtworkYearListQuery(_?: string) {
   });
 }
 
-import { useForm } from "react-hook-form";
+// TODO: add `useArtworkTownListQuery(town?: string)`
+// TODO: add `useArtworkTagListQuery(tag?: string)`
 
 export function useArtworkFilterForm() {
   return useForm({

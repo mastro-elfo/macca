@@ -29,15 +29,19 @@ export default function ArtworkDetailPage() {
       <Stack direction="row" justifyContent="space-between" spacing={2}>
         <Typography variant="h6">{artworkDetailQuery.data?.title}</Typography>
         <Typography variant="h6" align="right">
+          {/* TODO: add link to search by year */}
           {artworkDetailQuery.data?.year}
         </Typography>
       </Stack>
 
       <Stack direction="row" justifyContent="space-between" spacing={2}>
         <Typography variant="h6" color="textSecondary">
+          {/* TODO: add link to author page */}
           {artworkDetailQuery.data?.authors.map(fullNameFormatter).join(", ")}
         </Typography>
         <Typography variant="h6" color="textSecondary" align="right">
+          {/* TODO: add town */}
+          {/* TODO: add link to search by town */}
           {artworkDetailQuery.data?.address}
         </Typography>
       </Stack>

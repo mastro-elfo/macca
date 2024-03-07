@@ -16,6 +16,8 @@ export default function AuthorListPage() {
   const authorListQuery = useAuthorListQuery();
   const fullNameFormatter = useAuthorFullNameFormatter();
 
+  // TODO: improve page layout
+
   return (
     <PageLayout
       title={t("Authors")}
