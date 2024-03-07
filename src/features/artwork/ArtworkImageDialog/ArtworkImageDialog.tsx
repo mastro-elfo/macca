@@ -35,8 +35,11 @@ export default function ArtworkImageDialog({
         </Stack>
       </DialogContent>
       <DialogActions>
-        <Button onClick={(event) => onClose?.(event, "escapeKeyDown")}>
-          Close
+        <Button
+          onClick={(event) => onClose?.(event, "escapeKeyDown")}
+          title={t("Close")}
+        >
+          {t("Close")}
         </Button>
       </DialogActions>
     </Dialog>
