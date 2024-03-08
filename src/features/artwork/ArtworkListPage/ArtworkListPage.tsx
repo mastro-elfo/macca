@@ -1,4 +1,3 @@
-import { useQueryClient } from "@tanstack/react-query";
 import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import InfiniteContainer from "../../../components/InfiniteContainer/InfiniteContainer";
@@ -22,13 +21,10 @@ export default function ArtworkListPage() {
   const artworkInfiniteQuery = useArtworkInfiniteQuery(filterForm.getValues());
   const { ref } = useIntersection(artworkInfiniteQuery);
   const yearsQuery = useArtworkYearListQuery();
-  const queryClient = useQueryClient();
 
   useAutoSubmit(
     filterForm,
     (_data) => {
-      // FIXME: no need to invalidate queries here
-      void queryClient.invalidateQueries({ queryKey: ["artwork", "infinite"] });
       // TODO: push query parameters
     },
     (err) => {
