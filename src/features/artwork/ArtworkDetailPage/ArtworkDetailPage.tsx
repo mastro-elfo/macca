@@ -40,7 +40,7 @@ export default function ArtworkDetailPage() {
           {artworkDetailQuery.data?.authors.map(fullNameFormatter).join(", ")}
         </Typography>
         <Typography variant="h6" color="textSecondary" align="right">
-          {/* TODO: add town */}
+          {artworkDetailQuery.data?.town},{" "}
           {/* TODO: add link to search by town */}
           {artworkDetailQuery.data?.address}
         </Typography>
