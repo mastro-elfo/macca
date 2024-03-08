@@ -39,8 +39,7 @@ export default function ArtworkListPage() {
   return (
     <PageLayout
       title={t("Artworks")}
-      // TODO: add yearsQuery to loading state
-      loading={artworkInfiniteQuery.isFetching}
+      loading={artworkInfiniteQuery.isFetching || yearsQuery.isFetching}
       py={1}
       background={{
         image: "undraw_art_museum_-8-or4.svg",
