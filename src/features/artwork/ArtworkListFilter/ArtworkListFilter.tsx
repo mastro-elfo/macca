@@ -41,13 +41,12 @@ export default function ArtworkListFilter({
           label={t("Year")}
           fullWidth
           name="year"
-          // TODO: show empty value
-          // SelectProps={{
-          //   displayEmpty: true,
-          // }}
-          // InputLabelProps={{
-          //   shrink: true,
-          // }}
+          SelectProps={{
+            displayEmpty: true,
+          }}
+          InputLabelProps={{
+            shrink: true,
+          }}
         >
           <MenuItem value="">{t("All")}</MenuItem>
           {yearOptions.map((year) => (
