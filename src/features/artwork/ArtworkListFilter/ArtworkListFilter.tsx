@@ -1,6 +1,6 @@
-import { MenuItem, Stack } from "@mui/material";
+import { Button, MenuItem, Stack } from "@mui/material";
 import { useMemo } from "react";
-import { useWatch } from "react-hook-form";
+import { useFormContext, useWatch } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import ControlledTextField from "../../../components/ControlledTextField/ControlledTextField";
 import FilterIconButton from "../../../components/FilterIconButton/FilterIconButton";
@@ -20,8 +20,14 @@ export default function ArtworkListFilter({
     [filters]
   );
 
+  const { reset } = useFormContext();
+
   // TODO: filter by tag
   // TODO: filter by town
+
+  const handleReset = () => {
+    reset();
+  };
 
   return (
     <FilterIconButton
@@ -55,10 +61,11 @@ export default function ArtworkListFilter({
             </MenuItem>
           ))}
         </ControlledTextField>
-        {/* TODO: add clear button */}
-        {/* <Stack direction="row">
-          <Button>Clear</Button>
-        </Stack> */}
+        <Stack direction="row" justifyContent="flex-end">
+          <Button title={t("Clear")} onClick={handleReset}>
+            {t("Clear")}
+          </Button>
+        </Stack>
       </Stack>
     </FilterIconButton>
   );
