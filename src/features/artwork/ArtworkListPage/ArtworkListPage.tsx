@@ -10,6 +10,7 @@ import ArtworkListFilter from "../ArtworkListFilter/ArtworkListFilter";
 import {
   useArtworkFilterForm,
   useArtworkInfiniteQuery,
+  useArtworkTownListQuery,
   useArtworkYearListQuery,
 } from "../artworkService";
 
@@ -21,6 +22,7 @@ export default function ArtworkListPage() {
   const artworkInfiniteQuery = useArtworkInfiniteQuery(filterForm.getValues());
   const { ref } = useIntersection(artworkInfiniteQuery);
   const yearsQuery = useArtworkYearListQuery();
+  const townsQuery = useArtworkTownListQuery();
 
   useAutoSubmit(
     filterForm,
@@ -35,7 +37,11 @@ export default function ArtworkListPage() {
   return (
     <PageLayout
       title={t("Artworks")}
-      loading={artworkInfiniteQuery.isFetching || yearsQuery.isFetching}
+      loading={
+        artworkInfiniteQuery.isFetching ||
+        yearsQuery.isFetching ||
+        townsQuery.isFetching
+      }
       py={1}
       background={{
         image: "undraw_art_museum_-8-or4.svg",
@@ -44,10 +50,14 @@ export default function ArtworkListPage() {
       }}
       actions={
         <FormProvider {...filterForm}>
-          <ArtworkListFilter yearOptions={yearsQuery.data ?? []} />
+          <ArtworkListFilter
+            yearOptions={yearsQuery.data ?? []}
+            townOptions={townsQuery.data ?? []}
+          />
         </FormProvider>
       }
     >
+      {/* TODO: if list is empty, display "No element found" */}
       <InfiniteContainer query={artworkInfiniteQuery} intersectionRef={ref}>
         <ArtworkGrid
           artworks={

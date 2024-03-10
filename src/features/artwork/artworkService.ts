@@ -9,19 +9,23 @@ export function useArtworkListQuery() {
   });
 }
 
-export function useArtworkInfiniteQuery(filters: { year: number | string }) {
+export function useArtworkInfiniteQuery(filters: {
+  town: string;
+  year: number | string;
+}) {
   const limit = 10;
   const artworkQuery = useArtworkListQuery();
 
   return useInfiniteQuery({
     queryKey: ["artwork", "infinite", filters],
     queryFn: ({ pageParam }) => {
-      const data = (artworkQuery.data ?? []).filter((artwork) => {
-        if (filters.year) {
-          return artwork.year === filters.year;
-        }
-        return true;
-      });
+      const data = (artworkQuery.data ?? [])
+        .filter((artwork) =>
+          filters.town ? artwork.town === filters.town : true
+        )
+        .filter((artwork) =>
+          filters.year ? artwork.year === filters.year : true
+        );
       return {
         data: data.slice(pageParam * limit, (pageParam + 1) * limit),
         page: pageParam,
@@ -66,7 +70,22 @@ export function useArtworkYearListQuery(_?: string) {
   });
 }
 
-// TODO: add `useArtworkTownListQuery(town?: string)`
+export function useArtworkTownListQuery(town?: string) {
+  return useDbQuery<string[]>({
+    select: ({ artworks }) =>
+      Array.from(
+        new Set(
+          artworks
+            .filter((artwork) =>
+              town ? artwork.town.toLowerCase().includes(town) : true
+            )
+            .map((artwork) => artwork.town)
+            .sort()
+        )
+      ),
+  });
+}
+
 // TODO: add `useArtworkTagListQuery(tag?: string)`
 
 export function useArtworkFilterForm() {
@@ -74,6 +93,7 @@ export function useArtworkFilterForm() {
     mode: "onChange",
     defaultValues: {
       year: "",
+      town: "",
     },
   });
 }

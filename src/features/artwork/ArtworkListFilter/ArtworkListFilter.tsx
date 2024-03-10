@@ -6,10 +6,12 @@ import ControlledTextField from "../../../components/ControlledTextField/Control
 import FilterIconButton from "../../../components/FilterIconButton/FilterIconButton";
 
 type ArtworkListFilterProps = {
+  townOptions: string[];
   yearOptions: number[];
 };
 
 export default function ArtworkListFilter({
+  townOptions,
   yearOptions,
 }: ArtworkListFilterProps) {
   const { t } = useTranslation();
@@ -23,7 +25,6 @@ export default function ArtworkListFilter({
   const { reset } = useFormContext();
 
   // TODO: filter by tag
-  // TODO: filter by town
 
   const handleReset = () => {
     reset();
@@ -54,13 +55,35 @@ export default function ArtworkListFilter({
             shrink: true,
           }}
         >
-          <MenuItem value="">{t("All")}</MenuItem>
+          <MenuItem value="">{t("All years")}</MenuItem>
           {yearOptions.map((year) => (
             <MenuItem key={year} value={year}>
               {year}
             </MenuItem>
           ))}
         </ControlledTextField>
+
+        <ControlledTextField
+          name="town"
+          select
+          size="small"
+          label={t("Town")}
+          fullWidth
+          SelectProps={{
+            displayEmpty: true,
+          }}
+          InputLabelProps={{
+            shrink: true,
+          }}
+        >
+          <MenuItem value="">{t("All towns")}</MenuItem>
+          {townOptions.map((year) => (
+            <MenuItem key={year} value={year}>
+              {year}
+            </MenuItem>
+          ))}
+        </ControlledTextField>
+
         <Stack direction="row" justifyContent="flex-end">
           <Button title={t("Clear")} onClick={handleReset}>
             {t("Clear")}
