@@ -40,7 +40,7 @@ export default function ArtworkListFilter({
         color: "primary",
       }}
     >
-      <Stack px={2} spacing={2}>
+      <Stack px={2} pt={1} spacing={2}>
         <ControlledTextField
           select
           size="small"
@@ -85,7 +85,7 @@ export default function ArtworkListFilter({
         </ControlledTextField>
 
         <Stack direction="row" justifyContent="flex-end">
-          <Button title={t("Clear")} onClick={handleReset}>
+          <Button title={t("Clear")} onClick={handleReset} size="small">
             {t("Clear")}
           </Button>
         </Stack>
