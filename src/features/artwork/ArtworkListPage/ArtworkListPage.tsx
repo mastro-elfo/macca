@@ -1,5 +1,7 @@
+import { useMemo } from "react";
 import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import EmptyListAlert from "../../../components/EmptyListAlert/EmptyListAlert";
 import InfiniteContainer from "../../../components/InfiniteContainer/InfiniteContainer";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useAutoSubmit from "../../../services/useAutoSubmit";
@@ -34,6 +36,12 @@ export default function ArtworkListPage() {
     }
   );
 
+  const artworkList = useMemo(
+    () =>
+      artworkInfiniteQuery.data?.pages.map((page) => page.data).flat() ?? [],
+    [artworkInfiniteQuery.data?.pages]
+  );
+
   return (
     <PageLayout
       title={t("Artworks")}
@@ -58,13 +66,9 @@ export default function ArtworkListPage() {
       }
     >
       {/* TODO: if list is empty, display "No element found" */}
+      {artworkList.length === 0 && <EmptyListAlert />}
       <InfiniteContainer query={artworkInfiniteQuery} intersectionRef={ref}>
-        <ArtworkGrid
-          artworks={
-            artworkInfiniteQuery.data?.pages.map((page) => page.data).flat() ??
-            []
-          }
-        />
+        <ArtworkGrid artworks={artworkList} />
       </InfiniteContainer>
     </PageLayout>
   );
