@@ -32,3 +32,8 @@ export const ArtworkSchema = z.object({
 });
 
 export type ArtworkEntity = z.infer<typeof ArtworkSchema>;
+
+export type ArtworkFilter = {
+  town: string;
+  year: number | string;
+};

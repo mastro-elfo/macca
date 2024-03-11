@@ -1,7 +1,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { useDbQuery } from "../db/dbService";
-import { ArtworkEntity } from "./artworkModel";
+import { ArtworkEntity, ArtworkFilter } from "./artworkModel";
 
 export function useArtworkListQuery() {
   return useDbQuery<ArtworkEntity[]>({
@@ -9,22 +9,19 @@ export function useArtworkListQuery() {
   });
 }
 
-export function useArtworkInfiniteQuery(filters: {
-  town: string;
-  year: number | string;
-}) {
+export function useArtworkInfiniteQuery(filter: ArtworkFilter) {
   const limit = 10;
   const artworkQuery = useArtworkListQuery();
 
   return useInfiniteQuery({
-    queryKey: ["artwork", "infinite", filters],
+    queryKey: ["artwork", "infinite", filter],
     queryFn: ({ pageParam }) => {
       const data = (artworkQuery.data ?? [])
         .filter((artwork) =>
-          filters.town ? artwork.town === filters.town : true
+          filter.town ? artwork.town === filter.town : true
         )
         .filter((artwork) =>
-          filters.year ? artwork.year === filters.year : true
+          filter.year ? artwork.year === filter.year : true
         );
       return {
         data: data.slice(pageParam * limit, (pageParam + 1) * limit),
