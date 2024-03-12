@@ -83,7 +83,20 @@ export function useArtworkTownListQuery(town?: string) {
   });
 }
 
-// TODO: add `useArtworkTagListQuery(tag?: string)`
+export function useArtworkTagListQuery(tag?: string) {
+  return useDbQuery<string[]>({
+    select: ({ artworks }) =>
+      Array.from(
+        new Set(
+          artworks
+            .filter((artwork) => (tag ? artwork.tags.includes(tag) : true))
+            .map((artwork) => artwork.tags)
+            .flat()
+            .sort()
+        )
+      ),
+  });
+}
 
 export function useArtworkFilterForm() {
   return useForm({
