@@ -8,11 +8,13 @@ import FilterIconButton from "../../../components/FilterIconButton/FilterIconBut
 type ArtworkListFilterProps = {
   townOptions: string[];
   yearOptions: number[];
+  tagOptions: string[];
 };
 
 export default function ArtworkListFilter({
   townOptions,
   yearOptions,
+  tagOptions,
 }: ArtworkListFilterProps) {
   const { t } = useTranslation();
 
@@ -23,8 +25,6 @@ export default function ArtworkListFilter({
   );
 
   const { reset } = useFormContext();
-
-  // TODO: filter by tag
 
   const handleReset = () => {
     reset();
@@ -80,6 +80,27 @@ export default function ArtworkListFilter({
           {townOptions.map((year) => (
             <MenuItem key={year} value={year}>
               {year}
+            </MenuItem>
+          ))}
+        </ControlledTextField>
+
+        <ControlledTextField
+          name="tag"
+          select
+          size="small"
+          label={t("Tag")}
+          fullWidth
+          SelectProps={{
+            displayEmpty: true,
+          }}
+          InputLabelProps={{
+            shrink: true,
+          }}
+        >
+          <MenuItem value="">{t("All tags")}</MenuItem>
+          {tagOptions.map((tag) => (
+            <MenuItem key={tag} value={tag}>
+              {t(tag)}
             </MenuItem>
           ))}
         </ControlledTextField>

@@ -16,13 +16,12 @@ export function useArtworkInfiniteQuery(filter: ArtworkFilter) {
   return useInfiniteQuery({
     queryKey: ["artwork", "infinite", filter],
     queryFn: ({ pageParam }) => {
-      const data = (artworkQuery.data ?? [])
-        .filter((artwork) =>
-          filter.town ? artwork.town === filter.town : true
-        )
-        .filter((artwork) =>
-          filter.year ? artwork.year === filter.year : true
-        );
+      const data = (artworkQuery.data ?? []).filter(
+        (artwork) =>
+          (filter.town ? artwork.town === filter.town : true) &&
+          (filter.year ? artwork.year === filter.year : true) &&
+          (filter.tag ? artwork.tags.includes(filter.tag) : true)
+      );
       return {
         data: data.slice(pageParam * limit, (pageParam + 1) * limit),
         page: pageParam,
@@ -104,6 +103,7 @@ export function useArtworkFilterForm() {
     defaultValues: {
       year: "",
       town: "",
+      tag: "",
     },
   });
 }
