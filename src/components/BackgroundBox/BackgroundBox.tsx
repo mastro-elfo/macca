@@ -1,4 +1,4 @@
-import { Box, Breakpoint } from "@mui/material";
+import { Box, Breakpoint, Breakpoints } from "@mui/material";
 import { Season } from "../../services/useSeason/useSeason";
 
 type BackgroundPosition =
@@ -17,7 +17,7 @@ type BackgroundBoxProps = {
   drawerWidth?: number;
   image: string;
   opacity?: number;
-  size?: Breakpoint | false;
+  size?: Breakpoint | false | "cover";
   position?: BackgroundPosition;
   transform?: string;
 };
@@ -56,13 +56,7 @@ export default function BackgroundBox({
           backgroundRepeat: "no-repeat",
           backgroundPosition: position,
           backgroundSize: {
-            // TODO: support size `cover`
-            xs: "contain",
-            ...(size === false
-              ? {}
-              : {
-                  [size ?? "sm"]: theme.breakpoints.values[size ?? "sm"],
-                }),
+            ...getBackgroundSize(size, theme.breakpoints.values),
           },
           opacity: opacity ?? 1,
           transform: transform,
@@ -75,4 +69,24 @@ export default function BackgroundBox({
 function getImagePath(image: string, absolute?: boolean, season?: Season) {
   if (absolute) return `/macca/assets/${image}`;
   return `/macca/assets/${season}/${image}`;
+}
+
+function getBackgroundSize(
+  size: BackgroundBoxProps["size"],
+  breakpointValues: Breakpoints["values"]
+) {
+  if (!size) {
+    return {
+      xs: "contain",
+    };
+  }
+  if (size === "cover") {
+    return {
+      xs: "cover",
+    };
+  }
+  return {
+    xs: "contain",
+    [size]: breakpointValues[size],
+  };
 }

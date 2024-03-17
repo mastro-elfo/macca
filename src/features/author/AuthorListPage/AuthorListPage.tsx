@@ -27,6 +27,7 @@ export default function AuthorListPage() {
         image: "undraw_artist_b-4-rc.svg",
         position: "bottom right",
         opacity: 0.5,
+        size: "sm",
       }}
     >
       <List>

@@ -19,6 +19,7 @@ export default function FallbackLayout() {
         image="undraw_loading_re_5axr.svg"
         opacity={0.5}
         position="bottom"
+        size="sm"
       />
     </>
   );

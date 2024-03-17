@@ -58,6 +58,7 @@ export default function ArtworkListPage() {
         image: "undraw_art_museum_-8-or4.svg",
         position: "bottom",
         opacity: 0.5,
+        size: "sm",
       }}
       actions={
         <FormProvider {...filterForm}>

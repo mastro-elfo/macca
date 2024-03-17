@@ -18,7 +18,7 @@ export default function WhatIsMaccaPage() {
         image: "slide-opera-MACCA.jpg",
         absolutePath: true,
         position: "bottom",
-        size: false,
+        size: "cover",
         opacity: 0.25,
       }}
       loading={contentQuery.isFetching}

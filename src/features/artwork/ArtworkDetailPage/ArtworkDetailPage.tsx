@@ -23,6 +23,7 @@ export default function ArtworkDetailPage() {
         image: "undraw_art_lover_re_fn8g.svg",
         opacity: 0.5,
         position: "bottom left",
+        size: "sm",
       }}
       showBackButton
     >
