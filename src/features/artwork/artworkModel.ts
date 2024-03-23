@@ -33,8 +33,19 @@ export const ArtworkSchema = z.object({
 
 export type ArtworkEntity = z.infer<typeof ArtworkSchema>;
 
-export type ArtworkFilter = {
-  tag: string;
-  town: string;
-  year: number | string;
-};
+export const ArtworkFilterSchema = z.object({
+  tag: z.string(),
+  town: z.string(),
+  year: z
+    .number()
+    .or(z.string())
+    .transform((arg) => Number(arg)),
+});
+
+export type ArtworkFilter = z.infer<typeof ArtworkFilterSchema>;
+
+// export type ArtworkFilter = {
+//   tag: string;
+//   town: string;
+//   year: number | string;
+// };

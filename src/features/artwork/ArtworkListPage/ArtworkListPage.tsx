@@ -1,12 +1,14 @@
 import { useMemo } from "react";
 import { FormProvider } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 import EmptyListAlert from "../../../components/EmptyListAlert/EmptyListAlert";
 import InfiniteContainer from "../../../components/InfiniteContainer/InfiniteContainer";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useAutoSubmit from "../../../services/useAutoSubmit";
 import useDocumentTitle from "../../../services/useDocumentTitle";
 import useIntersection from "../../../services/useIntersection";
+import { useUsesearchparamsvaluesService } from "../../../services/useSearchParamsValuesService/useSearchParamsValuesService";
 import ArtworkGrid from "../ArtworkGrid/ArtworkGrid";
 import ArtworkListFilter from "../ArtworkListFilter/ArtworkListFilter";
 import {
@@ -21,8 +23,10 @@ export default function ArtworkListPage() {
   const { t } = useTranslation();
   useDocumentTitle(t("Artworks"));
 
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchParamsValues = useUsesearchparamsvaluesService(searchParams);
   const filterForm = useArtworkFilterForm();
-  const artworkInfiniteQuery = useArtworkInfiniteQuery(filterForm.getValues());
+  const artworkInfiniteQuery = useArtworkInfiniteQuery(searchParamsValues);
   const { ref } = useIntersection(artworkInfiniteQuery);
   const yearsQuery = useArtworkYearListQuery();
   const townsQuery = useArtworkTownListQuery();
@@ -30,8 +34,8 @@ export default function ArtworkListPage() {
 
   useAutoSubmit(
     filterForm,
-    (_data) => {
-      // TODO: push query parameters
+    (data) => {
+      setSearchParams(data);
     },
     (err) => {
       console.log("onError", err);
@@ -53,6 +57,7 @@ export default function ArtworkListPage() {
         townsQuery.isFetching ||
         tagsQuery.isFetching
       }
+      errors={[artworkInfiniteQuery.error]}
       py={1}
       background={{
         image: "undraw_art_museum_-8-or4.svg",
