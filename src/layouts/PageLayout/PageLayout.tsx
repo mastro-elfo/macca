@@ -1,4 +1,6 @@
 import {
+  Alert,
+  AlertTitle,
   AppBar,
   Box,
   BoxProps,
@@ -18,6 +20,7 @@ import DrawerIconButton from "../../features/drawer/DrawerIconButton/DrawerIconB
 type PageLayoutProps = PropsWithChildren & {
   actions?: ReactNode;
   background?: ComponentProps<typeof BackgroundBox>;
+  errors?: (Error | null | undefined)[];
   title?: ReactNode;
   loading?: boolean;
   showBackButton?: boolean;
@@ -27,6 +30,7 @@ export default function PageLayout({
   actions,
   background,
   children,
+  errors,
   loading,
   py,
   showBackButton,
@@ -47,6 +51,15 @@ export default function PageLayout({
       <Container>
         <Box py={py}>
           {showBackButton && <BackButton size="small" />}
+          {errors?.map(
+            (error, index) =>
+              !!error && (
+                <Alert key={index} severity="error">
+                  <AlertTitle>{error.name}</AlertTitle>
+                  {error.message}
+                </Alert>
+              )
+          )}
           {children ?? <Outlet />}
         </Box>
       </Container>
