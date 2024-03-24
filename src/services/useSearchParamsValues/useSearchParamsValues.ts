@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-export function useUsesearchparamsvaluesService(searchParams: URLSearchParams) {
+export default function useSearchParamsValues(searchParams: URLSearchParams) {
   return useMemo(() => {
     return Object.fromEntries(searchParams.entries());
   }, [searchParams]);

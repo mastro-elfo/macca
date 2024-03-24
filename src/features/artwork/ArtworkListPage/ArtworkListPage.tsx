@@ -8,7 +8,7 @@ import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useAutoSubmit from "../../../services/useAutoSubmit";
 import useDocumentTitle from "../../../services/useDocumentTitle";
 import useIntersection from "../../../services/useIntersection";
-import { useUsesearchparamsvaluesService } from "../../../services/useSearchParamsValuesService/useSearchParamsValuesService";
+import useSearchParamsValues from "../../../services/useSearchParamsValues/useSearchParamsValues";
 import ArtworkGrid from "../ArtworkGrid/ArtworkGrid";
 import ArtworkListFilter from "../ArtworkListFilter/ArtworkListFilter";
 import {
@@ -24,7 +24,7 @@ export default function ArtworkListPage() {
   useDocumentTitle(t("Artworks"));
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const searchParamsValues = useUsesearchparamsvaluesService(searchParams);
+  const searchParamsValues = useSearchParamsValues(searchParams);
   const filterForm = useArtworkFilterForm();
   const artworkInfiniteQuery = useArtworkInfiniteQuery(searchParamsValues);
   const { ref } = useIntersection(artworkInfiniteQuery);
