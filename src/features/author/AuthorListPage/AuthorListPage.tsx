@@ -1,8 +1,10 @@
 import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import SearchField from "../../../components/SearchField/SearchField";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useDocumentTitle from "../../../services/useDocumentTitle";
+import useSearchParamsValues from "../../../services/useSearchParamsValues/useSearchParamsValues";
 import {
   useAuthorFullNameFormatter,
   useAuthorListQuery,
@@ -13,15 +15,22 @@ export default function AuthorListPage() {
   useDocumentTitle(t("Authors"));
   const navigate = useNavigate();
 
-  const authorListQuery = useAuthorListQuery();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchParamsValues = useSearchParamsValues(searchParams);
+  const authorListQuery = useAuthorListQuery(searchParamsValues);
   const fullNameFormatter = useAuthorFullNameFormatter();
 
   // TODO: improve page layout
+
+  const handleSearch = (name: string) => {
+    setSearchParams({ name });
+  };
 
   return (
     <PageLayout
       title={t("Authors")}
       loading={authorListQuery.isFetching}
+      errors={[authorListQuery.error]}
       py={1}
       background={{
         image: "undraw_artist_b-4-rc.svg",
@@ -29,6 +38,14 @@ export default function AuthorListPage() {
         opacity: 0.5,
         size: "sm",
       }}
+      actions={
+        <SearchField
+          size="small"
+          placeholder={t("Search")}
+          onSearch={handleSearch}
+          defaultValue={searchParamsValues.name}
+        />
+      }
     >
       <List>
         {authorListQuery.data?.map((author) => (

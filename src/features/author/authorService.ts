@@ -1,11 +1,21 @@
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useDbQuery } from "../db/dbService";
-import { AuthorEntity } from "./authorModel";
+import { AuthorEntity, AuthorFilterSchema } from "./authorModel";
 
-export function useAuthorListQuery() {
+export function useAuthorListQuery(filter?: unknown) {
   return useDbQuery<AuthorEntity[]>({
-    select: ({ authors }) => authors,
+    select: ({ authors }) => {
+      if (!filter) return authors;
+
+      const parsedFilter = AuthorFilterSchema.parse(filter);
+      return authors.filter((author) =>
+        parsedFilter.name
+          ? author.firstName.toLowerCase().includes(parsedFilter.name) ||
+            author.lastName.toLowerCase().includes(parsedFilter.name)
+          : true
+      );
+    },
   });
 }
 

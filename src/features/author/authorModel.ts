@@ -8,3 +8,7 @@ export const AuthorSchema = z.object({
 });
 
 export type AuthorEntity = z.infer<typeof AuthorSchema>;
+
+export const AuthorFilterSchema = z.object({
+  name: z.string().optional(),
+});
