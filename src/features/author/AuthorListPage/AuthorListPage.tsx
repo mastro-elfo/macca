@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { Grid, ListItemButton, ListItemText } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import SearchField from "../../../components/SearchField/SearchField";
@@ -19,8 +19,6 @@ export default function AuthorListPage() {
   const searchParamsValues = useSearchParamsValues(searchParams);
   const authorListQuery = useAuthorListQuery(searchParamsValues);
   const fullNameFormatter = useAuthorFullNameFormatter();
-
-  // TODO: improve page layout
 
   const handleSearch = (name: string) => {
     setSearchParams({ name });
@@ -47,9 +45,9 @@ export default function AuthorListPage() {
         />
       }
     >
-      <List>
+      <Grid container spacing={2}>
         {authorListQuery.data?.map((author) => (
-          <ListItem disablePadding key={author.id}>
+          <Grid item xs={12} sm={6} md={4}>
             <ListItemButton
               key={author.id}
               onClick={() => {
@@ -59,9 +57,9 @@ export default function AuthorListPage() {
             >
               <ListItemText primary={fullNameFormatter(author)} />
             </ListItemButton>
-          </ListItem>
+          </Grid>
         ))}
-      </List>
+      </Grid>
     </PageLayout>
   );
 }
