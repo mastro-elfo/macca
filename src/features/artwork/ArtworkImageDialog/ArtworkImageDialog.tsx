@@ -23,6 +23,8 @@ export default function ArtworkImageDialog({
 }: ArtworkImageDialogProps) {
   const { t } = useTranslation();
 
+  // FIXME: large images are cropped
+
   return (
     <Dialog fullScreen onClose={onClose} {...props}>
       <DialogTitle>{image?.attribution.title}</DialogTitle>
