@@ -15,7 +15,7 @@ export default function WhatIsMaccaPage() {
       title={t("What is MACCA?")}
       py={1}
       background={{
-        image: "slide-opera-MACCA.jpg",
+        image: "slide-opera-MACCA.webp",
         absolutePath: true,
         position: "bottom",
         size: "cover",
