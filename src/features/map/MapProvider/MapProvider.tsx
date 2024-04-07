@@ -1,6 +1,8 @@
 import { PropsWithChildren } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { useParams } from "react-router-dom";
+import DevelopLayout from "../../../layouts/DevelopLayout/DevelopLayout";
+import Cross from "../Cross/Cross";
 import Geolocation from "../Geolocation/Geolocation";
 import Follow from "./Follow";
 type MapProviderProps = PropsWithChildren;
@@ -29,6 +31,9 @@ export default function MapProvider({ children }: MapProviderProps) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      <DevelopLayout>
+        <Cross />
+      </DevelopLayout>
       {children}
     </MapContainer>
   );
