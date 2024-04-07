@@ -1,6 +1,7 @@
 import { Box, alpha } from "@mui/material";
 
 export default function Cross() {
+  // TODO: +length, +thickness, +alpha
   return (
     <>
       <Box
