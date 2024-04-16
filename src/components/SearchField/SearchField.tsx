@@ -32,7 +32,7 @@ export default function SearchField({
   useDebounce<{ deburred: string; clean: string }>(
     (data) => onSearch?.(data.deburred, data.clean),
     { deburred: deburr(value), clean: value },
-    value ? 250 : 0
+    value ? 250 : 20
   );
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
