@@ -28,6 +28,7 @@ export const ArtworkSchema = z.object({
   authorIds: z.number().array(),
   isAuthorUnknown: z.boolean().optional(),
   images: ArtworkImageSchema.array(),
+  draft: z.boolean().optional(),
   // TODO: add markdown text (problem with translation)
 });
 

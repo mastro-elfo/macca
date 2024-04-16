@@ -1,17 +1,21 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
+import useEnvironment from "../../services/useEnvironment";
 import { useDbQuery } from "../db/dbService";
 import { ArtworkEntity, ArtworkFilterSchema } from "./artworkModel";
 
 export function useArtworkListQuery() {
+  const { isDevelopment } = useEnvironment();
   return useDbQuery<ArtworkEntity[]>({
-    select: ({ artworks }) => artworks,
+    select: ({ artworks }) =>
+      isDevelopment ? artworks : artworks.filter((artwork) => !artwork.draft),
   });
 }
 
 export function useArtworkInfiniteQuery(filter: unknown) {
   const limit = 10;
   const artworkQuery = useArtworkListQuery();
+  const { isDevelopment } = useEnvironment();
 
   return useInfiniteQuery({
     queryKey: ["artwork", "infinite", filter],
@@ -19,6 +23,7 @@ export function useArtworkInfiniteQuery(filter: unknown) {
       const parsedFilters = ArtworkFilterSchema.parse(filter);
       const data = (artworkQuery.data ?? []).filter(
         (artwork) =>
+          (isDevelopment || !artwork.draft) &&
           (parsedFilters.town ? artwork.town === parsedFilters.town : true) &&
           (parsedFilters.year ? artwork.year === parsedFilters.year : true) &&
           (parsedFilters.tag ? artwork.tags.includes(parsedFilters.tag) : true)
@@ -39,9 +44,15 @@ export function useArtworkInfiniteQuery(filter: unknown) {
 }
 
 export function useArtowrkListByAuthorQuery(authorId: number) {
+  const { isDevelopment } = useEnvironment();
+
   return useDbQuery<ArtworkEntity[]>({
     select: ({ artworks }) =>
-      artworks.filter((artwork) => artwork.authorIds.includes(authorId)),
+      artworks.filter(
+        (artwork) =>
+          (isDevelopment || !artwork.draft) &&
+          artwork.authorIds.includes(authorId)
+      ),
   });
 }
 
