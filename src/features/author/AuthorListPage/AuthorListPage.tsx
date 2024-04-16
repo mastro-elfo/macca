@@ -47,7 +47,7 @@ export default function AuthorListPage() {
     >
       <Grid container spacing={2}>
         {authorListQuery.data?.map((author) => (
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid key={author.id} item xs={12} sm={6} md={4}>
             <ListItemButton
               key={author.id}
               onClick={() => {
