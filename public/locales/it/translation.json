@@ -80,5 +80,8 @@
 
   "artwork-image-alt": "Opera {{title}}, immagine numero {{index}}",
 
-  "What is MACCA?": "Cos'è il MACCA?"
+  "What is MACCA?": "Cos'è il MACCA?",
+
+  "Draft": "Bozza",
+  "ArtworkDraftAlertContent": "Questa pagina è una bozza"
 }
