@@ -1748,6 +1748,58 @@
           }
         }
       ]
+    },
+    {
+      "id": 75,
+      "draft": true,
+      "title": "Mappe Celesti",
+      "year": 2023,
+      "tags": [],
+      "town": "Peccioli",
+      "address": "Piazza del Popolo, 10",
+      "latitude": 43.54808212985664,
+      "longitude": 10.72057735952965,
+      "authorIds": [3],
+      "images": []
+    },
+    {
+      "id": 76,
+      "draft": true,
+      "title": "Benvenuti in città",
+      "year": 2023,
+      "tags": [],
+      "town": "Peccioli",
+      "address": "Viale Mazzini, 1",
+      "latitude": 43.549425021236715,
+      "longitude": 10.719872511466258,
+      "authorIds": [3],
+      "images": []
+    },
+    {
+      "id": 77,
+      "draft": true,
+      "title": "Germoglio",
+      "year": 2024,
+      "tags": [],
+      "town": "Legoli",
+      "address": "via di Monti, 96",
+      "latitude": 43.56163010354558,
+      "longitude": 10.815903710887278,
+      "authorIds": [17],
+      "images": []
+    },
+    {
+      "id": 78,
+      "draft": true,
+      "title": "Untitled (work in progress)",
+      "year": 2024,
+      "tags": [],
+      "town": "Legoli",
+      "address": "via di Monti, 96",
+      "latitude": 43.56163010354558,
+      "longitude": 10.815903710887278,
+      "authorIds": [37],
+      "images": []
     }
   ],
   "authors": [
