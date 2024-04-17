@@ -160,6 +160,9 @@ function generateGroups(artworks: ArtworkEntity[], zoom: number) {
     const group = groups.find((g) => areNear(g, artwork, zoom));
     if (group) {
       group.artworks.push(artwork);
+      const { latitude, longitude } = averagePosition(group.artworks);
+      group.latitude = latitude;
+      group.longitude = longitude;
     } else {
       groups.push({
         id: artwork.id,
@@ -171,6 +174,28 @@ function generateGroups(artworks: ArtworkEntity[], zoom: number) {
     }
     return groups;
   }, []);
+}
+
+function averagePosition(artworks: ArtworkEntity[]) {
+  const { latitude, longitude } = artworks.reduce(
+    (acc, cur) => ({
+      latitude: acc.latitude + cur.latitude,
+      longitude: acc.longitude + cur.longitude,
+    }),
+    {
+      latitude: 0,
+      longitude: 0,
+    }
+  );
+  return artworks.length
+    ? {
+        latitude: latitude / artworks.length,
+        longitude: longitude / artworks.length,
+      }
+    : {
+        latitude: 0,
+        longitude: 0,
+      };
 }
 
 const THRESHOLDS: Record<number, number> = {
@@ -186,13 +211,13 @@ const THRESHOLDS: Record<number, number> = {
   9: 0.05,
   10: 0.02,
   11: 0.01,
-  12: 0.005,
+  12: 0.0075, // 0.0055 - 0.0075
   13: 0.004,
-  14: 0.002,
+  14: 0.003, // 0.002 - 0.003
   15: 0.001,
   16: 0.0005,
   17: 0.0002,
-  18: 0.0001,
+  18: 0.000125, // 0.0001 - 0.000125
 } as const;
 
 function areNear(artwork1: Point, artwork2: Point, zoom: number) {
