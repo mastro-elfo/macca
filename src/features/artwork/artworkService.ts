@@ -57,9 +57,13 @@ export function useArtowrkListByAuthorQuery(authorId: number) {
 }
 
 export function useArtworkDetailQuery(id: number) {
+  const { isDevelopment } = useEnvironment();
+
   return useDbQuery<ArtworkEntity | undefined>({
     select: ({ artworks }) => {
-      return artworks.find((artwork) => artwork.id === id);
+      return artworks.find(
+        (artwork) => artwork.id === id && (isDevelopment || !artwork.draft)
+      );
     },
   });
 }
