@@ -46,6 +46,9 @@ void i18n
     },
     fallbackLng: String(import.meta.env.VITE_I18N_FALLBACK_LANGUAGE),
     fallbackNS: "translation",
+    lng: import.meta.env.VITE_I18N_TEST_LANGUAGE
+      ? String(import.meta.env.VITE_I18N_TEST_LANGUAGE)
+      : undefined,
   });
 
 z.setErrorMap(makeZodI18nMap({ ns: ["zod", "zodCustom"] }));

@@ -29,6 +29,7 @@ export default function DrawerIconButton({
         color="inherit"
         title={title ?? t("Menu")}
         {...props}
+        data-cy="DrawerIconButton"
       >
         <DrawerIcon />
       </IconButton>

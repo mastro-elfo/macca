@@ -75,6 +75,27 @@ jobs:
       - name: Test
         run: yarn test
 
+      - name: E2E on firefox
+        uses: cypress-io/github-action@v6
+        with:
+          browser: firefox
+        env:
+          VITE_I18N_TEST_LANGUAGE: en
+
+      - name: E2E on chrome
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+        env:
+          VITE_I18N_TEST_LANGUAGE: en
+
+      - name: E2E on edge
+        uses: cypress-io/github-action@v6
+        with:
+          browser: edge
+        env:
+          VITE_I18N_TEST_LANGUAGE: en
+
       - name: Compress db
         run: |
           jq -c . ./public/data/db.json > ./public/data/db.tmp
