@@ -79,6 +79,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: firefox
+          start: yarn dev
         env:
           VITE_I18N_TEST_LANGUAGE: en
 
@@ -86,6 +87,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
+          start: yarn dev
         env:
           VITE_I18N_TEST_LANGUAGE: en
 
@@ -93,6 +95,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: edge
+          start: yarn dev
         env:
           VITE_I18N_TEST_LANGUAGE: en
 
