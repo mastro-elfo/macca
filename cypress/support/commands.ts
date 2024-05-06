@@ -25,13 +25,34 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       login(email: string, password: string): Chainable<void>
-//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//     }
-//   }
-// }
+export {};
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      dbjson(): Chainable<void>;
+    }
+  }
+}
+
+Cypress.Commands.add("dbjson", () => {
+  cy.intercept("GET", "**/db.json", {
+    artworks: [
+      {
+        id: 1,
+        title: "Artwork Title",
+        year: 2345,
+        tags: [],
+        town: "Artwork Town",
+        address: "Artwork Address",
+        latitude: 43.548747,
+        longitude: 10.721708,
+        authors: [],
+        authorIds: [],
+        images: [],
+        isAuthorUnknown: true,
+      },
+    ],
+    authors: [],
+  });
+});
