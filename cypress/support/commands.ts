@@ -48,11 +48,17 @@ Cypress.Commands.add("dbjson", () => {
         latitude: 43.548747,
         longitude: 10.721708,
         authors: [],
-        authorIds: [],
+        authorIds: [1],
         images: [],
         isAuthorUnknown: true,
       },
     ],
-    authors: [],
+    authors: [
+      {
+        id: 1,
+        firstName: "Author first name",
+        lastName: "Author last name",
+      },
+    ],
   });
 });
