@@ -1,4 +1,5 @@
 import { Grid, ListItemButton, ListItemText } from "@mui/material";
+import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import SearchField from "../../../components/SearchField/SearchField";
@@ -20,9 +21,12 @@ export default function AuthorListPage() {
   const authorListQuery = useAuthorListQuery(searchParamsValues);
   const fullNameFormatter = useAuthorFullNameFormatter();
 
-  const handleSearch = (name: string) => {
-    setSearchParams({ name });
-  };
+  const handleSearch = useCallback(
+    (name: string) => {
+      setSearchParams({ name });
+    },
+    [setSearchParams]
+  );
 
   return (
     <PageLayout

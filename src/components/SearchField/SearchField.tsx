@@ -7,7 +7,7 @@ import {
   TextFieldProps,
 } from "@mui/material";
 import { deburr } from "lodash";
-import { ChangeEventHandler, useState } from "react";
+import { ChangeEventHandler, useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import useDebounce from "../../services/useDebounce";
 type SearchfieldProps = Omit<
@@ -30,8 +30,12 @@ export default function SearchField({
   );
 
   useDebounce<{ deburred: string; clean: string }>(
-    (data) => onSearch?.(data.deburred, data.clean),
-    { deburred: deburr(value), clean: value },
+    useCallback(
+      (data: { deburred: string; clean: string }) =>
+        onSearch?.(data.deburred, data.clean),
+      [onSearch]
+    ),
+    useMemo(() => ({ deburred: deburr(value), clean: value }), [value]),
     value ? 250 : 20
   );
 
