@@ -16,4 +16,12 @@ describe("Author list page", () => {
     cy.contains("Author first name").click();
     cy.location("hash").should("match", /authors\/1/);
   });
+
+  it("should navigate from menu", () => {
+    cy.dbjson().as("db");
+    cy.visit("/");
+    cy.get('[data-cy="DrawerIconButton"]').click();
+    cy.contains("Authors").click();
+    cy.location("hash").should("eq", "#/authors");
+  });
 });

@@ -12,4 +12,12 @@ describe("Artwork list page", () => {
     cy.contains("Detail").first().click();
     cy.location("hash").should("match", /artworks\/1/);
   });
+
+  it("should navigate from menu", () => {
+    cy.dbjson().as("db");
+    cy.visit("/");
+    cy.get('[data-cy="DrawerIconButton"]').click();
+    cy.contains("Artworks").click();
+    cy.location("hash").should("eq", "#/artworks");
+  });
 });
