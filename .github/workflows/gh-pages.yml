@@ -72,8 +72,10 @@ jobs:
         if: ${{ steps.node-modules-cache.outputs.cache-hit }} != 'true'
         run: yarn --frozen-lockfile
 
-      - name: Test
-        run: yarn test
+      - name: Unit Test
+        run: |
+          yarn test
+          echo "## Unit Test :white_check_mark:" >> $GITHUB_STEP_SUMMARY
 
       - name: E2E on firefox
         uses: cypress-io/github-action@v6
