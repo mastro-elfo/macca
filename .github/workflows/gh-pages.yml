@@ -82,6 +82,7 @@ jobs:
         with:
           browser: firefox
           start: yarn dev
+          summary-title: "Cypress Results - Firefox"
         env:
           VITE_I18N_TEST_LANGUAGE: en
 
@@ -90,6 +91,7 @@ jobs:
         with:
           browser: chrome
           start: yarn dev
+          summary-title: "Cypress Results - Chrome"
         env:
           VITE_I18N_TEST_LANGUAGE: en
 
@@ -98,6 +100,7 @@ jobs:
         with:
           browser: edge
           start: yarn dev
+          summary-title: "Cypress Results - Edge"
         env:
           VITE_I18N_TEST_LANGUAGE: en
 
