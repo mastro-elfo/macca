@@ -2,9 +2,11 @@
 
 describe("What is MACCA page", () => {
   it("should be visible", () => {
-    cy.intercept("GET", "**/what-is-macca.md", "What is MACCA");
+    cy.intercept("GET", "**/what-is-macca.md", "What is MACCA").as("response");
     cy.visit("#/what-is-macca");
-    cy.contains("What is MACCA");
+    cy.wait("@response").then(() => {
+      cy.contains("What is MACCA");
+    });
   });
 
   it("should navigate from menu", () => {

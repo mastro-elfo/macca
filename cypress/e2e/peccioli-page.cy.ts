@@ -2,9 +2,11 @@
 
 describe("Peccioli page", () => {
   it("should be visible", () => {
-    cy.intercept("GET", "**/peccioli.md", "Peccioli");
+    cy.intercept("GET", "**/peccioli.md", "Peccioli").as("response");
     cy.visit("#/peccioli");
-    cy.contains("Peccioli");
+    cy.wait("@response").then(() => {
+      cy.contains("Peccioli");
+    });
   });
 
   it("should navigate from menu", () => {
