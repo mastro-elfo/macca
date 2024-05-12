@@ -23,7 +23,7 @@ export default function MapPage() {
       <MapProvider>
         <ArtworkMarkerGroup
           artworks={artworkListQuery.data ?? []}
-          zoom={Number(zoom)}
+          zoom={Math.round(Number(zoom))}
           selectedArtworkId={Number(id)}
         />
       </MapProvider>
