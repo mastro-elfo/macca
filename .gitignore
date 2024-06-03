@@ -26,3 +26,4 @@ dist-ssr
 
 # Cypress
 cypress/downloads
+cypress/screenshots
