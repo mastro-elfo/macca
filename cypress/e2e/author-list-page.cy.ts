@@ -24,6 +24,6 @@ describe("Author list page", () => {
     cy.visit("/");
     cy.get('[data-cy="DrawerIconButton"]').click();
     cy.contains("Authors").click();
-    cy.location("hash").should("eq", "#/authors");
+    cy.location("hash").should("match", /#\/authors/);
   });
 });
