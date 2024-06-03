@@ -77,7 +77,9 @@
   "azul-macaubas": "Azul Macaubas",
   "steel-structure": "Struttura d'acciaio",
   "grey-stone": "Pietra serena",
-  "lighting-mirroring-surfaces": "Luminaria e superfici specchianti",
+  "lighting": "Luminaria",
+  "mirroring-surfaces": "Superfici specchianti",
+  "ceramics": "Ceramica",
 
   "artwork-image-alt": "Opera {{title}}, immagine numero {{index}}",
 

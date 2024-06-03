@@ -1816,10 +1816,9 @@
     },
     {
       "id": 80,
-      "draft": true,
       "title": "We rise by lifting others",
       "year": 2023,
-      "tags": ["cor-ten-steel", "lighting-mirroring-surfaces"],
+      "tags": ["cor-ten-steel", "lighting", "mirroring-surfaces"],
       "town": "Peccioli",
       "address": "Via delle Serre, 13",
       "latitude": 43.547208403922596,
@@ -1869,7 +1868,33 @@
       "address": "Via Borgherucci, 49",
       "latitude": 43.549464065852675,
       "longitude": 10.7199764271297,
-      "authorIds": [37],
+      "authorIds": [3],
+      "images": []
+    },
+    {
+      "id": 82,
+      "draft": true,
+      "title": "Lane",
+      "year": 2023,
+      "tags": ["ceramics", "neon-lights"],
+      "town": "Peccioli",
+      "address": "Via Carraia, 11",
+      "latitude": 43.547080276651535,
+      "longitude": 10.72126416894224,
+      "authorIds": [48],
+      "images": []
+    },
+    {
+      "id": 83,
+      "draft": true,
+      "title": "Dance first think later",
+      "year": 2024,
+      "tags": ["lighting"],
+      "town": "Peccioli",
+      "address": "Via delle Serre, 22",
+      "latitude": 43.547080276651535,
+      "longitude": 10.72126416894224,
+      "authorIds": [47],
       "images": []
     }
   ],
@@ -2108,6 +2133,11 @@
       "id": 47,
       "firstName": "Marinella",
       "lastName": "Senatore"
+    },
+    {
+      "id": 48,
+      "firstName": "Nicola",
+      "lastName": "Boccini"
     }
   ]
 }
