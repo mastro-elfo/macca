@@ -77,14 +77,14 @@ jobs:
           yarn test
           echo "## Unit Test :white_check_mark:" >> $GITHUB_STEP_SUMMARY
 
-      # - name: E2E on firefox
-      #   uses: cypress-io/github-action@v6
-      #   with:
-      #     browser: firefox
-      #     start: yarn dev
-      #     summary-title: "Cypress Results - Firefox"
-      #   env:
-      #     VITE_I18N_TEST_LANGUAGE: en
+      - name: E2E on firefox
+        uses: cypress-io/github-action@v6
+        with:
+          browser: firefox
+          start: yarn dev
+          summary-title: "Cypress Results - Firefox"
+        env:
+          VITE_I18N_TEST_LANGUAGE: en
 
       - name: E2E on chrome
         uses: cypress-io/github-action@v6
