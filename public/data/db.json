@@ -830,7 +830,7 @@
     },
     {
       "id": 34,
-      "title": "Dai su fammi un sorriso e Ma che voglia di prenderti per mano",
+      "title": "Dai su fammi un sorriso",
       "year": 2021,
       "tags": ["neon-lights"],
       "town": "Peccioli",
@@ -841,13 +841,6 @@
       "images": [
         {
           "path": "55.webp",
-          "attribution": {
-            "title": "Peccioli PER",
-            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=157&idView=27"
-          }
-        },
-        {
-          "path": "56.webp",
           "attribution": {
             "title": "Peccioli PER",
             "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=157&idView=27"
@@ -1690,7 +1683,7 @@
     },
     {
       "id": 73,
-      "title": "Aério",
+      "title": "Aèrio",
       "year": 2023,
       "tags": ["mixed-technique"],
       "town": "Peccioli",
@@ -1798,6 +1791,84 @@
       "address": "via di Monti, 96",
       "latitude": 43.56163010354558,
       "longitude": 10.815903710887278,
+      "authorIds": [37],
+      "images": []
+    },
+    {
+      "id": 79,
+      "title": "Ma che voglia di prenderti per mano",
+      "year": 2021,
+      "tags": ["neon-lights"],
+      "town": "Peccioli",
+      "address": "Palazzo Senza Tempo, Via Carraia, 11",
+      "latitude": 43.547270617954304,
+      "longitude": 10.721062098906666,
+      "authorIds": [3],
+      "images": [
+        {
+          "path": "56.webp",
+          "attribution": {
+            "title": "Peccioli PER",
+            "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=157&idView=27"
+          }
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "draft": true,
+      "title": "We rise by lifting others",
+      "year": 2023,
+      "tags": ["cor-ten-steel", "lighting-mirroring-surfaces"],
+      "town": "Peccioli",
+      "address": "Via delle Serre, 13",
+      "latitude": 43.547208403922596,
+      "longitude": 10.726100096092122,
+      "authorIds": [47],
+      "images": [
+        {
+          "path": "114.webp",
+          "attribution": {
+            "title": "peccioli.net",
+            "url": "https://www.peccioli.net/we-rise-by-lifting-others/"
+          }
+        },
+
+        {
+          "path": "115.webp",
+          "attribution": {
+            "title": "peccioli.net",
+            "url": "https://www.peccioli.net/we-rise-by-lifting-others/"
+          }
+        },
+
+        {
+          "path": "116.webp",
+          "attribution": {
+            "title": "peccioli.net",
+            "url": "https://www.peccioli.net/we-rise-by-lifting-others/"
+          }
+        },
+
+        {
+          "path": "117.webp",
+          "attribution": {
+            "title": "peccioli.net",
+            "url": "https://www.peccioli.net/we-rise-by-lifting-others/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "draft": true,
+      "title": "Esercizio 2",
+      "year": 2023,
+      "tags": [],
+      "town": "Peccioli",
+      "address": "Via Borgherucci, 49",
+      "latitude": 43.549464065852675,
+      "longitude": 10.7199764271297,
       "authorIds": [37],
       "images": []
     }
@@ -2032,6 +2103,11 @@
       "id": 46,
       "firstName": "Dustin",
       "lastName": "White"
+    },
+    {
+      "id": 47,
+      "firstName": "Marinella",
+      "lastName": "Senatore"
     }
   ]
 }
