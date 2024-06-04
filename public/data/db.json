@@ -1744,16 +1744,22 @@
     },
     {
       "id": 75,
-      "draft": true,
       "title": "Mappe Celesti",
       "year": 2023,
-      "tags": [],
+      "tags": ["paint-on-wall", "mirroring-surfaces"],
       "town": "Peccioli",
       "address": "Piazza del Popolo, 10",
       "latitude": 43.54808212985664,
       "longitude": 10.72057735952965,
       "authorIds": [3],
-      "images": []
+      "images": [
+        {
+          "path": "118.webp",
+          "attribution": {
+            "title": "Mastro Elfo"
+          }
+        }
+      ]
     },
     {
       "id": 76,
