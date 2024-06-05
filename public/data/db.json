@@ -1769,10 +1769,9 @@
     },
     {
       "id": 76,
-      "draft": true,
       "title": "Benvenuti in città",
       "year": 2023,
-      "tags": [],
+      "tags": ["  "],
       "town": "Peccioli",
       "address": "Viale Mazzini, 1",
       "latitude": 43.549425021236715,
