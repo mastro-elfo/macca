@@ -83,7 +83,6 @@ jobs:
           browser: firefox
           start: yarn dev
           summary-title: "Cypress Results - Firefox"
-          install: false
         env:
           VITE_I18N_TEST_LANGUAGE: en
 
