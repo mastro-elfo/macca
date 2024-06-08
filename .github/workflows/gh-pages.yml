@@ -83,6 +83,8 @@ jobs:
           browser: firefox
           start: yarn dev
           summary-title: "Cypress Results - Firefox"
+          wait-on: "http://localhost:5173"
+          record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -94,6 +96,8 @@ jobs:
           browser: chrome
           start: yarn dev
           summary-title: "Cypress Results - Chrome"
+          wait-on: "http://localhost:5173"
+          record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -105,6 +109,8 @@ jobs:
           browser: edge
           start: yarn dev
           summary-title: "Cypress Results - Edge"
+          wait-on: "http://localhost:5173"
+          record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
