@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  projectId: "riamsw",
   e2e: {
     baseUrl: "http://localhost:5173/macca",
     defaultCommandTimeout: 32000,

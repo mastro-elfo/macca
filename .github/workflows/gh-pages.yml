@@ -85,6 +85,8 @@ jobs:
           summary-title: "Cypress Results - Firefox"
         env:
           VITE_I18N_TEST_LANGUAGE: en
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: E2E on chrome
         uses: cypress-io/github-action@v6
@@ -94,6 +96,8 @@ jobs:
           summary-title: "Cypress Results - Chrome"
         env:
           VITE_I18N_TEST_LANGUAGE: en
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: E2E on edge
         uses: cypress-io/github-action@v6
@@ -103,6 +107,8 @@ jobs:
           summary-title: "Cypress Results - Edge"
         env:
           VITE_I18N_TEST_LANGUAGE: en
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Compress db
         run: |
