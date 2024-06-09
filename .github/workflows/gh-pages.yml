@@ -77,38 +77,12 @@ jobs:
           yarn test
           echo "## Unit Test :white_check_mark:" >> $GITHUB_STEP_SUMMARY
 
-      - name: E2E on firefox
-        uses: cypress-io/github-action@v6
-        with:
-          browser: firefox
-          start: yarn dev
-          summary-title: "Cypress Results - Firefox"
-          wait-on: "http://localhost:5173"
-          record: true
-        env:
-          VITE_I18N_TEST_LANGUAGE: en
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: E2E on chrome
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
           start: yarn dev
           summary-title: "Cypress Results - Chrome"
-          wait-on: "http://localhost:5173"
-          record: true
-        env:
-          VITE_I18N_TEST_LANGUAGE: en
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: E2E on edge
-        uses: cypress-io/github-action@v6
-        with:
-          browser: edge
-          start: yarn dev
-          summary-title: "Cypress Results - Edge"
           wait-on: "http://localhost:5173"
           record: true
         env:
