@@ -1869,16 +1869,23 @@
     },
     {
       "id": 81,
-      "draft": true,
       "title": "Esercizio 2",
       "year": 2023,
-      "tags": [],
+      "tags": ["plexiglass", "neon-lights", "wood"],
       "town": "Peccioli",
       "address": "Via Borgherucci, 49",
       "latitude": 43.549464065852675,
       "longitude": 10.7199764271297,
       "authorIds": [3],
-      "images": []
+      "images": [
+        {
+          "path": "120.webp",
+          "attribution": {
+            "title": "Vittorio Corsini",
+            "url": "https://www.vittoriocorsini.com/news/portfolio/esercizio-2/"
+          }
+        }
+      ]
     },
     {
       "id": 82,
