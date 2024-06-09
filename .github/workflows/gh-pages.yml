@@ -77,21 +77,13 @@ jobs:
           yarn test
           echo "## Unit Test :white_check_mark:" >> $GITHUB_STEP_SUMMARY
 
-      - name: Compress db
-        run: |
-          jq -c . ./public/data/db.json > ./public/data/db.tmp
-          mv ./public/data/db.tmp ./public/data/db.json
-
-      - name: Build
-        run: yarn build
-
       - name: E2E on firefox
         uses: cypress-io/github-action@v6
         with:
           browser: firefox
-          start: yarn preview
+          start: yarn dev
           summary-title: "Cypress Results - Firefox"
-          wait-on: "http://localhost:4173"
+          wait-on: "http://localhost:5173"
           record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
@@ -102,9 +94,9 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          start: yarn preview
+          start: yarn dev
           summary-title: "Cypress Results - Chrome"
-          wait-on: "http://localhost:4173"
+          wait-on: "http://localhost:5173"
           record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
@@ -115,14 +107,22 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: edge
-          start: yarn preview
+          start: yarn dev
           summary-title: "Cypress Results - Edge"
-          wait-on: "http://localhost:4173"
+          wait-on: "http://localhost:5173"
           record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compress db
+        run: |
+          jq -c . ./public/data/db.json > ./public/data/db.tmp
+          mv ./public/data/db.tmp ./public/data/db.json
+
+      - name: Build
+        run: yarn build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

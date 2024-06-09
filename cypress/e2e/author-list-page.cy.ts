@@ -15,6 +15,7 @@ describe("Author list page", () => {
     cy.visit("#/authors");
     cy.wait("@db").then(() => {
       cy.contains("Author first name").click();
+      cy.wait(1000);
       cy.location("hash").should("match", /authors\/1/);
     });
   });
