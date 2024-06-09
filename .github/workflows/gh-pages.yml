@@ -91,7 +91,7 @@ jobs:
           browser: firefox
           start: yarn preview
           summary-title: "Cypress Results - Firefox"
-          wait-on: "http://localhost:5173"
+          wait-on: "http://localhost:4173"
           record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
@@ -104,7 +104,7 @@ jobs:
           browser: chrome
           start: yarn preview
           summary-title: "Cypress Results - Chrome"
-          wait-on: "http://localhost:5173"
+          wait-on: "http://localhost:4173"
           record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
@@ -117,7 +117,7 @@ jobs:
           browser: edge
           start: yarn preview
           summary-title: "Cypress Results - Edge"
-          wait-on: "http://localhost:5173"
+          wait-on: "http://localhost:4173"
           record: true
         env:
           VITE_I18N_TEST_LANGUAGE: en
