@@ -1889,14 +1889,13 @@
     },
     {
       "id": 82,
-      "draft": true,
       "title": "Lane",
       "year": 2023,
       "tags": ["ceramics", "neon-lights"],
       "town": "Peccioli",
-      "address": "Via Carraia, 11",
-      "latitude": 43.547080276651535,
-      "longitude": 10.72126416894224,
+      "address": "Palazzo Senza Tempo, Via Carraia, 11",
+      "latitude": 43.54736833676633,
+      "longitude": 10.721189393296779,
       "authorIds": [48],
       "images": []
     },
