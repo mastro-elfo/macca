@@ -1897,7 +1897,26 @@
       "latitude": 43.54736833676633,
       "longitude": 10.721189393296779,
       "authorIds": [48],
-      "images": []
+      "images": [
+        {
+          "path": "121.webp",
+          "attribution": {
+            "title": "Mastro Elfo"
+          }
+        },
+        {
+          "path": "122.webp",
+          "attribution": {
+            "title": "Mastro Elfo"
+          }
+        },
+        {
+          "path": "123.webp",
+          "attribution": {
+            "title": "Mastro Elfo"
+          }
+        }
+      ]
     },
     {
       "id": 83,
