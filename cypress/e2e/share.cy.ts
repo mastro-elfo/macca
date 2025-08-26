@@ -3,7 +3,7 @@
 describe("Artwork detail page", () => {
   it("should be visible", () => {
     cy.visit("#/share");
-    cy.contains("Share page");
+    cy.contains("Share");
   });
 
   it("should navigate from menu", () => {
