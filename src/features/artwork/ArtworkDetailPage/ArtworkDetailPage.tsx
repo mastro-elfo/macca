@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import PageLayout from "../../../layouts/PageLayout/PageLayout";
 import useDocumentTitle from "../../../services/useDocumentTitle";
 import { useAuthorFullNameFormatter } from "../../author/authorService";
+import ShareIconButton from "../../share/ShareIconButton/ShareIconButton";
 import ArtworkDraftAlert from "../ArtworkDraftAlert/ArtworkDraftAlert";
 import ArtworkImageList from "../ArtworkImageList/ArtworkImageList";
 import { useArtworkDetailQuery } from "../artworkService";
@@ -27,6 +28,7 @@ export default function ArtworkDetailPage() {
         size: "sm",
       }}
       showBackButton
+      actions={<ShareIconButton link={window.location.href} />}
     >
       {artworkDetailQuery.data?.draft && <ArtworkDraftAlert />}
 

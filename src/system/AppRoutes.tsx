@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import SharePage from "../features/share/SharePage/SharePage";
 import FallbackLayout from "../layouts/FallbackLayout/FallbackLayout";
 
 const MapPage = lazy(() => import("../features/map/MapPage/MapPage"));
@@ -48,6 +49,7 @@ export function AppRoutes() {
       </Route>
       <Route path="what-is-macca" element={<WhatIsMaccaPage />} />
       <Route path="peccioli" element={<PeccioliPage />} />
+      <Route path="share" element={<SharePage />} />
       <Route path="fallback" element={<FallbackLayout />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>

@@ -5,6 +5,7 @@ import {
   Box,
   BoxProps,
   Container,
+  ContainerProps,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -21,8 +22,9 @@ type PageLayoutProps = PropsWithChildren & {
   actions?: ReactNode;
   background?: ComponentProps<typeof BackgroundBox>;
   errors?: (Error | null | undefined)[];
-  title?: ReactNode;
   loading?: boolean;
+  maxWidth?: ContainerProps["maxWidth"];
+  title?: ReactNode;
   showBackButton?: boolean;
 } & Pick<BoxProps, "py">;
 
@@ -32,6 +34,7 @@ export default function PageLayout({
   children,
   errors,
   loading,
+  maxWidth,
   py,
   showBackButton,
   title,
@@ -48,7 +51,7 @@ export default function PageLayout({
         </Toolbar>
       </AppBar>
       <Toolbar />
-      <Container>
+      <Container maxWidth={maxWidth}>
         <Box py={py}>
           {showBackButton && <BackButton size="small" />}
           {errors?.map(

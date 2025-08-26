@@ -1,5 +1,6 @@
 import CastleIcon from "@mui/icons-material/Castle";
 import HelpIcon from "@mui/icons-material/Help";
+import ShareIcon from "@mui/icons-material/Share";
 import {
   List,
   ListItemButton,
@@ -77,6 +78,18 @@ export default function DrawerContent() {
           <CastleIcon />
         </ListItemIcon>
         <ListItemText>{"Peccioli"}</ListItemText>
+      </ListItemButton>
+
+      <ListItemButton
+        onClick={() => {
+          navigate("/share");
+        }}
+        selected={location.pathname.startsWith("/share")}
+      >
+        <ListItemIcon>
+          <ShareIcon />
+        </ListItemIcon>
+        <ListItemText>{t("Share")}</ListItemText>
       </ListItemButton>
 
       {/* TODO: choose language (need more languages) */}
