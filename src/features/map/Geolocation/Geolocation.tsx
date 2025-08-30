@@ -9,6 +9,7 @@ import { renderToString } from "react-dom/server";
 import { useTranslation } from "react-i18next";
 import { Marker, useMap } from "react-leaflet";
 import LoadingProgress from "../../../components/LoadingProgress/LoadingProgress";
+import useBreakpoint from "../../../services/useBreakpoint";
 import AccuracyCircle from "./AccuracyCircle";
 
 export default function Geolocation() {
@@ -20,6 +21,7 @@ export default function Geolocation() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const map = useMap();
+  const { only: xsmall } = useBreakpoint("xs");
 
   const zoom = map.getZoom();
 
@@ -102,7 +104,8 @@ export default function Geolocation() {
         sx={(theme) => ({
           position: "fixed",
           zIndex: theme.zIndex.appBar,
-          top: theme.spacing(2),
+          top: xsmall ? undefined : theme.spacing(2),
+          bottom: xsmall ? theme.spacing(2) : undefined,
           right: theme.spacing(1),
         })}
         onClick={handleToggle}
