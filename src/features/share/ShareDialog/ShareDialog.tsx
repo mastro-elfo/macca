@@ -19,6 +19,7 @@ export default function ShareDialog({ link, ...props }: ShareDialogProps) {
   const { t } = useTranslation();
 
   const qrcode = useDataUrl(link);
+  const hasClipboard = !!navigator.clipboard as boolean;
 
   return (
     <Dialog {...props}>
@@ -29,7 +30,6 @@ export default function ShareDialog({ link, ...props }: ShareDialogProps) {
           alt={t("Link to page", { href: link })}
           style={{ display: "block", margin: "auto" }}
         />
-
         <ListItemButton
           title={t("Copy to clipboard")}
           onClick={() => {
@@ -37,11 +37,13 @@ export default function ShareDialog({ link, ...props }: ShareDialogProps) {
               info(t("Copied to clipboard"));
             });
           }}
-          disabled={!link}
+          disabled={!link || !hasClipboard}
         >
-          <ListItemIcon>
-            <ContentCopyIcon />
-          </ListItemIcon>
+          {hasClipboard && (
+            <ListItemIcon>
+              <ContentCopyIcon />
+            </ListItemIcon>
+          )}
           <ListItemText>{link}</ListItemText>
         </ListItemButton>
       </DialogContent>

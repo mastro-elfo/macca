@@ -22,6 +22,7 @@ export default function SharePage() {
   const qrcode = useDataUrl(link, {
     width: theme.breakpoints.values.sm,
   });
+  const hasClipboard = !!navigator.clipboard as boolean;
 
   return (
     <PageLayout
@@ -62,11 +63,13 @@ export default function SharePage() {
             info(t("Copied to clipboard"));
           });
         }}
-        disabled={!link}
+        disabled={!link || !hasClipboard}
       >
-        <ListItemIcon>
-          <ContentCopyIcon />
-        </ListItemIcon>
+        {hasClipboard && (
+          <ListItemIcon>
+            <ContentCopyIcon />
+          </ListItemIcon>
+        )}
         <ListItemText>{link}</ListItemText>
       </ListItemButton>
     </PageLayout>
