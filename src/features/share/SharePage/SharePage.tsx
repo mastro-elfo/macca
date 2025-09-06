@@ -36,14 +36,8 @@ export default function SharePage() {
       }}
       maxWidth="sm"
     >
-      <Typography paragraph>
-        📣 Use this qr-code to share a link to this app with your friends at the
-        bar or at the library.
-      </Typography>
-      <Typography paragraph>
-        🔗 In alternative you can copy the same link with the button below and
-        paste it to social media or instant messagin apps.
-      </Typography>
+      <Typography paragraph>{t("SHARE_PAGE_P1")}</Typography>
+      <Typography paragraph>{t("SHARE_PAGE_P2")}</Typography>
 
       <img
         src={qrcode.data}

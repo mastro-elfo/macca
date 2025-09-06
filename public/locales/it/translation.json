@@ -96,7 +96,7 @@
   "Share this artwork": "Condividi quest'opera",
   "Copy to clipboard": "Copia negli appunti",
   "Copied to clipboard": "Copiato negli appunti",
-  "📣 Use this qr-code to share a link to this app with your friends at the bar or at the library.": "📣 Use this qr-code to share a link to this app with your friends at the bar or at the library.",
-  "🔗 In alternative you can copy the same link with the button below and paste it to social media or instant messagin apps.": "🔗 In alternative you can copy the same link with the button below and paste it to social media or instant messagin apps.",
+  "SHARE_PAGE_P1": "📣 Usa questo codice QR per condividere l'applicazione con i tuoi amici al pub o in biblioteca.",
+  "SHARE_PAGE_P2": "🔗 Oppure usa il bottone sotto per copiare il link e usarlo nei social media o nelle app di messaggistica.",
   "Link to page": "Link alla pagina {{link}}"
 }
