@@ -10,11 +10,13 @@ import { useTranslation } from "react-i18next";
 import { Marker, useMap } from "react-leaflet";
 import LoadingProgress from "../../../components/LoadingProgress/LoadingProgress";
 import useBreakpoint from "../../../services/useBreakpoint";
+import { useAppSnackbar } from "../../../system/AppSnackbar/AppSnackbar";
 import AccuracyCircle from "./AccuracyCircle";
 
 export default function Geolocation() {
   const theme = useTheme();
   const { t } = useTranslation();
+  const { error: snackbarError } = useAppSnackbar();
 
   const [position, setPosition] = useState<GeolocationPosition>();
   const [active, setActive] = useState(false);
@@ -60,9 +62,13 @@ export default function Geolocation() {
             setError(false);
             setLoading(false);
           },
-          () => {
+          (err) => {
             setError(true);
             setLoading(false);
+            snackbarError(err.message);
+            if (err.code === err.PERMISSION_DENIED) {
+              setActive(false);
+            }
           }
         );
       };
@@ -71,7 +77,7 @@ export default function Geolocation() {
         clearInterval(iv);
       };
     }
-  }, [active]);
+  }, [active, snackbarError]);
 
   const handleToggle = () => {
     setActive(!active);
