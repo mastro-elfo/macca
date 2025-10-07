@@ -28,6 +28,7 @@ void i18n
           expirationTime: Number.isNaN(expirationTime)
             ? 86400000
             : expirationTime,
+          prefix: "macca_",
         },
         {
           loadPath: "/macca/locales/{{lng}}/{{ns}}.json",
