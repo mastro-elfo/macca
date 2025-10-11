@@ -32,6 +32,7 @@ export default function ArtworkImageList({ artwork }: ArtworkImageListProps) {
             artwork={artwork}
             image={image}
             index={index}
+            sx={{ cursor: "pointer" }}
           />
         ))}
       </ImageList>
