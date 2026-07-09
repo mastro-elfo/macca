@@ -1967,6 +1967,19 @@
       "longitude": 10.712496042251587,
       "authorIds": [51],
       "images": []
+    },
+    {
+      "id": 86,
+      "title": "",
+      "draft": true,
+      "year": 2026,
+      "tags": [],
+      "town": "Peccioli",
+      "address": "",
+      "latitude": 43.54566114155433,
+      "longitude": 10.7169646024704,
+      "authorIds": [52],
+      "images": []
     }
   ],
   "authors": [
@@ -2224,6 +2237,11 @@
       "id": 51,
       "firstName": "Antonio",
       "lastName": "Signorini"
+    },
+    {
+      "id": 52,
+      "firstName": "Carol",
+      "lastName": "Rollo"
     }
   ]
 }
