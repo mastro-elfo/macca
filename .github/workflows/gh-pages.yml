@@ -69,7 +69,7 @@ jobs:
             ${{ runner.os }}-node-modules-
 
       - name: Install dependencies
-        if: ${{ steps.node-modules-cache.outputs.cache-hit }} != 'true'
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
 
       - name: Unit Test
