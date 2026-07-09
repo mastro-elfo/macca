@@ -30,13 +30,13 @@ export {};
 declare global {
   namespace Cypress {
     interface Chainable {
-      dbjson(): Chainable<void>;
+      dbjson(): Chainable<null>;
     }
   }
 }
 
 Cypress.Commands.add("dbjson", () => {
-  cy.intercept("GET", "**/db.json", {
+  return cy.intercept("GET", "**/db.json", {
     artworks: [
       {
         id: 1,
