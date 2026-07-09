@@ -13,7 +13,7 @@ import zodItCustom from "./locales/it/zodCustom.json";
 import zodItFix from "./locales/it/zodFix.json";
 
 const expirationTime = Number(
-  import.meta.env.VITE_I18N_EXPIRATION_TIME || 86400000
+  import.meta.env.VITE_I18N_EXPIRATION_TIME || 86400000,
 );
 
 void i18n
