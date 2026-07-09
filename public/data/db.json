@@ -1934,7 +1934,6 @@
     },
     {
       "id": 83,
-      "draft": true,
       "title": "Dance first think later",
       "year": 2024,
       "tags": ["lighting"],
@@ -1943,6 +1942,30 @@
       "latitude": 43.547080276651535,
       "longitude": 10.72126416894224,
       "authorIds": [47],
+      "images": []
+    },
+    {
+      "id": 84,
+      "title": "Breath",
+      "year": 2026,
+      "tags": [],
+      "town": "Peccioli",
+      "address": "Str. Vicinale delle Serre, 20",
+      "latitude": 43.545037071417326,
+      "longitude": 10.725595951080324,
+      "authorIds": [49, 50],
+      "images": []
+    },
+    {
+      "id": 85,
+      "title": "Metamotus (Flying Horses)",
+      "year": 2026,
+      "tags": [],
+      "town": "Peccioli",
+      "address": "",
+      "latitude": 43.55988080176921,
+      "longitude": 10.712496042251587,
+      "authorIds": [51],
       "images": []
     }
   ],
@@ -2186,6 +2209,21 @@
       "id": 48,
       "firstName": "Nicola",
       "lastName": "Boccini"
+    },
+    {
+      "id": 49,
+      "firstName": "Emiliano",
+      "lastName": "Ponzi"
+    },
+    {
+      "id": 50,
+      "firstName": "Dario",
+      "lastName": "Spinelli"
+    },
+    {
+      "id": 51,
+      "firstName": "Antonio",
+      "lastName": "Signorini"
     }
   ]
 }
