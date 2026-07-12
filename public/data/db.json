@@ -1970,7 +1970,7 @@
     },
     {
       "id": 86,
-      "title": "",
+      "title": "Murale",
       "draft": true,
       "year": 2026,
       "tags": [],
@@ -1979,6 +1979,19 @@
       "latitude": 43.54566114155433,
       "longitude": 10.7169646024704,
       "authorIds": [52],
+      "images": []
+    },
+    {
+      "id": 87,
+      "draf": true,
+      "title": "Presenze",
+      "year": 2011,
+      "tags": [""],
+      "town": "Fabbrica",
+      "address": "Via Vittorio Veneto",
+      "latitude": 43.50715790441356,
+      "longitude": 10.757763603192954,
+      "authorIds": [31],
       "images": []
     }
   ],
