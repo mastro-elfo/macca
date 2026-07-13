@@ -1985,13 +1985,39 @@
       "id": 87,
       "draf": true,
       "title": "Presenze",
-      "year": 2011,
+      "year": 2026,
       "tags": [""],
       "town": "Fabbrica",
       "address": "Via Vittorio Veneto",
       "latitude": 43.50715790441356,
       "longitude": 10.757763603192954,
       "authorIds": [31],
+      "images": []
+    },
+    {
+      "id": 87,
+      "draf": true,
+      "title": "Passaggio specchiante",
+      "year": 2024,
+      "tags": [""],
+      "town": "Peccioli",
+      "address": "Palazzo Pescatori, Piazza Monsavino, 2",
+      "latitude": 43.54700646703831,
+      "longitude": 10.720816254615785,
+      "authorIds": [53],
+      "images": []
+    },
+    {
+      "id": 88,
+      "draf": true,
+      "title": "Flower Up",
+      "year": 2025,
+      "tags": [""],
+      "town": "Peccioli",
+      "address": "Piazza del Popolo",
+      "latitude": 43.54802516173511,
+      "longitude": 10.720773339271547,
+      "authorIds": [49],
       "images": []
     }
   ],
@@ -2255,6 +2281,21 @@
       "id": 52,
       "firstName": "Carol",
       "lastName": "Rollo"
+    },
+    {
+      "id": 53,
+      "firstName": "Celo1Studio",
+      "lastName": ""
+    },
+    {
+      "id": 54,
+      "firstName": "Edward",
+      "lastName": "Raneri"
+    },
+    {
+      "id": 55,
+      "firstName": "Costantino",
+      "lastName": "Gucci"
     }
   ]
 }
