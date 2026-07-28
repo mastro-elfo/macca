@@ -1995,8 +1995,7 @@
       "images": []
     },
     {
-      "id": 87,
-      "draf": true,
+      "id": 88,
       "title": "Passaggio specchiante",
       "year": 2024,
       "tags": [""],
@@ -2005,10 +2004,17 @@
       "latitude": 43.54700646703831,
       "longitude": 10.720816254615785,
       "authorIds": [53],
-      "images": []
+      "images": [
+        {
+          "path": "126.webp",
+          "attribution": {
+            "title": "Mastro Elfo"
+          }
+        }
+      ]
     },
     {
-      "id": 88,
+      "id": 89,
       "draf": true,
       "title": "Flower Up",
       "year": 2025,
