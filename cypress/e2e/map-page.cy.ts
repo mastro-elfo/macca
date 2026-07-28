@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Map page", () => {
   it("should be visible", () => {

@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("What is MACCA page", () => {
   it("should be visible", () => {

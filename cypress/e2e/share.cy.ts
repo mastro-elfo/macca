@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe("Artwork detail page", () => {
   it("should be visible", () => {
