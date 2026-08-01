@@ -2,7 +2,12 @@
 
 describe("Artwork list page", () => {
   it("should be visible", () => {
+    cy.dbjson().as("db");
     cy.visit("#/artworks");
+    cy.wait("@db").then(() => {
+      cy.contains("Artworks");
+      cy.contains("Artwork Title");
+    });
   });
 
   it("should open the detail page", () => {
