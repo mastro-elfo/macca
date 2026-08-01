@@ -4,7 +4,7 @@ describe("Artwork list page", () => {
   it("should be visible", () => {
     cy.dbjson().as("db");
     cy.visit("#/artworks");
-    cy.wait("@db").then(() => {
+    cy.wait(["@db", "@db"]).then(() => {
       cy.contains("Artworks");
       cy.contains("Artwork Title");
     });
@@ -13,7 +13,7 @@ describe("Artwork list page", () => {
   it("should open the detail page", () => {
     cy.dbjson().as("db");
     cy.visit("#/artworks");
-    cy.wait("@db").then(() => {
+    cy.wait(["@db", "@db"]).then(() => {
       cy.contains("Detail").first().click();
       cy.location("hash").should("match", /artworks\/1/);
     });
