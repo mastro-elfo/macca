@@ -1,23 +1,26 @@
 /// <reference types="cypress" />
 
 describe("Artwork list page", () => {
-  beforeEach(() => {
-    cy.dbjson().as("db");
-  });
-
   it("should be visible", () => {
+    cy.dbjson().as("db");
     cy.visit("#/artworks");
-    cy.contains("Artworks");
-    cy.contains("Artwork Title");
+    cy.wait("@db").then(() => {
+      cy.contains("Artworks");
+      cy.contains("Artwork Title");
+    });
   });
 
   it("should open the detail page", () => {
+    cy.dbjson().as("db");
     cy.visit("#/artworks");
-    cy.contains("Detail").first().click();
-    cy.location("hash").should("match", /artworks\/1/);
+    cy.wait("@db").then(() => {
+      cy.contains("Detail").first().click();
+      cy.location("hash").should("match", /artworks\/1/);
+    });
   });
 
   it("should navigate from menu", () => {
+    cy.dbjson().as("db");
     cy.visit("/");
     cy.get('[data-cy="DrawerIconButton"]').click();
     cy.contains("Artworks").click();
