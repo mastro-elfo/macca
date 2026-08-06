@@ -711,6 +711,25 @@
             "url": "http://www.fondarte.peccioli.net/opere/opere.php?idOpera=46&idView=13",
             "title": "Peccioli PER"
           }
+        },
+        {
+          "path": "129.webp",
+          "attribution": {
+            "title": "Mastro Elfo"
+          }
+        },
+        {
+          "path": "128.webp",
+          "attribution": {
+            "title": "Mastro Elfo"
+          }
+        },
+        {
+          "path": "127.webp",
+          "attribution": {
+            "title": "Mastro Elfo"
+          },
+          "cols": 3
         }
       ]
     },
